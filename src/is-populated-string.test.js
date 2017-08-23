@@ -1,6 +1,6 @@
 const { map, curry } = require('ramda');
 const { isObject } = require('lodash/fp');
-const isPopulatedString = require('./isPopulatedString');
+const isPopulatedString = require('./is-populated-string');
 
 // harness :: Boolean -> * -> Function -> Boolean
 const harness = curry((expected, input) => {
