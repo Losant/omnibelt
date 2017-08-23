@@ -1,5 +1,5 @@
 /* eslint-disable global-require */
 
 module.exports = {
-  isPopulatedString: require('./isPopulatedString'),
+  isPopulatedString: require('./is-populated-string'),
 };
