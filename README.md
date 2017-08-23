@@ -46,3 +46,18 @@ isPopulatedString('');      // false
 isPopulatedString(5);       // false
 isPopulatedString(true);    // false
 ```
+
+### > `trace`
+`trace :: String -> a -> a`
+
+Effectively a curried `console.log` that also returns it's input.
+
+```js
+trace('The meaning of life: ', 42);   // 42
+
+pipe(
+  identity
+  trace('The meaning of life: ')      // 42
+  // ...
+)(42)
+```
