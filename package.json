@@ -6,8 +6,8 @@
   "repository": "git@bitbucket.org:losant/losant-utils.git",
   "author": "@Losant",
   "engines": {
-    "node": "6.11.2",
-    "yarn": "0.27.5"
+    "node": "8.4.0",
+    "yarn": "1.0.0"
   },
   "scripts": {
     "preinstall": "node -e 'if(process.env.npm_lifecycle_script){console.error(`Use yarn!`);process.exit(1);}'",
