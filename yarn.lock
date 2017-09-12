@@ -742,9 +742,9 @@ escodegen@^1.6.1:
   optionalDependencies:
     source-map "~0.2.0"
 
-"eslint-config-losant@git+ssh://git@bitbucket.org/losant/eslint-config-losant.git#v1.1.23":
-  version "1.1.23"
-  resolved "git+ssh://git@bitbucket.org/losant/eslint-config-losant.git#1a88fe3fa1fa4e8b124fca1a37e6f0c41157c4c4"
+"eslint-config-losant@git+ssh://git@bitbucket.org/losant/eslint-config-losant.git#v1.1.24":
+  version "1.1.24"
+  resolved "git+ssh://git@bitbucket.org/losant/eslint-config-losant.git#1706f35835b1f89565feb0c53889f64a1db0c4e5"
   dependencies:
     babel-eslint "^7.2.3"
     eslint "^4.0.0"

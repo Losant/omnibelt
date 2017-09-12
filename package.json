@@ -7,10 +7,10 @@
   "author": "@Losant",
   "engines": {
     "node": "8.4.0",
-    "yarn": "1.0.0"
+    "yarn": "1.0.1"
   },
   "scripts": {
-    "preinstall": "node -e 'if(process.env.npm_lifecycle_script){console.error(`Use yarn!`);process.exit(1);}'",
+    "preinstall": "node -e 'if(!process.env.npm_execpath.includes(`yarn`)){console.error(`Use yarn!`);process.exit(1);}'",
     "lint": "esw *.js src",
     "lint:fix": "esw --fix *.js src",
     "lint:watch": "esw --watch *.js src",
@@ -22,7 +22,7 @@
     "ramda": "^0.24.1"
   },
   "devDependencies": {
-    "eslint-config-losant": "git+ssh://git@bitbucket.org/losant/eslint-config-losant.git#v1.1.23",
+    "eslint-config-losant": "git+ssh://git@bitbucket.org/losant/eslint-config-losant.git#v1.1.24",
     "jest": "^20.0.4"
   },
   "eslintConfig": {
