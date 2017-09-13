@@ -47,6 +47,32 @@ isPopulatedString(5);       // false
 isPopulatedString(true);    // false
 ```
 
+### > `mergeWithArrays`
+`mergeWithArrays :: Object -> Object -> Object`
+
+Tired of creating a customizer when you want to merge arrays as well? Enjoy.
+
+```js
+mergeWithArrays(
+  {
+    foo: [1, 2, 3],
+    bar: 'first',
+    baz: true,
+  }, 
+  {
+    foo: [4, 5],
+    bar: 'second',
+  }
+);
+/*
+ * {
+ *   foo: [1, 2, 3, 4, 5],
+ *   bar: 'second',
+ *   baz: true,
+ * }
+ */
+```
+
 ### > `trace`
 `trace :: String -> a -> a`
 
