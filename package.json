@@ -1,12 +1,12 @@
 {
   "name": "losant-utils",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "main": "src/index.js",
   "repository": "git@bitbucket.org:losant/losant-utils.git",
   "author": "@Losant",
   "engines": {
-    "node": "8.4.0",
+    "node": "8.5.0",
     "yarn": "1.0.1"
   },
   "scripts": {
@@ -14,8 +14,13 @@
     "lint": "esw *.js src",
     "lint:fix": "esw --fix *.js src",
     "lint:watch": "esw --watch *.js src",
+    "lint:changed": "lint-staged",
     "test": "jest --verbose",
-    "test:watch": "jest --watch -o --verbose"
+    "test:watch": "jest --watch -o --verbose",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": "esw"
   },
   "dependencies": {
     "lodash": "^4.17.4",
@@ -23,7 +28,9 @@
   },
   "devDependencies": {
     "eslint-config-losant": "git+ssh://git@bitbucket.org/losant/eslint-config-losant.git#v1.1.24",
-    "jest": "^20.0.4"
+    "husky": "^0.14.3",
+    "jest": "^20.0.4",
+    "lint-staged": "^4.1.3"
   },
   "eslintConfig": {
     "extends": "losant/env/node",
