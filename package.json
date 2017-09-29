@@ -1,13 +1,13 @@
 {
   "name": "losant-utils",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": true,
   "main": "src/index.js",
   "repository": "git@bitbucket.org:losant/losant-utils.git",
   "author": "@Losant",
   "engines": {
-    "node": "8.5.0",
-    "yarn": "^1.0.1"
+    "node": "8.6.0",
+    "yarn": "^1.1.0"
   },
   "scripts": {
     "preinstall": "node -e 'if(!process.env.npm_execpath.includes(`yarn`)){console.error(`Use yarn!`);process.exit(1);}'",
