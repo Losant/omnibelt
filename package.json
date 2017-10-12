@@ -1,6 +1,6 @@
 {
   "name": "losant-utils",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": true,
   "main": "src/index.js",
   "repository": "git@bitbucket.org:losant/losant-utils.git",
