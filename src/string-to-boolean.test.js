@@ -18,6 +18,7 @@ const cases = [
   ['n', false],
   ['lskdjfldskj', false],
   ['', false],
+  ['sdlkfj_true_lsdkjf', false],
 ];
 
 map(
