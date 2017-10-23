@@ -2,6 +2,17 @@
 # yarn lockfile v1
 
 
+"@losant/eslint-config-losant@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@losant/eslint-config-losant/-/eslint-config-losant-1.2.1.tgz#317c5099d540a906d7acc5766929c58efb53b978"
+  dependencies:
+    babel-eslint "^7.2.3"
+    eslint "^4.0.0"
+    eslint-plugin-lodash "^2.4.4"
+    eslint-plugin-react "^7.1.0"
+    eslint-plugin-require-path-exists "^1.1.7"
+    eslint-watch "^3.1.2"
+
 abab@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
@@ -817,17 +828,6 @@ escodegen@^1.6.1:
     optionator "^0.8.1"
   optionalDependencies:
     source-map "~0.5.6"
-
-"eslint-config-losant@git+ssh://git@bitbucket.org/losant/eslint-config-losant.git#v1.1.27":
-  version "1.1.27"
-  resolved "git+ssh://git@bitbucket.org/losant/eslint-config-losant.git#3d3331c1014b95aa391f7b5ec7f0e15e6110441a"
-  dependencies:
-    babel-eslint "^7.2.3"
-    eslint "^4.0.0"
-    eslint-plugin-lodash "^2.4.4"
-    eslint-plugin-react "^7.1.0"
-    eslint-plugin-require-path-exists "^1.1.7"
-    eslint-watch "^3.1.2"
 
 eslint-plugin-lodash@^2.4.4:
   version "2.4.5"
@@ -3033,6 +3033,10 @@ staged-git-files@0.0.4:
 stream-to-observable@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/stream-to-observable/-/stream-to-observable-0.1.0.tgz#45bf1d9f2d7dc09bed81f1c307c430e68b84cffe"
+
+string-format@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/string-format/-/string-format-0.5.0.tgz#bfc4a69a250f17f273d97336797daf5dca6ecf30"
 
 string-length@^2.0.0:
   version "2.0.0"

@@ -34,6 +34,24 @@ if (!l.isPopulatedString('test')) {
 
 - What is this `method :: Type -> Type` stuff? It's [Hindley-Milner Notation](https://drboolean.gitbooks.io/mostly-adequate-guide/content/ch7.html).
 
+
+
+### > `format`
+`format :: String -> String`
+
+Curried version of [`string-format`](https://github.com/davidchambers/string-format). It handles more than I'm indicating in the type signature here. Once you play around with it, feel free to put some more examples and update these docs.
+
+```js
+format('Hello, {}!', 'Alice'); // => 'Hello, Alice!'
+
+pipe(
+  identity,
+  format('Hello, {}!')
+)('Alice'); // => 'Hello, Alice!'
+```
+
+
+
 ### > `isPopulatedString`
 `isPopulatedString :: String -> Boolean`
 
@@ -46,6 +64,8 @@ isPopulatedString('');      // false
 isPopulatedString(5);       // false
 isPopulatedString(true);    // false
 ```
+
+
 
 ### > `mergeWithArrays`
 `mergeWithArrays :: Object -> Object -> Object`
@@ -72,6 +92,39 @@ mergeWithArrays(
  * }
  */
 ```
+
+
+
+### > `replaceAll`
+`replaceAll :: String -> String -> String => String`
+
+Really, using `R.replace` with regex is fine, but this makes a nice interface.
+
+```js
+replaceAll(
+  '\\n',
+  '\n',
+  'foo\\nbar\\nbaz\\n'
+);
+// foo\nbar\nbaz\n
+```
+
+
+
+### > `stringToBoolean`
+`stringToBoolean :: String -> Boolean`
+
+Cast a configuration string to a boolean value by looking for common "truth" directives. All else is false. This is especially useful for deciphering environment variables. See tests for full behavior.
+
+```js
+stringToBoolean('True');    // true
+stringToBoolean(' yes ');   // true
+stringToBoolean('false');   // false
+stringToBoolean('treu');    // false
+stringToBoolean('asdf');    // false
+```
+
+
 
 ### > `trace`
 `trace :: String -> a -> a`
