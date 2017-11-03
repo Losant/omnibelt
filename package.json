@@ -1,12 +1,12 @@
 {
   "name": "losant-utils",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "private": true,
   "main": "src/index.js",
   "repository": "git@bitbucket.org:losant/losant-utils.git",
   "author": "@Losant",
   "engines": {
-    "node": "8.8.1",
+    "node": "8.9.0",
     "yarn": "^1.2.1"
   },
   "scripts": {
