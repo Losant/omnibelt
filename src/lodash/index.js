@@ -29,6 +29,7 @@ module.exports = pick([
   'trimStart',
   'upperFirst',
   'words',
+  'escape',
   'unescape',
   'escapeRegExp',
   // Other
