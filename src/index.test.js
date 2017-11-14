@@ -3,5 +3,5 @@
 // const L = require('./losant');
 
 it('sub utilities don\'t contain duplicates', () => {
-  // TODO:
+  expect().toBeDefined();
 });
