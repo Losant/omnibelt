@@ -1,5 +1,3 @@
-/* eslint-disable global-require */
-
 module.exports = {
   allEqual: require('./all-equal'),
   argsToObj: require('./args-to-obj'),
