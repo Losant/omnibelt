@@ -1,8 +1,8 @@
-const { isString, isEmpty } = require('lodash/fp');
+const { is, isEmpty } = require('ramda');
 
 // isPopulatedString :: String -> Boolean
 const isPopulatedString = (x) => {
-  if (!isString(x)) { return false; }
+  if (!is(String)(x)) { return false; }
   return !isEmpty(x);
 };
 
