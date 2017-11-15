@@ -4,5 +4,5 @@ const { compose, uniq, length, equals } = require('ramda');
 // TODO: DOCS
 
 // allEqual :: Array -> Boolean
-const allEqual = compose(uniq, length, equals(1));
+const allEqual = compose(equals(1), length, uniq);
 module.exports = allEqual;
