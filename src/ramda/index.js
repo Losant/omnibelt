@@ -1,3 +1,3 @@
-const R = require('ramda');
+const r = require('ramda');
 
-module.exports = R.omit([], R);
+module.exports = r.omit([], r);

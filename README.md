@@ -11,13 +11,17 @@ const {
 ```
 
 ... I've only grouped them for demonstration purposes, please don't do that in your code.
- 
+
+
+
 
 ## Test
 
 ```bash
 yarn run test
 ```
+
+
 
 ## Usage
 
@@ -34,18 +38,20 @@ if (!isPopulatedString(foo)) {
 }
 ```
 
-Namespaced - Use `L` by convention
+Namespaced - Use `l` by convention
 
 ```js
-const L = require('losant-utils');
+const l = require('losant-utils');
 const foo = 'foo';
 
-if (!L.isPopulatedString(foo)) {
+if (!l.isPopulatedString(foo)) {
   throw new Error('DANGER');
 } else {
-  return L.toLower(foo);
+  return l.toLower(foo);
 }
 ```
+
+
 
 ## Docs
 
@@ -97,7 +103,7 @@ mergeWithArrays(
     foo: [1, 2, 3],
     bar: 'first',
     baz: true,
-  }, 
+  },
   {
     foo: [4, 5],
     bar: 'second',

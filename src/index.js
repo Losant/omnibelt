@@ -1,9 +1,9 @@
 const _ = require('./lodash');
-const R = require('./ramda');
-const L = require('./losant');
+const r = require('./ramda');
+const l = require('./losant');
 
 module.exports = {
   ..._,
-  ...R,
-  ...L,
+  ...r,
+  ...l,
 };
