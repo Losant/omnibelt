@@ -27,3 +27,7 @@ it('exports all utilities', () => {
       expect(keys(index)).toEqual(funcs);
     });
 });
+
+it('all exported utilities are function', () => {
+  expect().toBeDefined();
+});
