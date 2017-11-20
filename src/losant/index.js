@@ -4,6 +4,7 @@ module.exports = {
   containsAll: require('./contains-all'),
   defaultToStrict: require('./default-to-strict'),
   ensureArray: require('./ensure-array'),
+  equalsAny: require('./equals-any'),
   evolveArray: require('./evolve-array'),
   flattenShallow: require('./flatten-shallow'),
   format: require('./format'),
