@@ -12,11 +12,11 @@
   "scripts": {
     "preinstall": "node -e 'if(!process.env.npm_execpath.includes(`yarn`)){console.error(`Use yarn!`);process.exit(1);}'",
     "lint": "esw *.js src",
-    "lint:fix": "esw --fix *.js src",
-    "lint:watch": "esw --watch *.js src",
+    "lint:fix": "yarn lint --fix",
+    "lint:watch": "yarn lint --watch",
     "lint:staged": "lint-staged",
     "test": "jest --verbose",
-    "test:watch": "jest --watch -o --verbose",
+    "test:watch": "yarn test --watch -o",
     "precommit": "lint-staged"
   },
   "lint-staged": {

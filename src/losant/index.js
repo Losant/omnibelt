@@ -10,6 +10,7 @@ module.exports = {
   format: require('./format'),
   fpThrow: require('./fp-throw'),
   isNilOrEmpty: require('./is-nil-or-empty'),
+  isNotEmpty: require('./is-not-empty'),
   isNot: require('./is-not'),
   isPopulatedString: require('./is-populated-string'),
   list: require('./list'),
@@ -21,4 +22,6 @@ module.exports = {
   stringToBoolean: require('./string-to-boolean'),
   testHarness: require('./test-harness'),
   trace: require('./trace'),
+  updateKeyPaths: require('./update-key-paths'),
+  updateKeysWith: require('./update-keys-with'),
 };
