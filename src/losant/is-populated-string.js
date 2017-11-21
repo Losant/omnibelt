@@ -1,9 +1,15 @@
-const { is, isEmpty } = require('ramda');
+const { is, allPass } = require('ramda');
 
-// isPopulatedString :: String -> Boolean
-const isPopulatedString = (x) => {
-  if (!is(String)(x)) { return false; }
-  return !isEmpty(x);
-};
+const isNotEmpty = require('./is-not-empty');
+
+/**
+ * Checks if a value is both a string and non-empty.
+ *
+ * @signature * -> Boolean
+ */
+const isPopulatedString = allPass([
+  is(String),
+  isNotEmpty,
+]);
 
 module.exports = isPopulatedString;
