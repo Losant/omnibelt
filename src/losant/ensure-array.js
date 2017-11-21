@@ -1,7 +1,8 @@
-const { ifElse } = require('ramda');
+const { ifElse, allPass } = require('ramda');
 const { isArrayLike } = require('lodash/fp');
 
 const list = require('./list');
+const isNot = require('./is-not');
 
 // TODO: TESTS
 // TODO: DOCS
@@ -14,7 +15,10 @@ const list = require('./list');
  * @signature * a -> Array a
  */
 const ensureArray = ifElse(
-  isArrayLike,
+  allPass([
+    isArrayLike,
+    isNot(String),
+  ]),
   Array.from,
   list,
 );
