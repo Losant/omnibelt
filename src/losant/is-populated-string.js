@@ -1,4 +1,6 @@
-const { complement, is, isEmpty, allPass } = require('ramda');
+const { is, allPass } = require('ramda');
+
+const isNotEmpty = require('./is-not-empty');
 
 /**
  * Checks if a value is both a string and non-empty.
@@ -7,7 +9,7 @@ const { complement, is, isEmpty, allPass } = require('ramda');
  */
 const isPopulatedString = allPass([
   is(String),
-  complement(isEmpty),
+  isNotEmpty,
 ]);
 
 module.exports = isPopulatedString;
