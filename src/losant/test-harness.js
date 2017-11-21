@@ -1,7 +1,15 @@
 const {
-  pipe, cond, equals, always, T, identity, curry,
+  __, pipe, curry, curryN, map,
 } = require('ramda');
+
+const stringifyObject = require('stringify-object');
+
 const format = require('./format');
+
+const stringify = curryN(2, stringifyObject)(__, {
+  indent: '  ',
+  inlineCharacterLimit: 50,
+});
 
 // TODO: `subj` could take an array and support a lot more interfaces... that starts
 //       down the road toward a testing framework on top of jest though.
@@ -12,12 +20,9 @@ const format = require('./format');
 const testHarness = curry((func, subj, expected) => {
   it(
     pipe(
-      cond([
-        [equals(''), always('\'\'')],
-        [T, identity],
-      ]),
-      format(`{} ==> ${expected}`),
-    )(subj),
+      map(stringify),
+      format('{subj} ==> {expected}'),
+    )({ subj, expected }),
     () => expect(func(subj)).toEqual(expected),
   );
 });
