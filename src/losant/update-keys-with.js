@@ -6,7 +6,7 @@ const { curry, prop, propOr, reduce, keys } = require('ramda');
  * passed as the first argument (i.e. if you use `assoc` it will expect a
  * string, if you use `assocPath` it will expect an array, etc.)
  *
- * @typedef {String | [String]} KeyPath
+ * @typedef KeyPath = String | [String]
  * @signature (KeyPath, *, { a: * } -> { b: * }) -> { a: KeyPath } -> { b: * }
  */
 const updateKeysWith = curry((fn, evolveKeysMap, obj) => {

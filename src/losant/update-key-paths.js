@@ -9,8 +9,11 @@ const updateKeysWith = require('./update-keys-with');
  * { oldKey: newKey } where `newKey` is an array. Any keys that aren't included
  * in the map will be passed through unchanged.
  *
- * @typedef {[String]} KeyPath
+ * @typedef KeyPath = [String]
  * @signature { a: KeyPath } -> { a: * } -> { b: * }
+ *
+ * @example
+ *     updateKeyPaths({ foo: ['params', 'bar'] }, { foo: 1 }); // => { params: { bar: 1 } }
  */
 const updateKeyPaths = updateKeysWith(pipe(
   list,

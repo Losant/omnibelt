@@ -17,11 +17,11 @@ module.exports = {
   mergeSpec: require('./merge-spec'),
   mergeWithArrays: require('./merge-with-arrays'),
   propOrStrict: require('./prop-or-strict'),
-  renameKeys: require('./rename-keys'),
   replaceAll: require('./replace-all'),
   stringToBoolean: require('./string-to-boolean'),
   testHarness: require('./test-harness'),
   trace: require('./trace'),
   updateKeyPaths: require('./update-key-paths'),
   updateKeysWith: require('./update-keys-with'),
+  updateKeys: require('./update-keys'),
 };
