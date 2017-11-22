@@ -19,6 +19,7 @@ module.exports = {
   propOrStrict: require('./prop-or-strict'),
   replaceAll: require('./replace-all'),
   stringToBoolean: require('./string-to-boolean'),
+  stringify: require('./stringify'),
   testHarness: require('./test-harness'),
   trace: require('./trace'),
   updateKeyPaths: require('./update-key-paths'),
