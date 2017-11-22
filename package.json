@@ -41,7 +41,8 @@
       "jest": true
     },
     "rules": {
-      "arrow-body-style": 0
+      "arrow-body-style": 0,
+      "valid-jsdoc": 0
     }
   }
 }

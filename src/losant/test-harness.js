@@ -1,15 +1,9 @@
 const {
-  __, pipe, curry, curryN, map,
+  pipe, curry, map,
 } = require('ramda');
 
-const stringifyObject = require('stringify-object');
-
 const format = require('./format');
-
-const stringify = curryN(2, stringifyObject)(__, {
-  indent: '  ',
-  inlineCharacterLimit: 50,
-});
+const stringify = require('./stringify');
 
 // TODO: `subj` could take an array and support a lot more interfaces... that starts
 //       down the road toward a testing framework on top of jest though.
