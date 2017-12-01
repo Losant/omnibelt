@@ -8,10 +8,8 @@ to discern what changed.
 - `?.?.?` - *WIP*
    - Added methods:
       - `jsonParseSafe`
-      - `jsonParseUnsafe`
       - `thunkify`
       - `tryCatchSafe`
-      - `tryCatchUnsafe`
 - `1.0.7`
    - Converted to flat structure that exports all of the Lodash, Ramda, and
      custom methods that we're using.
