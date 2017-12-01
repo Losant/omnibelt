@@ -2,8 +2,6 @@ const { assoc } = require('ramda');
 
 const updateKeysWith = require('./update-keys-with');
 
-// TODO: TESTS
-
 /**
  * Updates the key names for a given object according to the provided map of
  * { oldKey: newKey } where `newKey` is a string. Any keys that aren't included
