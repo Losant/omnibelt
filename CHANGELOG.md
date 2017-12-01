@@ -3,10 +3,13 @@
 Below should serve as an "upgrade guide" jumping off point as you are migrating projects to newer versions of this package. Ideally, interface changes will be called out specifically and one should not have to go sifting through git diffs to discern what changed.
 
 - `?.?.?` - *WIP*
+- `1.0.9`
    - Added methods:
       - `jsonParseSafe`
       - `thunkify`
       - `tryCatchSafe`
+- `1.0.8`
+   - `fpThrow` now accepts an `Error` object and will rethrow when passed.
 - `1.0.7`
    - Converted to flat structure that exports all of the Lodash, Ramda, and custom methods that we're using.
    - New documentation standard introduced, but not fully converted to.
