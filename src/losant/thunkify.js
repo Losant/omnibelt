@@ -7,7 +7,7 @@ const { curry } = require('ramda');
  * @signature Function -> Function -> Function -> *
  *
  * @example
- *    const logItems = pipe(list, join(', ') console.log);
+ *    const logItems = pipe(list, join(', '), console.log);
  *    const logger = thunkify(logItems);
  *    const log123 = logger(1, 2, 3);
  *    log123(); // => 1, 2, 3
