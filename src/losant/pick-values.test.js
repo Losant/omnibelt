@@ -10,6 +10,11 @@ const cases = [
     expected: [1, 2],
   },
   {
+    keys: ['b', 'a'],
+    value: { a: 1, b: 2 },
+    expected: [2, 1],
+  },
+  {
     keys: ['a', 'b'],
     value: { foo: 1, bar: 2 },
     expected: [],
