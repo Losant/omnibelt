@@ -17,6 +17,7 @@ module.exports = {
   list: require('./list'),
   mergeSpec: require('./merge-spec'),
   mergeWithArrays: require('./merge-with-arrays'),
+  pickValues: require('./pick-values'),
   propOrStrict: require('./prop-or-strict'),
   replaceAll: require('./replace-all'),
   stringToBoolean: require('./string-to-boolean'),
