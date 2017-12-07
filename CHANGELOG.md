@@ -3,6 +3,8 @@
 Below should serve as an "upgrade guide" jumping off point as you are migrating projects to newer versions of this package. Ideally, interface changes will be called out specifically and one should not have to go sifting through git diffs to discern what changed.
 
 - `?.?.?` - *WIP*
+- `1.0.10`
+   - Node and Yarn version less restrictive, allows anything newer.
    - Added methods:
       - `containsAny`
       - `isNotNil`
