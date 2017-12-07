@@ -2,6 +2,7 @@ module.exports = {
   allEqual: require('./all-equal'),
   argsToObj: require('./args-to-obj'),
   containsAll: require('./contains-all'),
+  containsAny: require('./contains-any'),
   defaultToStrict: require('./default-to-strict'),
   ensureArray: require('./ensure-array'),
   equalsAny: require('./equals-any'),
