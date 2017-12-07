@@ -10,11 +10,11 @@ module.exports = pick([
   'castArray',
   // Type Coercion
   'toString',
-  // Functions
-  'mapKeys',
-  'keyBy',
   // Collections
   'compact',
+  'keyBy',
+  // Objects
+  'mapKeys',
   // String
   'parseInt',
   'camelCase',
