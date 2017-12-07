@@ -1,5 +1,6 @@
-module.exports = {
-  ...require('./lodash'),
-  ...require('./ramda'),
-  ...require('./losant'),
-};
+module.exports = Object.assign(
+  {},
+  require('./lodash'),
+  require('./ramda'),
+  require('./losant'),
+);
