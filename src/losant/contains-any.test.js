@@ -13,7 +13,6 @@ const cases = [
 ];
 
 const testHarnessAdapter = pipe(
-  // replace first argument with partially-applied function
   adjust(containsAny, 0),
   apply(testHarness),
 );
