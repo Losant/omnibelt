@@ -12,6 +12,7 @@ module.exports = {
   fpThrow: require('./fp-throw'),
   isNilOrEmpty: require('./is-nil-or-empty'),
   isNotEmpty: require('./is-not-empty'),
+  isNotNil: require('./is-not-nil'),
   isNot: require('./is-not'),
   isPopulatedString: require('./is-populated-string'),
   jsonParseSafe: require('./json-parse-safe'),
