@@ -17,7 +17,8 @@
     "lint:staged": "lint-staged",
     "test": "jest --verbose",
     "test:watch": "yarn test --watch -o",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "postmerge": "losant-scripts git-hook post-merge"
   },
   "lint-staged": {
     "*.js": "esw"
