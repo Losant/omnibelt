@@ -10,7 +10,7 @@
     "yarn": ">=1.2.1"
   },
   "scripts": {
-    "preinstall": "node -e 'if(!process.env.npm_execpath.includes(`yarn`)){console.error(`Use yarn!`);process.exit(1);}'",
+    "preinstall": "bash scripts/pre-install.sh",
     "lint": "esw *.js src",
     "lint:fix": "yarn lint --fix",
     "lint:watch": "yarn lint --watch",
@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "@losant/eslint-config-losant": "^1.2.1",
+    "@losant/scripts": "^1.0.7",
     "fs-extra": "^4.0.2",
     "husky": "^0.14.3",
     "jest": "^21.0.2",
