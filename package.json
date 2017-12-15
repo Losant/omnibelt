@@ -18,7 +18,8 @@
     "test": "jest --verbose",
     "test:watch": "yarn test --watch -o",
     "precommit": "lint-staged",
-    "postmerge": "losant-scripts git-hook post-merge"
+    "postmerge": "losant-scripts git-hook post-merge",
+    "postversion": "losant-scripts git-hook post-version"
   },
   "lint-staged": {
     "*.js": "esw"
@@ -31,7 +32,7 @@
   },
   "devDependencies": {
     "@losant/eslint-config-losant": "^1.2.1",
-    "@losant/scripts": "^1.0.7",
+    "@losant/scripts": "^1.0.8",
     "fs-extra": "^4.0.3",
     "husky": "^0.14.3",
     "jest": "^21.0.2",
