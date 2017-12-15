@@ -1,9 +1,19 @@
-const { curry, path } = require('ramda');
+const { pipe, curry, path, map, apply, equals } = require('ramda');
 
-const eqPaths = curry((pathToCheck, a, b) => {
-  const getVal = path(pathToCheck);
+const list = require('./list');
 
-  return getVal(a) === getVal(b);
-});
+/**
+ * Takes a path to check and two objects and checks if the value at that path
+ * is equal for both objects.
+ *
+ * @signature Array<String> -> Object -> Object -> Boolean
+ */
+const eqPaths = curry((pathToCheck, a, b) =>
+  pipe(
+    list,
+    map(path(pathToCheck)),
+    apply(equals),
+  )(a, b)
+);
 
 module.exports = eqPaths;
