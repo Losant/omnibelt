@@ -3,7 +3,7 @@
   "version": "1.0.10",
   "private": true,
   "main": "src/index.js",
-  "repository": "git@bitbucket.org:losant/losant-utils.git",
+  "repository": "git@github.com/Losant/losant-utils.git",
   "author": "@Losant",
   "engines": {
     "node": ">=8.9.0",
