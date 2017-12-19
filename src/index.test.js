@@ -2,6 +2,6 @@
 // const r = require('./ramda');
 // const l = require('./losant');
 
-it('sub utilities don\'t contain duplicates', () => {
+it.skip('sub utilities don\'t contain duplicates', () => {
   expect().toBeDefined();
 });
