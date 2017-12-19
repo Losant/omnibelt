@@ -6,6 +6,7 @@ module.exports = {
   debounce: require('./debounce'),
   defaultToStrict: require('./default-to-strict'),
   ensureArray: require('./ensure-array'),
+  ensureStartsWith: require('./ensure-starts-with'),
   eqPaths: require('./eq-paths'),
   equalsAny: require('./equals-any'),
   evolveArray: require('./evolve-array'),
