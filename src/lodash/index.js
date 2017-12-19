@@ -3,19 +3,14 @@ const _ = require('lodash/fp');
 
 // TODO: Maybe grab these methods from individual packages
 module.exports = pick([
-  // Type Checking
   'isNull',
   'isUndefined',
   'isArrayLike',
   'castArray',
-  // Type Coercion
   'toString',
-  // Collections
   'compact',
   'keyBy',
-  // Objects
   'mapKeys',
-  // String
   'parseInt',
   'camelCase',
   'kebabCase',
@@ -40,8 +35,6 @@ module.exports = pick([
   'escape',
   'unescape',
   'escapeRegExp',
-  // Other
-  'debounce',
-  'throttle',
   'noop',
+  'flip',
 ], _);

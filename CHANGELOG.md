@@ -6,8 +6,14 @@ Below should serve as an "upgrade guide" jumping off point as you are migrating 
    - Moved git repo from bitcuket to github, update your remotes!
       - `git remote set-url origin git@github.com:Losant/losant-utils.git`
    - Added methods:
-      - 'nonePass'
-      - 'eqPaths'
+      - `nonePass`
+      - `eqPaths`
+      - `throttleLeading`
+      - `throttleTrailing`
+   - Moved methods:
+      - `flip` now comes from `lodash/fp`
+      - `throttle` is now "custom" and accepts 3 arguments (still curried)
+      - `debounce` is now "custom" and accepts 3 arguments (still curried)
 - `1.0.10`
    - Node and Yarn version less restrictive, allows anything newer.
    - Added methods:
