@@ -8,6 +8,7 @@ Below should serve as an "upgrade guide" jumping off point as you are migrating 
    - Added methods:
       - `nonePass`
       - `eqPaths`
+      - 'ensureStartsWith'
       - `throttleLeading`
       - `throttleTrailing`
    - Moved methods:
