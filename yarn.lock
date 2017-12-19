@@ -13,12 +13,13 @@
     eslint-plugin-require-path-exists "^1.1.7"
     eslint-watch "^3.1.2"
 
-"@losant/scripts@^1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@losant/scripts/-/scripts-1.0.7.tgz#40075836fd52fc49f26c5ccc3582a786f80b9c4f"
+"@losant/scripts@^1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@losant/scripts/-/scripts-1.0.8.tgz#38e776bffc9c40692e7b1f5937da519de7a2c521"
   dependencies:
     chalk "^2.3.0"
     commander "^2.11.0"
+    ramda "^0.25.0"
 
 abab@^1.0.3:
   version "1.0.4"
@@ -2705,6 +2706,10 @@ qs@~6.4.0:
 qs@~6.5.1:
   version "6.5.1"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.1.tgz#349cdf6eef89ec45c12d7d5eb3fc0c870343a6d8"
+
+ramda@^0.24.1:
+  version "0.24.1"
+  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.24.1.tgz#c3b7755197f35b8dc3502228262c4c91ddb6b857"
 
 ramda@^0.25.0:
   version "0.25.0"
