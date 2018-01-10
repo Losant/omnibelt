@@ -1,6 +1,7 @@
 module.exports = {
   allEqual: require('./all-equal'),
   argsToObj: require('./args-to-obj'),
+  clampPositive: require('./clamp-positive'),
   containsAll: require('./contains-all'),
   containsAny: require('./contains-any'),
   debounce: require('./debounce'),
