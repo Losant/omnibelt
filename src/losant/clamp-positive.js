@@ -4,8 +4,8 @@ const { clamp } = require('ramda');
  * Clamps a numeric value so that it's guaranteed to be 0 or higher. Works with
  * Numbers and other ordered types like Strings and Dates, though the behavior
  * when given a String is inconsistent (e.g. `clampPositive('5')` returns the
- * String '5' but `clampPositive('-1')` returns the Number 0). If given NaN it
- * will return NaN.
+ * String '5', `clampPositive('-1')` returns the Number 0, and `clampPositive('foo')`
+ * returns the string 'foo'). If given NaN it will return NaN.
  *
  * @signature Number -> Number
  *

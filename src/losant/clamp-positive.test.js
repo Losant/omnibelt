@@ -10,6 +10,9 @@ const cases = [
   [-Infinity, 0],
   [Infinity, Infinity],
   [NaN, NaN],
+  ['1', '1'],
+  ['-1', 0],
+  ['foo', 'foo'],
 ];
 
 map(
