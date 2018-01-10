@@ -1,7 +1,7 @@
 const { clamp } = require('ramda');
 
 /**
- * Clamps a numberic value so that it's guaranteed to be 0 or higher. Works with
+ * Clamps a numeric value so that it's guaranteed to be 0 or higher. Works with
  * Numbers and other ordered types like Strings and Dates, though the behavior
  * when given a String is inconsistent (e.g. `clampPositive('5')` returns the
  * String '5' but `clampPositive('-1')` returns the Number 0). If given NaN it
