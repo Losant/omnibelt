@@ -18,8 +18,8 @@
     "test": "jest --verbose",
     "test:watch": "yarn test --watch -o",
     "precommit": "lint-staged",
-    "postmerge": "losant-scripts git-hook post-merge",
-    "postversion": "losant-scripts git-hook post-version"
+    "postmerge": "npx @losant/scripts git-hook post-merge",
+    "postversion": "npx @losant/scripts git-hook post-version"
   },
   "lint-staged": {
     "*.js": "esw"
