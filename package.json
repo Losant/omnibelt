@@ -10,7 +10,7 @@
     "yarn": ">=1.2.1"
   },
   "scripts": {
-    "preinstall": "bash scripts/pre-install.sh",
+    "preinstall": "npx @losant/scripts force-yarn",
     "lint": "esw *.js src",
     "lint:fix": "yarn lint --fix",
     "lint:watch": "yarn lint --watch",
