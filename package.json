@@ -10,7 +10,7 @@
     "yarn": ">=1.2.1"
   },
   "scripts": {
-    "preinstall": "npx @losant/scripts force-yarn",
+    "preinstall": "losant-scripts force-yarn || npx @losant/scripts force-yarn",
     "lint": "esw *.js src",
     "lint:fix": "yarn lint --fix",
     "lint:watch": "yarn lint --watch",
@@ -18,8 +18,8 @@
     "test": "jest --verbose",
     "test:watch": "yarn test --watch -o",
     "precommit": "lint-staged",
-    "postmerge": "npx @losant/scripts git-hook post-merge",
-    "postversion": "npx @losant/scripts git-hook post-version"
+    "postmerge": "losant-scripts git-hook post-merge",
+    "postversion": "losant-scripts git-hook post-version"
   },
   "lint-staged": {
     "*.js": "esw"
