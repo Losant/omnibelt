@@ -10,7 +10,7 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
-"@losant/eslint-config-losant@^1.2.1":
+"@losant/eslint-config-losant@^1.2.3":
   version "1.2.6"
   resolved "https://registry.yarnpkg.com/@losant/eslint-config-losant/-/eslint-config-losant-1.2.6.tgz#3cf1452b8ae9a459770ee7371122f1d825e067f0"
   dependencies:
@@ -21,7 +21,7 @@
     eslint-plugin-require-path-exists "^1.1.7"
     eslint-watch "^3.1.2"
 
-"@losant/scripts@^1.0.8":
+"@losant/scripts@^1.0.10":
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/@losant/scripts/-/scripts-1.0.10.tgz#7b412e7d98b3c90775788e5adcd964d03e9ac91f"
   dependencies:

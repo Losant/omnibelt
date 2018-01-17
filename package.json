@@ -10,7 +10,8 @@
     "yarn": ">=1.3.2"
   },
   "scripts": {
-    "preinstall": "losant-scripts force-yarn || npx @losant/scripts force-yarn",
+    "preinstall": "losant-scripts force-yarn 2> /dev/null || npx @losant/scripts force-yarn",
+    "reinstall": "rm -rf node_modules && yarn install",
     "lint": "esw *.js src",
     "lint:fix": "yarn lint --fix",
     "lint:watch": "yarn lint --watch",
@@ -31,8 +32,8 @@
     "stringify-object": "^3.2.1"
   },
   "devDependencies": {
-    "@losant/eslint-config-losant": "^1.2.1",
-    "@losant/scripts": "^1.0.8",
+    "@losant/eslint-config-losant": "^1.2.3",
+    "@losant/scripts": "^1.0.10",
     "fs-extra": "^4.0.3",
     "husky": "^0.14.3",
     "jest": "^21.0.2",
