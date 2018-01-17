@@ -2,7 +2,19 @@ const {
   pipe, split, join, curry,
 } = require('ramda');
 
-// replaceAll :: String -> String -> String => String
+/**
+ * Really, using `R.replace` with regex is fine, but this makes a nice interface.
+ *
+ * @signature String -> String -> String -> String
+ *
+ * @example
+ *   replaceAll(
+ *     '\\n',
+ *     '\n',
+ *     'foo\\nbar\\nbaz\\n',
+ *   );
+ *   // foo\nbar\nbaz\n
+ */
 const replaceAll = curry((target, replacement, data) => {
   return pipe(
     split(target),
