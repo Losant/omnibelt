@@ -3,8 +3,15 @@
 Below should serve as an "upgrade guide" jumping off point as you are migrating projects to newer versions of this package. Ideally, interface changes will be called out specifically and one should not have to go sifting through git diffs to discern what changed.
 
 - `?.?.?` - *WIP*
+   - All docs now colocated with implementations.
    - Added methods:
       - `clampPositive`
+      - `count`
+      - `intersectAny`
+      - `upperCamelCase`
+   - Removed methods:
+      - `flattenShallow`
+         - This is just `R.unnest` (though `flattenShallow` is a bit more semantic).
 - `1.0.12`
    - `ramda` back down to `0.24.1`.
 - `1.0.11`
