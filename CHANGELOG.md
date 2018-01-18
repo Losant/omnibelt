@@ -5,6 +5,12 @@ Below should serve as an "upgrade guide" jumping off point as you are migrating 
 - `?.?.?` - *WIP*
    - Added methods:
       - `clampPositive`
+      - `count`
+      - `intersectAny`
+      - `upperCamelCase`
+   - Removed methods:
+      - `flattenShallow`
+         - This is just `R.unnest` (though `flattenShallow` is a bit more semantic).
 - `1.0.12`
    - `ramda` back down to `0.24.1`.
 - `1.0.11`
