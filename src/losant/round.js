@@ -3,6 +3,8 @@ const _ = require('lodash');
 
 /**
  * Curried FP version of `lodash.round`
+ * NOTE: `lodash/fp.round` has a fixed arity of one, therefore
+ *       a precision cannot be specified.
  *
  * @signature Number -> Number -> Number
  * @see lodash.round
