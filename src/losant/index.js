@@ -1,2 +1,2 @@
-const exportDir = require('@rjhilgefort/export-dir');
-module.exports = exportDir(null, __dirname);
+const { fromFiles } = require('@rjhilgefort/export-dir');
+module.exports = fromFiles(null, __dirname);

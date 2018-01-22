@@ -30,9 +30,9 @@
     jest "^22.0.3"
     ramda "^0.25.0"
 
-"@rjhilgefort/export-dir@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@rjhilgefort/export-dir/-/export-dir-0.0.4.tgz#7a7f06c18013e2641672a1e6698381f0857007d1"
+"@rjhilgefort/export-dir@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@rjhilgefort/export-dir/-/export-dir-1.1.0.tgz#22264f58f577144d90825f58d998cfbdfbe20467"
   dependencies:
     lodash.camelcase "^4.3.0"
     ramda "^0.25.0"
@@ -3074,6 +3074,10 @@ pn@^1.0.0:
 prelude-ls@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
+
+present@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/present/-/present-1.0.0.tgz#6d2f865be7a96885118f4660e83e2161fb71cf2b"
 
 preserve@^0.2.0:
   version "0.2.0"
