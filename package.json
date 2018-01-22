@@ -26,7 +26,7 @@
     "*.js": "esw"
   },
   "dependencies": {
-    "@rjhilgefort/export-dir": "^0.0.4",
+    "@rjhilgefort/export-dir": "^1.1.0",
     "lodash": "^4.17.4",
     "ramda": "^0.24.1",
     "string-format": "^0.5.0",
@@ -38,7 +38,8 @@
     "fs-extra": "^4.0.3",
     "husky": "^0.14.3",
     "jest": "^21.0.2",
-    "lint-staged": "^6.0.0"
+    "lint-staged": "^6.0.0",
+    "present": "^1.0.0"
   },
   "eslintConfig": {
     "extends": "@losant/eslint-config-losant/env/node",
