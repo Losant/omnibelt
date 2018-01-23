@@ -1,4 +1,6 @@
-const { curry, reduce } = require('ramda');
+const curry = require('ramda/src/curry');
+const reduce = require('ramda/src/reduce');
+const assoc = require('ramda/src/assoc');
 
 /**
  * A variant of `keyBy` / `indexBy` that accepts getter functions for both the
@@ -15,10 +17,7 @@ const keyByWith = curry((getKey, getValue, list) => {
     const key = getKey(obj);
     const value = getValue(obj);
 
-    return {
-      ...acc,
-      [key]: value,
-    };
+    return assoc(key, value, acc);
   };
 
   return reduce(reducer, {}, list);

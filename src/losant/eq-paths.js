@@ -1,4 +1,9 @@
-const { pipe, curry, path, map, apply, equals } = require('ramda');
+const pipe = require('ramda/src/pipe');
+const curry = require('ramda/src/curry');
+const path = require('ramda/src/path');
+const map = require('ramda/src/map');
+const apply = require('ramda/src/apply');
+const equals = require('ramda/src/equals');
 
 /**
  * Takes a path to check and two objects and checks if the value at that path

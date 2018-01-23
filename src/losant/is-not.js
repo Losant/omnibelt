@@ -1,6 +1,5 @@
-const {
-  complement, is,
-} = require('ramda');
+const complement = require('ramda/src/complement');
+const is = require('ramda/src/is');
 
 /**
  * Checks if a value is not of a certain type (i.e. the opposite of `is`).
