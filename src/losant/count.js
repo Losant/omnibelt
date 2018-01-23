@@ -1,4 +1,4 @@
-const { countBy, identity } = require('ramda');
+import { countBy, identity } from 'ramda';
 
 /**
  * `countBy` the raw values in an array (`identity`). All values are

@@ -1,7 +1,8 @@
-const {
-  flip, contains
-} = require('ramda');
+import { flip, contains } from 'ramda';
 
-// equalsAny :: Array<* a> => a -> Boolean
+/**
+ * @signature Array<* a> -> a -> Boolean
+ */
 const equalsAny = flip(contains);
+
 module.exports = equalsAny;

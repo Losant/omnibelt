@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 
-const { curry } = require('ramda');
+import { curry } from 'ramda';
 
 /**
  * Effectively a curried `console.log` that also returns it's input.

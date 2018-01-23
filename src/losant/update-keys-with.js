@@ -1,4 +1,4 @@
-const { curry, prop, propOr, reduce, keys } = require('ramda');
+import { curry, prop, propOr, reduce, keys } from 'ramda';
 
 /**
  * Updates the keys for an object using the provided function and a map of

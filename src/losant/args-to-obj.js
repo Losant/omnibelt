@@ -1,7 +1,6 @@
-const {
-  pipe, zipObj,
-} = require('ramda');
-const list = require('./list');
+import { pipe, zipObj } from 'ramda';
+
+import list from './list';
 
 /**
  * Converts function arguments to an object based on the provided array of keys.

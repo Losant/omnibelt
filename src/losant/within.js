@@ -1,6 +1,8 @@
-const { curry, gt, lt, __, both } = require('ramda');
+import { curry, gt, lt, __, both } from 'ramda';
 
-// within :: Number -> Number -> Number -> Boolean
+/**
+ * @signature Number -> Number -> Number -> Boolean
+ */
 const within = curry(
   (start, end, value) =>
     both(

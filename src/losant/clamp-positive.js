@@ -1,4 +1,4 @@
-const { clamp } = require('ramda');
+import { clamp } from 'ramda';
 
 /**
  * Clamps a numeric value so that it's guaranteed to be 0 or higher. Works with

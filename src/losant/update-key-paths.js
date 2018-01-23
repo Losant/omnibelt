@@ -1,8 +1,8 @@
-const { pipe, assocPath, adjust, apply } = require('ramda');
+import { pipe, assocPath, adjust, apply } from 'ramda';
 
-const list = require('./list');
-const ensureArray = require('./ensure-array');
-const updateKeysWith = require('./update-keys-with');
+import list from './list';
+import ensureArray from './ensure-array';
+import updateKeysWith from './update-keys-with';
 
 /**
  * Updates the key paths for a given object according to the provided map of

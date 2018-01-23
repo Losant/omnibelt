@@ -1,8 +1,11 @@
-const { compose, uniq, length, equals } = require('ramda');
+import { compose, uniq, length, equals } from 'ramda';
 
-// TODO: TESTS
-// TODO: DOCS
-
-// allEqual :: Array -> Boolean
+/**
+ * TODO: TESTS
+ * TODO: DOCS
+ *
+ * @signature Array -> Boolean
+ */
 const allEqual = compose(equals(1), length, uniq);
+
 module.exports = allEqual;

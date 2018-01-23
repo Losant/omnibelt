@@ -1,16 +1,18 @@
-const {
-  curry, compose, prop,
-} = require('ramda');
-const defaultToStrict = require('./default-to-strict');
+import { curry, compose, prop } from 'ramda';
 
-// TODO: TESTS
-// TODO: DOCS
+import defaultToStrict from './default-to-strict';
 
-// propOrStrict :: * a => String => Object -> a|*
-const propOrStrict = curry((def, key, data) => {
-  return compose(
+/**
+ * TODO: TESTS
+ * TODO: DOCS
+ *
+ * @signature * a -> String -> Object -> a|*
+ */
+const propOrStrict = curry((def, key, data) =>
+  compose(
     defaultToStrict(def),
     prop(key),
-  )(data);
-});
+  )(data)
+);
+
 module.exports = propOrStrict;

@@ -1,6 +1,9 @@
-module.exports = Object.assign(
-  {},
-  require('./lodash'),
-  require('./ramda'),
-  require('./losant'),
-);
+import lodash from './lodash';
+import ramda from './ramda';
+import losant from './losant';
+
+module.exports = {
+  ...lodash,
+  ...ramda,
+  ...losant,
+};

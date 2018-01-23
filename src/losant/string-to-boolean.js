@@ -1,7 +1,6 @@
-const {
-  pipe, toLower, trim, defaultTo,
-} = require('ramda');
-const equalsAny = require('./equals-any');
+import { pipe, toLower, trim, defaultTo } from 'ramda';
+
+import equalsAny from './equals-any';
 
 /**
  * Cast a configuration string to a boolean value by looking for common "truth" directives.

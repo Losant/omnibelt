@@ -1,4 +1,4 @@
-const { complement, anyPass } = require('ramda');
+import { complement, anyPass } from 'ramda';
 
 /**
  * Takes a list of predicates and returns a predicate that returns true for a

@@ -1,5 +1,5 @@
-const { pick } = require('ramda');
-const _ = require('lodash/fp');
+import { pick } from 'ramda';
+import _ from 'lodash/fp';
 
 // TODO: Maybe grab these methods from individual packages
 module.exports = pick([

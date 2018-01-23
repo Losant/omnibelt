@@ -1,6 +1,4 @@
-const {
-  complement, is,
-} = require('ramda');
+import { complement, is } from 'ramda';
 
 /**
  * Checks if a value is not of a certain type (i.e. the opposite of `is`).

@@ -1,6 +1,4 @@
-const {
-  pipe, split, join, curry,
-} = require('ramda');
+import { pipe, split, join, curry } from 'ramda';
 
 /**
  * Really, using `R.replace` with regex is fine, but this makes a nice interface.
@@ -15,11 +13,11 @@ const {
  *   );
  *   // foo\nbar\nbaz\n
  */
-const replaceAll = curry((target, replacement, data) => {
-  return pipe(
+const replaceAll = curry((target, replacement, data) =>
+  pipe(
     split(target),
     join(replacement),
-  )(data);
-});
+  )(data)
+);
 
 module.exports = replaceAll;

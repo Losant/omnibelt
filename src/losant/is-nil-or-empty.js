@@ -1,6 +1,4 @@
-const {
-  either, isNil, isEmpty,
-} = require('ramda');
+import { either, isNil, isEmpty } from 'ramda';
 
 /**
  * Checks if a value is null, undefined, or an empty string.

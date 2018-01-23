@@ -1,8 +1,11 @@
-const { unapply, identity } = require('ramda');
+import { unapply, identity } from 'ramda';
 
-// TODO: TESTS
-// TODO: DOCS
-
-// list :: [*...] -> Array<*>
+/**
+ * TODO: TESTS
+ * TODO: DOCS
+ *
+ * @signature *... -> Array<*>
+ */
 const list = unapply(identity);
+
 module.exports = list;

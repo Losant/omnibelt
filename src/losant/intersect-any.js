@@ -1,8 +1,8 @@
-const {
-  filter, gt, __, compose, unnest, keys, map,
-  unless, equals,
-} = require('ramda');
-const count = require('./count');
+import {
+  filter, gt, __, compose, unnest, keys, map, unless, equals,
+} from 'ramda';
+
+import count from './count';
 
 const gt1 = gt(__, 1);
 

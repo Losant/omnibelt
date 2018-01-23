@@ -1,9 +1,7 @@
-const {
-  pipe, curry, map,
-} = require('ramda');
+import { pipe, curry, map } from 'ramda';
 
-const format = require('./format');
-const stringify = require('./stringify');
+import format from './format';
+import stringify from './stringify';
 
 // TODO: `subj` could take an array and support a lot more interfaces... that starts
 //       down the road toward a testing framework on top of jest though.

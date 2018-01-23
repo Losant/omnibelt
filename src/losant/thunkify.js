@@ -1,4 +1,4 @@
-const { curry } = require('ramda');
+import { curry } from 'ramda';
 
 /**
  * Takes a function and returns a function that takes any number of arguments

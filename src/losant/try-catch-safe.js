@@ -1,4 +1,4 @@
-const { curry } = require('ramda');
+import { curry } from 'ramda';
 
 /**
  * A safe version of `try/catch` that returns an [error, result] tuple instead

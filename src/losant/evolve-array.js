@@ -1,12 +1,10 @@
-const {
-  zipWith, call,
-} = require('ramda');
-
-// TODO: TESTS
+import { zipWith, call } from 'ramda';
 
 /**
  * Applies an array of transform functions to an array of values, with each
  * transform being applied to the value that has the same index.
+ *
+ * TODO: TESTS
  *
  * @signature [a -> b] -> [a] -> [b]
  *

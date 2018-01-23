@@ -1,4 +1,4 @@
-const { complement, isNil } = require('ramda');
+import { complement, isNil } from 'ramda';
 
 /**
  * Takes a value and returns true if the value is neither null nor undefined;

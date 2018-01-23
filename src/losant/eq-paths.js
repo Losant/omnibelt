@@ -1,4 +1,4 @@
-const { pipe, curry, path, map, apply, equals } = require('ramda');
+import { pipe, curry, path, map, apply, equals } from 'ramda';
 
 /**
  * Takes a path to check and two objects and checks if the value at that path

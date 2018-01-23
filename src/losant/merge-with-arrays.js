@@ -1,4 +1,4 @@
-const { mergeWith, concat, isArray } = require('lodash/fp');
+import { mergeWith, concat, isArray } from 'lodash/fp';
 
 /**
  * A merge that also handles arrays.
@@ -20,12 +20,11 @@ const { mergeWith, concat, isArray } = require('lodash/fp');
  *   //   baz: true,
  *   // }
  */
-const mergeWithArrays =
-  mergeWith(
-    (x, y) => {
-      if (isArray(x)) { return concat(x, y); }
-      // return `undefined` so `mergeWith` does default
-    }
-  );
+const mergeWithArrays = mergeWith((x, y) => {
+  if (isArray(x)) {
+    return concat(x, y);
+  }
+  // return `undefined` so `mergeWith` does default
+});
 
 module.exports = mergeWithArrays;

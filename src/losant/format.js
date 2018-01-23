@@ -1,5 +1,5 @@
-const { curryN } = require('ramda');
-const stringFormat = require('string-format');
+import { curryN } from 'ramda';
+import stringFormat from 'string-format';
 
 /**
  * Formats a string.

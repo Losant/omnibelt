@@ -1,0 +1,23 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "ie": 11
+      }
+    }]
+  ],
+  "plugins": [
+    ["transform-imports", {
+      "ramda": {
+        "transform": "ramda/src/${member}"
+      },
+      "lodash/fp": {
+        "transform": "lodash/fp/${member}"
+      },
+      "lodash": {
+        "transform": "lodash/${member}"
+      }
+    }],
+    "transform-object-rest-spread"
+  ]
+}

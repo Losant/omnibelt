@@ -1,6 +1,6 @@
-const { __, curryN } = require('ramda');
+import { __, curryN } from 'ramda';
 
-const stringifyObject = require('stringify-object');
+import stringifyObject from 'stringify-object';
 
 /**
  * @signature * -> String

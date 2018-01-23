@@ -1,6 +1,4 @@
-const {
-  curry, unless, startsWith, concat,
-} = require('ramda');
+import { curry, unless, startsWith, concat } from 'ramda';
 
 /**
  * Ensures a string / array value starts with the specified prefix. If not, the

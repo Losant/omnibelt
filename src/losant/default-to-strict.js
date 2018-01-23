@@ -1,16 +1,18 @@
-const {
-  curry, when, either, isNil, complement, always,
-} = require('ramda');
-const isPopulatedString = require('./is-populated-string');
+import { curry, when, either, isNil, complement, always } from 'ramda';
 
-// TODO: TESTS
-// TODO: DOCS
+import isPopulatedString from './is-populated-string';
 
-// defaultToStrict :: * a => * b -> a|b
-const defaultToStrict = curry((def, val) => {
-  return when(
+/**
+ * TODO: TESTS
+ * TODO: DOCS
+ *
+ * @signature * a -> * b -> a|b
+ */
+const defaultToStrict = curry((def, val) =>
+  when(
     either(isNil, complement(isPopulatedString)),
     always(def),
-  )(val);
-});
+  )(val)
+);
+
 module.exports = defaultToStrict;

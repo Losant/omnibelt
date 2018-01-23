@@ -1,7 +1,7 @@
-const { pipe } = require('ramda');
+import { pipe } from 'ramda';
 
-const list = require('./list');
-const tryCatchSafe = require('./try-catch-safe');
+import list from './list';
+import tryCatchSafe from './try-catch-safe';
 
 /**
  * A safe version of `JSON.parse` that returns an [error, result] tuple instead

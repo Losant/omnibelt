@@ -1,4 +1,4 @@
-const { complement, isEmpty } = require('ramda');
+import { complement, isEmpty } from 'ramda';
 
 /**
  * Returns true if value is non-empty.

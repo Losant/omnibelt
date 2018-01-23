@@ -1,6 +1,6 @@
-const { is, allPass } = require('ramda');
+import { is, allPass } from 'ramda';
 
-const isNotEmpty = require('./is-not-empty');
+import isNotEmpty from './is-not-empty';
 
 /**
  * Checks if a value is both a string and non-empty.

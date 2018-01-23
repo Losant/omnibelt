@@ -1,5 +1,10 @@
-const { compose, curryN } = require('ramda');
-const { flip } = require('lodash/fp');
-const { debounce } = require('lodash');
+import { compose, curryN } from 'ramda';
+import { flip } from 'lodash/fp';
+import { debounce as _debounce } from 'lodash';
 
-module.exports = compose(curryN(3), flip)(debounce);
+/**
+ * @signature Object -> Number -> Function -> Function
+ */
+const debounce = compose(curryN(3), flip)(_debounce);
+
+module.exports = debounce;

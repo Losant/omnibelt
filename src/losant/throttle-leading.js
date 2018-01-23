@@ -1,3 +1,8 @@
-const throttle = require('./throttle');
+import throttle from './throttle';
 
-module.exports = throttle({ trailing: false });
+/**
+ * @signature Number -> Function -> Function
+ */
+const throttleLeading = throttle({ trailing: false });
+
+module.exports = throttleLeading;

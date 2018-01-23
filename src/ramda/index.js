@@ -1,4 +1,4 @@
-const r = require('ramda');
+import r from 'ramda';
 
 module.exports = r.omit([
   'flip',

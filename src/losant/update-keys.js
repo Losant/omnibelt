@@ -1,6 +1,6 @@
-const { assoc } = require('ramda');
+import { assoc } from 'ramda';
 
-const updateKeysWith = require('./update-keys-with');
+import updateKeysWith from './update-keys-with';
 
 /**
  * Updates the key names for a given object according to the provided map of

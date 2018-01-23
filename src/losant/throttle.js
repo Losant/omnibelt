@@ -1,5 +1,10 @@
-const { compose, curryN } = require('ramda');
-const { flip } = require('lodash/fp');
-const { throttle } = require('lodash');
+import { compose, curryN } from 'ramda';
+import { flip } from 'lodash/fp';
+import { throttle as _throttle } from 'lodash';
 
-module.exports = compose(curryN(3), flip)(throttle);
+/**
+ * @signature Object -> Number -> Function -> Function
+ */
+const throttle = compose(curryN(3), flip)(_throttle);
+
+module.exports = throttle;

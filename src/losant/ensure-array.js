@@ -1,7 +1,7 @@
-const { ifElse } = require('ramda');
-const { isArrayLikeObject } = require('lodash/fp');
+import { ifElse } from 'ramda';
+import { isArrayLikeObject } from 'lodash/fp';
 
-const list = require('./list');
+import list from './list';
 
 /**
  * Takes a value of any type and returns an array. If the value is array-like
