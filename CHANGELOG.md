@@ -3,6 +3,8 @@
 Below should serve as an "upgrade guide" jumping off point as you are migrating projects to newer versions of this package. Ideally, interface changes will be called out specifically and one should not have to go sifting through git diffs to discern what changed.
 
 - `?.?.?` - *WIP*
+   - Removed methods:
+      - `indexBy` from Ramda has been omitted in favor of `keyBy`
 - `1.1.2`
    - Added methods:
       - `keyByWith`

@@ -7,4 +7,5 @@ module.exports = r.omit([
   'toUpper',
   'trim',
   'split',
+  'indexBy',
 ], r);
