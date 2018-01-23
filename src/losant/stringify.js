@@ -1,4 +1,5 @@
-const { __, curryN } = require('ramda');
+const __ = require('ramda/src/__');
+const curryN = require('ramda/src/curryN');
 
 const stringifyObject = require('stringify-object');
 

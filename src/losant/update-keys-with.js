@@ -1,4 +1,8 @@
-const { curry, prop, propOr, reduce, keys } = require('ramda');
+const curry = require('ramda/src/curry');
+const prop = require('ramda/src/prop');
+const propOr = require('ramda/src/propOr');
+const reduce = require('ramda/src/reduce');
+const keys = require('ramda/src/keys');
 
 /**
  * Updates the keys for an object using the provided function and a map of

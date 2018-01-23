@@ -1,5 +1,7 @@
-const { compose, curryN, flip } = require('ramda');
-const _ = require('lodash');
+const compose = require('ramda/src/compose');
+const curryN = require('ramda/src/curryN');
+const flip = require('ramda/src/flip');
+const _round = require('lodash/round');
 
 /**
  * Curried FP version of `lodash.round`
@@ -9,6 +11,6 @@ const _ = require('lodash');
  * @signature Number -> Number -> Number
  * @see lodash.round
  */
-const round = compose(flip, curryN(2))(_.round);
+const round = compose(flip, curryN(2))(_round);
 
 module.exports = round;

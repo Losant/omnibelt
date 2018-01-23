@@ -1,4 +1,5 @@
-const { countBy, identity } = require('ramda');
+const countBy = require('ramda/src/countBy');
+const identity = require('ramda/src/identity');
 
 /**
  * `countBy` the raw values in an array (`identity`). All values are

@@ -1,4 +1,6 @@
-const { mergeWith, concat, isArray } = require('lodash/fp');
+const mergeWith = require('lodash/fp/mergeWith');
+const concat = require('ramda/src/concat');
+const is = require('ramda/src/is');
 
 /**
  * A merge that also handles arrays.
@@ -23,7 +25,7 @@ const { mergeWith, concat, isArray } = require('lodash/fp');
 const mergeWithArrays =
   mergeWith(
     (x, y) => {
-      if (isArray(x)) { return concat(x, y); }
+      if (is(Array, x)) { return concat(x, y); }
       // return `undefined` so `mergeWith` does default
     }
   );

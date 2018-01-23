@@ -1,12 +1,17 @@
-const {
-  curry, converge, merge, identity, applySpec,
-} = require('ramda');
+const curry = require('ramda/src/curry');
+const converge = require('ramda/src/converge');
+const merge = require('ramda/src/merge');
+const identity = require('ramda/src/identity');
+const applySpec = require('ramda/src/applySpec');
 
-// TODO: TESTS
-// TODO: DOCS
+/**
+ * TODO: TESTS
+ * TODO: DOCS
+ *
+ * @signature Object a -> Object b -> Object a b
+ */
+const mergeSpec = curry((spec, data) =>
+  converge(merge, [identity, applySpec(spec)])(data)
+);
 
-// mergeSpec :: Object a => Object b -> Object a b
-const mergeSpec = curry((spec, data) => {
-  return converge(merge, [identity, applySpec(spec)])(data);
-});
 module.exports = mergeSpec;

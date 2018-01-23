@@ -1,4 +1,5 @@
-const { complement, anyPass } = require('ramda');
+const complement = require('ramda/src/complement');
+const anyPass = require('ramda/src/anyPass');
 
 /**
  * Takes a list of predicates and returns a predicate that returns true for a
