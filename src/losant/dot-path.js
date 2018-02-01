@@ -11,6 +11,10 @@ const contains = require('ramda/src/contains');
  * Gets a prop value using either a dot-separated path or a prop name.
  *
  * @signature String -> Object -> *
+ *
+ * @example
+ *   dotPath('a.b', { a: { b: 1 } }); // => 1
+ *   dotPath('foo', { foo: 'bar' }); // => 'bar'
  */
 const dotPath = curry((stringPath, obj) => {
   const propOrPath = cond([

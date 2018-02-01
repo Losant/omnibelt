@@ -8,6 +8,8 @@ const cases = [
   ['foo', { foo: 1 }, { foo: 2 }, false],
   ['a.b', { a: { b: 1 } }, { a: { b: 1 } }, true],
   ['a.b', { a: { b: 1 } }, { a: { b: 2 } }, false],
+  ['a', { a: [1, 2, 3] }, { a: [1, 2, 3] }, true],
+  ['a', { a: { b: [1, 2, 3] } }, { a: { b: [1, 2, 3] } }, false],
   ['a.b.c', { a: 'foo' }, { a: 'foo' }, true],
 ];
 

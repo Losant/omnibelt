@@ -12,7 +12,7 @@ const is = require('ramda/src/is');
  * @example
  *   equalsShallow({ a: 1 }, { a: 1 }); // true
  *   equalsShallow({ a: 1 }, { a: 2 }); // false
- *   equalsShallow({ a: { b: 1 } }, { a: { b: 2 } }); // true
+ *   equalsShallow({ a: { b: 1 } }, { a: { b: 1 } }); // false
  */
 const equalsShallow = curry((a, b) => {
   // Strict equality check.

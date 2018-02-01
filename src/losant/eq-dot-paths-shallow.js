@@ -13,6 +13,12 @@ const equalsShallow = require('./equals-shallow');
  * property values.
  *
  * @signature String -> Object -> Object -> Boolean
+ *
+ * @example
+ *   eqDotPathsShallow('foo', { foo: 1 }, { foo: 1 }); // => true
+ *   eqDotPathsShallow('foo', { foo: 1 }, { foo: 2 }); // => false
+ *   eqDotPathsShallow('a', { a: [1, 2, 3] }, { a: [1, 2, 3] }); // => true
+ *   eqDotPathsShallow('a', { a: { b: [1, 2, 3] } }, { a: { b: [1, 2, 3] } }); // false
  */
 const eqDotPathsShallow = curry((stringPath, a, b) =>
   pipe(
