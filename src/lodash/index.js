@@ -37,4 +37,5 @@ module.exports = pick([
   'escapeRegExp',
   'noop',
   'flip',
+  'toPlainObject',
 ], _);
