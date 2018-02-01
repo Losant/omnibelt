@@ -3,7 +3,7 @@ const isNil = require('ramda/src/isNil');
 const isEmpty = require('ramda/src/isEmpty');
 
 /**
- * Checks if a value is null, undefined, or an empty string.
+ * Checks if a value is null, undefined, an empty string, an empty object, an empty array.
  *
  * @signature * -> Boolean
  */
