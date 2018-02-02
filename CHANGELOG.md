@@ -4,6 +4,8 @@ Below should serve as an "upgrade guide" jumping off point as you are migrating 
 
 - `?.?.?` - *WIP*
    - All internal Losant utilities now only require the specific function(s) they need from `ramda`/`lodash`.
+   - Removed methods:
+      - `indexBy` from Ramda has been omitted in favor of `keyBy`
    - Added methods:
       - `dotPath`
       - `dotPathOr`

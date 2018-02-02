@@ -7,9 +7,9 @@ const curry = require('ramda/src/curry');
  * @signature Function -> Function -> Function -> *
  *
  * @example
- *    const logger = thunkify(console.log);
- *    const logFoo = logger('foo');
- *    logFoo(); // => 'foo'
+ *   const logger = thunkify(console.log);
+ *   const logFoo = logger('foo');
+ *   logFoo(); // => 'foo'
  */
 const thunkify = curry((fn, value) => () => fn(value));
 

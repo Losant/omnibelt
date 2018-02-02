@@ -11,7 +11,7 @@ const equals = require('ramda/src/equals');
  * @signature Array<* a> -> Array<* a> -> Boolean
  *
  * @example
- *     containsAll([1, 2, 3], [1, 2, 3, 4, 5]); // => true
+ *   containsAll([1, 2, 3], [1, 2, 3, 4, 5]); // => true
  */
 const containsAll = curry((smaller, larger) =>
   pipe(

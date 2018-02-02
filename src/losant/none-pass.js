@@ -12,13 +12,13 @@ const anyPass = require('ramda/src/anyPass');
  * @signature [(*... -> Boolean)] -> (*... -> Boolean)
  *
  * @example
- *     const isClub = propEq('suit', '♣');
- *     const isSpade = propEq('suit', '♠');
- *     const isRedCard = nonePass([isClub, isSpade]);
+ *   const isClub = propEq('suit', '♣');
+ *   const isSpade = propEq('suit', '♠');
+ *   const isRedCard = nonePass([isClub, isSpade]);
  *
- *     isRedCard({ rank: '10', suit: '♣' }); //=> false
- *     isRedCard({ rank: 'Q', suit: '♠' }); //=> false
- *     isRedCard({ rank: 'Q', suit: '♦' }); //=> true
+ *   isRedCard({ rank: '10', suit: '♣' }); //=> false
+ *   isRedCard({ rank: 'Q', suit: '♠' }); //=> false
+ *   isRedCard({ rank: 'Q', suit: '♦' }); //=> true
  */
 const nonePass = (predicates) => complement(anyPass(predicates));
 
