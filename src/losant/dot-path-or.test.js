@@ -1,4 +1,4 @@
-const { map, pathOr } = require('ramda');
+const { map } = require('ramda');
 
 const testHarness = require('./test-harness');
 const dotPathOr = require('./dot-path-or');
