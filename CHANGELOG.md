@@ -4,6 +4,8 @@ Below should serve as an "upgrade guide" jumping off point as you are migrating 
 
 - `?.?.?` - *WIP*
    - All internal losant utilities now only require the specific funtion they need from `ramda`/`lodash`.
+   - Removed methods:
+      - `indexBy` from Ramda has been omitted in favor of `keyBy`
    - Added methods:
       - `toPlainObject`
 - `1.1.2`
