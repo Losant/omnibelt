@@ -16,7 +16,7 @@ const updateKeysWith = require('./update-keys-with');
  * @signature { a: KeyPath } -> { a: * } -> { b: * }
  *
  * @example
- *     updateKeyPaths({ foo: ['params', 'bar'] }, { foo: 1 }); // => { params: { bar: 1 } }
+ *   updateKeyPaths({ foo: ['params', 'bar'] }, { foo: 1 }); // => { params: { bar: 1 } }
  */
 const updateKeyPaths = updateKeysWith(pipe(
   list,

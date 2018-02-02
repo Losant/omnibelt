@@ -10,12 +10,12 @@ const clamp = require('ramda/src/clamp');
  * @signature Number -> Number
  *
  * @example
- *     clampPositive(-1); // => 0
- *     clampPositive(0); // => 0
- *     clampPositive(20); // => 20
- *     clampPositive(-Infinity); // => 0
- *     clampPositive(Infinity); // => Infinity
- *     clampPositive(NaN); // => NaN
+ *   clampPositive(-1); // => 0
+ *   clampPositive(0); // => 0
+ *   clampPositive(20); // => 20
+ *   clampPositive(-Infinity); // => 0
+ *   clampPositive(Infinity); // => Infinity
+ *   clampPositive(NaN); // => NaN
  */
 const clampPositive = clamp(0, Infinity);
 
