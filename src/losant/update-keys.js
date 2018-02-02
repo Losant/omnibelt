@@ -11,7 +11,7 @@ const updateKeysWith = require('./update-keys-with');
  * @signature { a: KeyPath } -> { a: * } -> { b: * }
  *
  * @example
- *     updateKeys({ foo: 'bar' }, { foo: 1 }); // => { bar: 1 }
+ *   updateKeys({ foo: 'bar' }, { foo: 1 }); // => { bar: 1 }
  */
 const updateKeys = updateKeysWith(assoc);
 

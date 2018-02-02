@@ -7,7 +7,7 @@ const curry = require('ramda/src/curry');
  * @signature Function -> Array<*> -> Array<?Error, *>
  *
  * @example
- *     const [error, result] = tryCatchSafe(someFnThatMightThrow, [arg1, arg2]);
+ *   const [error, result] = tryCatchSafe(someFnThatMightThrow, [arg1, arg2]);
  */
 const tryCatchSafe = curry((tryFn, args) => {
   try {

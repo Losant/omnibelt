@@ -10,8 +10,8 @@ const tryCatchSafe = require('./try-catch-safe');
  * @signature * -> Array<?SyntaxError, *>
  *
  * @example
- *     const [error, result] = jsonParseSafe('{ "foo": "bar" }'); // => [null, { foo: 'bar' }]
- *     const [error, result] = jsonParseSafe('{'); // => [SyntaxError, null]
+ *   const [error, result] = jsonParseSafe('{ "foo": "bar" }'); // => [null, { foo: 'bar' }]
+ *   const [error, result] = jsonParseSafe('{'); // => [SyntaxError, null]
  */
 const jsonParseSafe = pipe(
   list,
