@@ -3,10 +3,15 @@
 Below should serve as an "upgrade guide" jumping off point as you are migrating projects to newer versions of this package. Ideally, interface changes will be called out specifically and one should not have to go sifting through git diffs to discern what changed.
 
 - `?.?.?` - *WIP*
-   - All internal losant utilities now only require the specific funtion they need from `ramda`/`lodash`.
+   - All internal Losant utilities now only require the specific function(s) they need from `ramda`/`lodash`.
    - Removed methods:
       - `indexBy` from Ramda has been omitted in favor of `keyBy`
    - Added methods:
+      - `dotPath`
+      - `dotPathOr`
+      - `eqDotPaths`
+      - `eqDotPathsShallow`
+      - `equalsShallow`
       - `toPlainObject`
 - `1.1.2`
    - Added methods:
