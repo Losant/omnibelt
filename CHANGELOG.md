@@ -6,6 +6,7 @@ Below should serve as an "upgrade guide" jumping off point as you are migrating 
    - All internal Losant utilities now only require the specific function(s) they need from `ramda`/`lodash`.
    - Added methods:
       - `dotPath`
+      - `dotPathOr`
       - `eqDotPaths`
       - `eqDotPathsShallow`
       - `equalsShallow`
