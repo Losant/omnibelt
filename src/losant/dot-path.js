@@ -1,28 +1,21 @@
-const T = require('ramda/src/T');
-const curry = require('ramda/src/curry');
-const pipe = require('ramda/src/pipe');
-const prop = require('ramda/src/prop');
+const curryN = require('ramda/src/curryN');
+const useWith = require('ramda/src/useWith');
 const path = require('ramda/src/path');
-const cond = require('ramda/src/cond');
 const split = require('ramda/src/split');
-const contains = require('ramda/src/contains');
 
 /**
- * Gets a prop value using either a dot-separated path or a prop name.
+ * Gets a prop value using a dot-separated path composed of any combination of prop names
+ * and/or array indices.
  *
  * @signature String -> Object -> *
  *
  * @example
  *   dotPath('a.b', { a: { b: 1 } }); // => 1
  *   dotPath('foo', { foo: 'bar' }); // => 'bar'
+ *   dotPath('a.0', { a: [1, 2, 3] }); // => 1
+ *   dotPath('0', ['foo', 'bar']); // => 'foo'
+ *   dotPath('0.0', [[1, 2, 3]]); // => 1
  */
-const dotPath = curry((stringPath, obj) => {
-  const propOrPath = cond([
-    [contains('.'), pipe(split('.'), path)],
-    [T, prop],
-  ])(stringPath);
-
-  return propOrPath(obj);
-});
+const dotPath = curryN(2, useWith(path, [split('.')]));
 
 module.exports = dotPath;
