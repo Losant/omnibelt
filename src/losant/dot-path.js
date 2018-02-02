@@ -1,5 +1,5 @@
-const curryN = require('ramda/src/curryN');
 const useWith = require('ramda/src/useWith');
+const identity = require('ramda/src/identity');
 const path = require('ramda/src/path');
 const split = require('ramda/src/split');
 
@@ -16,6 +16,6 @@ const split = require('ramda/src/split');
  *   dotPath('0', ['foo', 'bar']); // => 'foo'
  *   dotPath('0.0', [[1, 2, 3]]); // => 1
  */
-const dotPath = curryN(2, useWith(path, [split('.')]));
+const dotPath = useWith(path, [split('.'), identity]);
 
 module.exports = dotPath;
