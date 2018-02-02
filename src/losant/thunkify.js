@@ -1,4 +1,4 @@
-const { curry } = require('ramda');
+const curry = require('ramda/src/curry');
 
 /**
  * Takes a function and returns a function that takes any number of arguments

@@ -1,5 +1,6 @@
-const { upperFirst, camelCase } = require('lodash/fp');
-const { compose } = require('ramda');
+const compose = require('ramda/src/compose');
+const upperFirst = require('lodash/fp/upperFirst');
+const camelCase = require('lodash/fp/camelCase');
 
 /**
  * Upper-first-camelcase-ify
@@ -11,4 +12,5 @@ const { compose } = require('ramda');
  *   upperCamelCase('foo_bar_baz') // => 'FooBarBaz'
  */
 const upperCamelCase = compose(upperFirst, camelCase);
+
 module.exports = upperCamelCase;

@@ -1,4 +1,5 @@
-const { is, allPass } = require('ramda');
+const is = require('ramda/src/is');
+const allPass = require('ramda/src/allPass');
 
 const isNotEmpty = require('./is-not-empty');
 

@@ -1,6 +1,4 @@
-const { is } = require('ramda');
-
-// TODO: TESTS
+const is = require('ramda/src/is');
 
 /**
  * Takes an error and immediately throws it. Useful for throwing an error when
@@ -8,6 +6,8 @@ const { is } = require('ramda');
  * function to throw it. If the given error is not a Error instance then it
  * will be used as the error message and a new Error instance will be created
  * and then thrown.
+ *
+ * TODO: TESTS
  *
  * @signature Error | String -> void
  *
