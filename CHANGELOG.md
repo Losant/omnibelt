@@ -13,6 +13,10 @@ Below should serve as an "upgrade guide" jumping off point as you are migrating 
       - `eqDotPathsShallow`
       - `equalsShallow`
       - `toPlainObject`
+      - `mapFilter`
+      - `filterMap`
+      - `mapRejectNil`
+      - `rejectNilMap`
 - `1.1.2`
    - Added methods:
       - `keyByWith`
