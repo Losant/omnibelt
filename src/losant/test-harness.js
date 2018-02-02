@@ -1,6 +1,8 @@
+const apply = require('ramda/src/apply');
 const pipe = require('ramda/src/pipe');
 const curry = require('ramda/src/curry');
 const map = require('ramda/src/map');
+const ensureArray = require('./ensure-array');
 
 const format = require('./format');
 const stringify = require('./stringify');
@@ -11,13 +13,19 @@ const stringify = require('./stringify');
 // TODO: Write README entry for this?
 // NOTE: This assumes Jest, but may work with Mocha/Chai.
 // NOTE: See `string-to-boolean` tests for example usage.
+// testHarness :: Function -> [*] -> *
 const testHarness = curry((func, subj, expected) => {
   it(
     pipe(
       map(stringify),
       format('{subj} ==> {expected}'),
     )({ subj, expected }),
-    () => expect(func(subj)).toEqual(expected),
+    () => {
+      subj = ensureArray(subj);
+      expect(
+        apply(func, subj)
+      ).toEqual(expected);
+    },
   );
 });
 
