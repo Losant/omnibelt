@@ -13,6 +13,10 @@ Below should serve as an "upgrade guide" jumping off point as you are migrating 
       - `eqDotPathsShallow`
       - `equalsShallow`
       - `toPlainObject`
+      - `defer`
+      - `noopAsync`
+      - `resolveProps`
+      - `timeout`
 - `1.1.2`
    - Added methods:
       - `keyByWith`
