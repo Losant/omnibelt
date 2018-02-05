@@ -11,7 +11,7 @@ const defer = require('./defer');
  * NOTE: this does NOT cancel the original promise.
  *
  * REASONING: we are trying to no longer use libraries that create their own "Promise"
- * classes with special methods - i.e., we want to treat everything like a native promise
+ * classes with special methods (q/bluebird) - i.e., we want to treat everything like a native promise
  *
  * @signature Number -> Promise<*> -> Promise<*>
  */

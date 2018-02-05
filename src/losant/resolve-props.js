@@ -7,6 +7,9 @@ const { map, keys } = require('ramda');
  *
  * Similar to http://bluebirdjs.com/docs/api/promise.props.html
  *
+ * REASONING: we are trying to no longer use libraries that create their own "Promise"
+ * classes with special methods (q/bluebird) - i.e., we want to treat everything like a native promise
+ *
  * @signature Object -> Promise<Object>
  */
 const resolveProps = async (obj) => {
