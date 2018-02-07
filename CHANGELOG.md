@@ -19,6 +19,10 @@ Below should serve as an "upgrade guide" jumping off point as you are migrating 
       - `filterMap`
       - `mapRejectNil`
       - `rejectNilMap`
+      - `defer`
+      - `noopAsync`
+      - `resolveProps`
+      - `timeout`
 - `1.1.2`
    - Added methods:
       - `keyByWith`
