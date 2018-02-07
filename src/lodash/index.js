@@ -13,6 +13,7 @@ module.exports = pick([
   'escape',
   'escapeRegExp',
   'flip',
+  'forEach',
   'isArrayLike',
   'isNull',
   'isUndefined',
