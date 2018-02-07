@@ -4,6 +4,8 @@ Below should serve as an "upgrade guide" jumping off point as you are migrating 
 
 - `?.?.?` - *WIP*
    - All internal Losant utilities now only require the specific function(s) they need from `ramda`/`lodash`.
+   - The following methods are now pulled from Lodash instead of Ramda:
+      - `forEach`: Note that `forEachObjIndexed` still comes from ramda (behaves as expected)
    - Removed methods:
       - `indexBy` from Ramda has been omitted in favor of `keyBy`
       - `parseInt` from Lodash has been omitted because it conflicts poorly with native
