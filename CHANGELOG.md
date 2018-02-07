@@ -6,13 +6,19 @@ Below should serve as an "upgrade guide" jumping off point as you are migrating 
    - All internal Losant utilities now only require the specific function(s) they need from `ramda`/`lodash`.
    - Removed methods:
       - `indexBy` from Ramda has been omitted in favor of `keyBy`
+      - `parseInt` from Lodash has been omitted because it conflicts poorly with native
    - Added methods:
       - `dotPath`
       - `dotPathOr`
       - `eqDotPaths`
       - `eqDotPathsShallow`
       - `equalsShallow`
-      - `toPlainObject`
+      - `toPlainObject` (Lodash)
+      - `toNumber` (Lodash)
+      - `mapFilter`
+      - `filterMap`
+      - `mapRejectNil`
+      - `rejectNilMap`
       - `defer`
       - `noopAsync`
       - `resolveProps`
