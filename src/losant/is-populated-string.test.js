@@ -1,6 +1,6 @@
 const { map, apply } = require('ramda');
 
-const testHarness = require('./test-harness');
+const testHarnessUnary = require('./test-harness-unary');
 const isPopulatedString = require('./is-populated-string');
 
 const cases = [
@@ -14,5 +14,5 @@ const cases = [
 ];
 
 map(
-  apply(testHarness(isPopulatedString))
+  apply(testHarnessUnary(isPopulatedString))
 )(cases);

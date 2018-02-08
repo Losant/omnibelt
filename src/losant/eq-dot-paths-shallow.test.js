@@ -1,6 +1,6 @@
 const { map } = require('ramda');
 
-const testHarness = require('./test-harness');
+const testHarnessUnary = require('./test-harness-unary');
 const eqDotPathsShallow = require('./eq-dot-paths-shallow');
 
 const cases = [
@@ -16,7 +16,7 @@ const cases = [
 const testHarnessAdapter = (testCase) => {
   const [stringPath, objA, objB, expectedResult] = testCase;
 
-  return testHarness(eqDotPathsShallow(stringPath, objA), objB, expectedResult);
+  return testHarnessUnary(eqDotPathsShallow(stringPath, objA), objB, expectedResult);
 };
 
 map(testHarnessAdapter)(cases);

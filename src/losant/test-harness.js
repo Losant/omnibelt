@@ -1,23 +1,34 @@
-const pipe = require('ramda/src/pipe');
 const curry = require('ramda/src/curry');
 const map = require('ramda/src/map');
+const always = require('ramda/src/always');
+const when = require('ramda/src/when');
+const compose = require('ramda/src/compose');
+const evolve = require('ramda/src/evolve');
+const is = require('ramda/src/is');
 
 const format = require('./format');
 const stringify = require('./stringify');
 
-// TODO: `subj` could take an array and support a lot more interfaces... that starts
-//       down the road toward a testing framework on top of jest though.
 // TODO: Write tests for this?
 // TODO: Write README entry for this?
-// NOTE: This assumes Jest, but may work with Mocha/Chai.
 // NOTE: See `string-to-boolean` tests for example usage.
-const testHarness = curry((func, subj, expected) => {
+
+const testCaseToString = compose(
+  format('[{args}] ==> {expected}'),
+  evolve({
+    args: map(compose(
+      stringify,
+      when(is(Function), always('[Function]')),
+    )),
+    expected: stringify,
+  }),
+);
+
+// testHarness :: Function -> [*] -> *
+const testHarness = curry((fn, args, expected) => {
   it(
-    pipe(
-      map(stringify),
-      format('{subj} ==> {expected}'),
-    )({ subj, expected }),
-    () => expect(func(subj)).toEqual(expected),
+    testCaseToString({ args, expected }),
+    () => expect(fn(...args)).toEqual(expected),
   );
 });
 

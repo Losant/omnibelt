@@ -2,7 +2,7 @@ const {
   map, apply,
 } = require('ramda');
 
-const testHarness = require('./test-harness');
+const testHarnessUnary = require('./test-harness-unary');
 const stringToBoolean = require('./string-to-boolean');
 
 const cases = [
@@ -25,5 +25,5 @@ const cases = [
 ];
 
 map(
-  apply(testHarness(stringToBoolean))
+  apply(testHarnessUnary(stringToBoolean))
 )(cases);

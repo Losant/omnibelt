@@ -1,6 +1,6 @@
 const { pipe, map, apply, adjust, equals, is } = require('ramda');
 
-const testHarness = require('./test-harness');
+const testHarnessUnary = require('./test-harness-unary');
 const nonePass = require('./none-pass');
 
 const isFoo = equals('foo');
@@ -29,7 +29,7 @@ const testHarnessAdapter = ({ label, cases }) => {
   describe(label, () => {
     return map(pipe(
       adjust(nonePass, 0),
-      apply(testHarness),
+      apply(testHarnessUnary),
     ), cases);
   });
 };

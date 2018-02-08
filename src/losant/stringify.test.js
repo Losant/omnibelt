@@ -1,6 +1,6 @@
 const { map, apply } = require('ramda');
 
-const testHarness = require('./test-harness');
+const testHarnessUnary = require('./test-harness-unary');
 const stringify = require('./stringify');
 
 const cases = [
@@ -15,5 +15,5 @@ const cases = [
 ];
 
 map(
-  apply(testHarness(stringify))
+  apply(testHarnessUnary(stringify))
 )(cases);

@@ -1,6 +1,6 @@
 const { map } = require('ramda');
 
-const testHarness = require('./test-harness');
+const testHarnessUnary = require('./test-harness-unary');
 const mapFilter = require('./map-filter');
 
 const cases = [
@@ -23,7 +23,7 @@ const testHarnessAdapter = ({ label, cases }) => {
 
     const func = mapFilter(predicate, transform);
 
-    return testHarness(func, input, expected);
+    return testHarnessUnary(func, input, expected);
   };
 
   describe(label, () => {
