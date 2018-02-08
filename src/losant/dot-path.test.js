@@ -1,6 +1,6 @@
 const { pipe, map, apply, adjust } = require('ramda');
 
-const testHarnessUnary = require('./test-harness-unary');
+const testHarnessUnary = require('../../test/test-harness-unary');
 const dotPath = require('./dot-path');
 
 const testObj = {

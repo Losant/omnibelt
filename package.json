@@ -12,7 +12,7 @@
   "scripts": {
     "preinstall": "losant-scripts force-yarn 2> /dev/null || npx @losant/scripts force-yarn",
     "reinstall": "rm -rf node_modules && yarn install",
-    "lint": "esw *.js src",
+    "lint": "esw *.js src test",
     "lint:fix": "yarn lint --fix",
     "lint:watch": "yarn lint --watch",
     "lint:staged": "lint-staged",

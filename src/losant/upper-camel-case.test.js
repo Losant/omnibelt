@@ -1,5 +1,5 @@
 const { map, apply } = require('ramda');
-const testHarnessUnary = require('./test-harness-unary');
+const testHarnessUnary = require('../../test/test-harness-unary');
 const upperCamelCase = require('./upper-camel-case');
 
 const cases = [

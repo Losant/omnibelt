@@ -1,13 +1,8 @@
-const curry = require('ramda/src/curry');
-const map = require('ramda/src/map');
-const always = require('ramda/src/always');
-const when = require('ramda/src/when');
-const compose = require('ramda/src/compose');
-const evolve = require('ramda/src/evolve');
-const is = require('ramda/src/is');
-
-const format = require('./format');
-const stringify = require('./stringify');
+const {
+  curry, map, always, when, compose, evolve, is,
+} = require('ramda');
+const format = require('../src/losant/format');
+const stringify = require('../src/losant/stringify');
 
 // TODO: Write tests for this?
 // TODO: Write README entry for this?
