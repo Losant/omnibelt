@@ -1,6 +1,6 @@
 const { map, apply } = require('ramda');
 
-const testHarness = require('./test-harness');
+const testHarnessUnary = require('../../test/test-harness-unary');
 const ensureArray = require('./ensure-array');
 
 const getFunctionArguments = () => {
@@ -33,5 +33,5 @@ const cases = [
 ];
 
 map(
-  apply(testHarness(ensureArray))
+  apply(testHarnessUnary(ensureArray))
 )(cases);

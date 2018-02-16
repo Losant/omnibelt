@@ -5,6 +5,7 @@ module.exports = r.omit([
   'forEach',
   'indexBy',
   'split',
+  'tap',
   'toLower',
   'toString',
   'toUpper',

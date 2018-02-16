@@ -1,15 +1,18 @@
-const { map, apply } = require('ramda');
-
-const testHarness = require('./test-harness');
+const testCases = require('../../test/test-cases');
 const count = require('./count');
 
-const cases = [
-  [[1, 1, 2], { '1': 2, '2': 1 }],
-  [['a', 'b', 'a'], { 'a': 2, 'b': 1 }],
+testCases(count, [
+  [
+    [[1, 1, 2]],
+    { '1': 2, '2': 1 }
+  ],
+  [
+    [['a', 'b', 'a']],
+    { 'a': 2, 'b': 1 }
+  ],
   // NOTE: This is just to show not to do this
-  [[{ a: 'a' }, { b: 'b' }, { a: 'a' }], { '[object Object]': 3 }],
-];
-
-map(
-  apply(testHarness(count))
-)(cases);
+  [
+    [[{ a: 'a' }, { b: 'b' }, { a: 'a' }]],
+    { '[object Object]': 3 }
+  ],
+]);

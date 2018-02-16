@@ -3,10 +3,18 @@
 Below should serve as an "upgrade guide" jumping off point as you are migrating projects to newer versions of this package. Ideally, interface changes will be called out specifically and one should not have to go sifting through git diffs to discern what changed.
 
 - `?.?.?` - *WIP*
+   - ⬆️ Ramda upgrade to `0.25.0`. Upgrade guide [here](https://github.com/ramda/ramda/issues/2319).
+   - `tap` has been omitted from Ramda and implemented in this project to work around new version.
    - Added methods:
       - `hasPath`
       - `mergeDeepWithArrays`
       - `toInteger` (Lodash)
+   - Remove methods:
+      - `testHarness`: Now is not exported as part of this library and is only used internally
+   - Internal changes:
+      - `test*` methods have been moved to `test/` and are only for internal use.
+      - `testHarness` has been updated with a new interface. `testHarnessUnary` is still around for backwards compatibility.
+      - `testCases` now exists to eliminate a common pattern when using `testHarness`.
 - `1.1.3`
    - All internal Losant utilities now only require the specific function(s) they need from `ramda`/`lodash`.
    - The following methods are now pulled from Lodash instead of Ramda:

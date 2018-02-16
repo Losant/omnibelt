@@ -1,6 +1,6 @@
 const { map, apply } = require('ramda');
 
-const testHarness = require('./test-harness');
+const testHarnessUnary = require('../../test/test-harness-unary');
 const updateKeyPaths = require('./update-key-paths');
 
 const updateFooKeyPath = updateKeyPaths({ foo: ['params', 'bar'] });
@@ -10,5 +10,5 @@ const cases = [
 ];
 
 map(
-  apply(testHarness(updateFooKeyPath))
+  apply(testHarnessUnary(updateFooKeyPath))
 )(cases);
