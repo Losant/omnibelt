@@ -1,6 +1,6 @@
 const { pipe, map, apply, adjust } = require('ramda');
 
-const testHarness = require('./test-harness');
+const testHarnessUnary = require('../../test/test-harness-unary');
 const ensureStartsWith = require('./ensure-starts-with');
 
 const cases = [
@@ -13,7 +13,7 @@ const cases = [
 
 const testHarnessAdapter = pipe(
   adjust(ensureStartsWith, 0),
-  apply(testHarness),
+  apply(testHarnessUnary),
 );
 
 map(testHarnessAdapter)(cases);

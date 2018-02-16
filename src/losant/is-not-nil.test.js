@@ -1,6 +1,6 @@
 const { map, apply } = require('ramda');
 
-const testHarness = require('./test-harness');
+const testHarnessUnary = require('../../test/test-harness-unary');
 const isNotNil = require('./is-not-nil');
 
 const cases = [
@@ -14,5 +14,5 @@ const cases = [
 ];
 
 map(
-  apply(testHarness(isNotNil))
+  apply(testHarnessUnary(isNotNil))
 )(cases);

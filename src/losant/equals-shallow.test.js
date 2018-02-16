@@ -1,6 +1,6 @@
 const { pipe, map, apply, adjust } = require('ramda');
 
-const testHarness = require('./test-harness');
+const testHarnessUnary = require('../../test/test-harness-unary');
 const equalsShallow = require('./equals-shallow');
 
 const getTestDate = () => new Date(2017, 1, 1);
@@ -31,7 +31,7 @@ const cases = [
 
 const testHarnessAdapter = pipe(
   adjust(equalsShallow, 0),
-  apply(testHarness),
+  apply(testHarnessUnary),
 );
 
 map(testHarnessAdapter)(cases);
