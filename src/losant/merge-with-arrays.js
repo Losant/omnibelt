@@ -1,9 +1,12 @@
-const mergeWith = require('lodash/fp/mergeWith');
-const concat = require('ramda/src/concat');
-const is = require('ramda/src/is');
+const mergeDeepWithArrays = require('./merge-deep-with-arrays');
 
 /**
  * A merge that also handles arrays.
+ *
+ * @deprecated
+ * This a deep merge, but our regular `merge` function is a shallow merge, so this has
+ * been renamed to `mergeDeepWithArrays`. Leaving an alias here temporarily until we can
+ * make sure we update any instances where we're using `mergeWithArrays`.
  *
  * @signature Object -> Object -> Object
  *
@@ -22,12 +25,6 @@ const is = require('ramda/src/is');
  *   //   baz: true,
  *   // }
  */
-const mergeWithArrays =
-  mergeWith(
-    (x, y) => {
-      if (is(Array, x)) { return concat(x, y); }
-      // return `undefined` so `mergeWith` does default
-    }
-  );
+const mergeWithArrays = mergeDeepWithArrays;
 
 module.exports = mergeWithArrays;

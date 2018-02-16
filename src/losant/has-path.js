@@ -26,3 +26,5 @@ const hasPath = curry((pathList, obj) => {
 
   return hasPath(nextPathList, nextObj);
 });
+
+module.exports = hasPath;
