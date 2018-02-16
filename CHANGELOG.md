@@ -4,6 +4,8 @@ Below should serve as an "upgrade guide" jumping off point as you are migrating 
 
 - `?.?.?` - *WIP*
    - Added methods:
+      - `hasPath`
+      - `mergeDeepWithArrays`
       - `toInteger` (Lodash)
 - `1.1.3`
    - All internal Losant utilities now only require the specific function(s) they need from `ramda`/`lodash`.
