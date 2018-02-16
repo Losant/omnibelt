@@ -1,6 +1,6 @@
 const { map, apply } = require('ramda');
 
-const testHarness = require('./test-harness');
+const testHarnessUnary = require('../../test/test-harness-unary');
 const isNot = require('./is-not');
 
 const caseSections = [
@@ -43,7 +43,7 @@ caseSections.forEach((section) => {
 
   describe(`is not ${typeCtor.name}`, () => {
     map(
-      apply(testHarness(isNot(typeCtor)))
+      apply(testHarnessUnary(isNot(typeCtor)))
     )(cases);
   });
 });

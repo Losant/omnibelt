@@ -1,6 +1,6 @@
 const { map, apply } = require('ramda');
 
-const testHarness = require('./test-harness');
+const testHarnessUnary = require('../../test/test-harness-unary');
 const clampPositive = require('./clamp-positive');
 
 const cases = [
@@ -16,5 +16,5 @@ const cases = [
 ];
 
 map(
-  apply(testHarness(clampPositive))
+  apply(testHarnessUnary(clampPositive))
 )(cases);

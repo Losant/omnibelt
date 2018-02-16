@@ -1,12 +1,12 @@
 const { pipe, unary, map, prop, always, tryCatch } = require('ramda');
 
-const testHarness = require('./test-harness');
+const testHarnessUnary = require('../../test/test-harness-unary');
 const keyByWith = require('./key-by-with');
 
 const testHarnessAdapter = (obj) => {
   const { list, keyFn, valueFn, expectedResult } = obj;
 
-  testHarness(keyByWith(keyFn, valueFn), list, expectedResult);
+  testHarnessUnary(keyByWith(keyFn, valueFn), list, expectedResult);
 };
 
 const cases = [
