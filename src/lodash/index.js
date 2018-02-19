@@ -4,7 +4,7 @@ const _ = require('lodash/fp');
 // TODO: Maybe grab these methods from individual packages
 
 // NOTES: when deconstructing, parseInt conflicts poorly with native parseInt
-// so for now, just use native parseInt, or toNumber
+// so for now, just use native parseInt, or toInteger
 module.exports = pick([
   'camelCase',
   'capitalize',
@@ -31,6 +31,7 @@ module.exports = pick([
   'snakeCase',
   'split',
   'startCase',
+  'toInteger',
   'toLower',
   'toNumber',
   'toPlainObject',

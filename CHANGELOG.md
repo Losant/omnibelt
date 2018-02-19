@@ -5,6 +5,8 @@ Below should serve as an "upgrade guide" jumping off point as you are migrating 
 - `?.?.?` - *WIP*
    - ⬆️ Ramda upgrade to `0.25.0`. Upgrade guide [here](https://github.com/ramda/ramda/issues/2319).
    - `tap` has been omitted from Ramda and implemented in this project to work around new version.
+   - Added methods:
+      - `toInteger` (Lodash)
    - Remove methods:
       - `testHarness`: Now is not exported as part of this library and is only used internally
    - Internal changes:
