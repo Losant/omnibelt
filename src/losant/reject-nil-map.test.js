@@ -17,8 +17,8 @@ const cases = [
         [null, 1, 2, undefined, 1, 4, 0, '', false],
         [undefined, 'a2', undefined, null, 'a0', 'a', 'afalse']
       ]
-    ],
-  },
+    ]
+  }
 ];
 
 const testHarnessAdapter = ({ label, cases }) => {

@@ -5,7 +5,7 @@ const isNotEmpty = require('./is-not-empty');
 
 const cases = [
   ['', false],
-  ['foo', true],
+  ['foo', true]
 ];
 
 map(

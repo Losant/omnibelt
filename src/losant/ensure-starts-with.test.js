@@ -8,7 +8,7 @@ const cases = [
   ['foo', 'bar', 'foobar'],
   [[1], [1, 2, 3], [1, 2, 3]],
   [[1], [2, 3], [1, 2, 3]],
-  [[1, 2], [3], [1, 2, 3]],
+  [[1, 2], [3], [1, 2, 3]]
 ];
 
 const testHarnessAdapter = pipe(

@@ -29,7 +29,7 @@ const cases = [
   [false, [false]],
   [null, [null]],
   [dateNow, [dateNow]],
-  [symbolFoo, [symbolFoo]],
+  [symbolFoo, [symbolFoo]]
 ];
 
 map(

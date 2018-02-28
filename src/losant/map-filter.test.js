@@ -13,8 +13,8 @@ const cases = [
         [0, 1, 2, 3, 4],
         [2, 4]
       ]
-    ],
-  },
+    ]
+  }
 ];
 
 const testHarnessAdapter = ({ label, cases }) => {

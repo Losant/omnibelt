@@ -10,7 +10,7 @@ const cases = [
   [5, false],
   [false, false],
   [{ foo: 'foo' }, false],
-  [[ 'foo' ], false],
+  [[ 'foo' ], false]
 ];
 
 map(

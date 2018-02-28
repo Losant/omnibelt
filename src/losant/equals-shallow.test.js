@@ -26,7 +26,7 @@ const cases = [
   [new TestDataStructure('a'), new TestDataStructure('b'), false],
   [null, null, true],
   [undefined, undefined, true],
-  [null, undefined, false],
+  [null, undefined, false]
 ];
 
 const testHarnessAdapter = pipe(

@@ -1,5 +1,5 @@
 const {
-  compose, subtract, __, curry,
+  compose, subtract, __, curry
 } = require('ramda');
 const present = require('present');
 const round = require('./round');

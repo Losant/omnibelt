@@ -12,7 +12,7 @@ const cases = [
   [NaN, NaN],
   ['1', '1'],
   ['-1', 0],
-  ['foo', 'foo'],
+  ['foo', 'foo']
 ];
 
 map(

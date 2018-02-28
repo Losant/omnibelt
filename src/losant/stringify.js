@@ -16,7 +16,7 @@ const stringifyObject = require('stringify-object');
  */
 const stringify = curryN(2, stringifyObject)(__, {
   indent: '  ',
-  inlineCharacterLimit: 50,
+  inlineCharacterLimit: 50
 });
 
 module.exports = stringify;

@@ -1,5 +1,5 @@
 const {
-  curry, map, pipe,
+  curry, map, pipe
 } = require('ramda');
 const format = require('../src/losant/format');
 const stringify = require('../src/losant/stringify');

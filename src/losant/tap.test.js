@@ -4,7 +4,7 @@ const testCases = require('../../test/test-cases');
 const tap = require('./tap');
 
 testCases(tap, [
-  [[() => 'bar', 'foo'], 'foo'],
+  [[() => 'bar', 'foo'], 'foo']
 ]);
 
 it('Side effects happen', () => {

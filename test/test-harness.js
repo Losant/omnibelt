@@ -1,5 +1,5 @@
 const {
-  curry, map, always, when, compose, evolve, is,
+  curry, map, always, when, compose, evolve, is
 } = require('ramda');
 const format = require('../src/losant/format');
 const stringify = require('../src/losant/stringify');
@@ -15,7 +15,7 @@ const testCaseToString = compose(
       stringify,
       when(is(Function), always('[Function]')),
     )),
-    expected: stringify,
+    expected: stringify
   }),
 );
 
