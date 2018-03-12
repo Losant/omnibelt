@@ -1,6 +1,6 @@
 const { map, apply } = require('ramda');
 
-const testHarnessUnary = require('../../test/test-harness-unary');
+const testHarnessUnary = require('./test-harness-unary');
 const updateKeyPaths = require('./update-key-paths');
 
 const updateFooKeyPath = updateKeyPaths({ foo: ['params', 'bar'] });

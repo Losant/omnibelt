@@ -1,8 +1,8 @@
 const {
   curry, compose, evolve, map
 } = require('ramda');
-const format = require('../src/losant/format');
-const stringify = require('../src/losant/stringify');
+const format = require('./format');
+const stringify = require('./stringify');
 
 // TODO: Write tests for this?
 // TODO: Write README entry for this?

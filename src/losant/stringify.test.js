@@ -1,5 +1,5 @@
 const { noop } = require('lodash/fp');
-const testCases = require('../../test/test-cases');
+const testCases = require('./test-cases');
 const stringify = require('./stringify');
 
 testCases(stringify, [

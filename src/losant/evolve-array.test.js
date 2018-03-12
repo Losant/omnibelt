@@ -1,5 +1,5 @@
 const { inc, dec, identity } = require('ramda');
-const testCases = require('../../test/test-cases');
+const testCases = require('./test-cases');
 const evolveArray = require('./evolve-array');
 
 testCases(evolveArray, [
