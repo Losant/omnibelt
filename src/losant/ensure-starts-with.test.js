@@ -1,6 +1,6 @@
 const { pipe, map, apply, adjust } = require('ramda');
 
-const testHarnessUnary = require('../../test/test-harness-unary');
+const testHarnessUnary = require('./test-harness-unary');
 const ensureStartsWith = require('./ensure-starts-with');
 
 const cases = [
@@ -8,7 +8,7 @@ const cases = [
   ['foo', 'bar', 'foobar'],
   [[1], [1, 2, 3], [1, 2, 3]],
   [[1], [2, 3], [1, 2, 3]],
-  [[1, 2], [3], [1, 2, 3]],
+  [[1, 2], [3], [1, 2, 3]]
 ];
 
 const testHarnessAdapter = pipe(

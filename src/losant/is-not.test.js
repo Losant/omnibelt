@@ -1,41 +1,41 @@
 const { map, apply } = require('ramda');
 
-const testHarnessUnary = require('../../test/test-harness-unary');
+const testHarnessUnary = require('./test-harness-unary');
 const isNot = require('./is-not');
 
 const caseSections = [
   [Object, [
     ['', true],
-    [{}, false],
+    [{}, false]
   ]],
   [Array, [
     ['', true],
-    [[], false],
+    [[], false]
   ]],
   [String, [
     [null, true],
-    ['', false],
+    ['', false]
   ]],
   [Number, [
     ['', true],
-    [1, false],
+    [1, false]
   ]],
   [Boolean, [
     ['', true],
-    [true, false],
+    [true, false]
   ]],
   [Function, [
     ['', true],
-    [function() {}, false],
+    [function() {}, false]
   ]],
   [Symbol, [
     ['', true],
-    [Symbol('foo'), false],
+    [Symbol('foo'), false]
   ]],
   [Date, [
     ['', true],
-    [new Date(), false],
-  ]],
+    [new Date(), false]
+  ]]
 ];
 
 caseSections.forEach((section) => {

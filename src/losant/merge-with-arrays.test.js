@@ -7,26 +7,26 @@ describe('mergeWithArrays', () => {
       foo: [1, 2, 3],
       bar: {
         a: 'a',
-        c: 1,
+        c: 1
       },
-      a: 3,
+      a: 3
     };
     const y = {
       foo: [4],
       bar: {
         a: 'new',
-        b: 'b',
+        b: 'b'
       },
-      a: 4,
+      a: 4
     };
     const expected = {
       foo: [1, 2, 3, 4],
       bar: {
         a: 'new',
         b: 'b',
-        c: 1,
+        c: 1
       },
-      a: 4,
+      a: 4
     };
 
     expect(

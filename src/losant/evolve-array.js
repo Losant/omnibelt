@@ -5,11 +5,10 @@ const call = require('ramda/src/call');
  * Applies an array of transform functions to an array of values, with each
  * transform being applied to the value that has the same index.
  *
- * TODO: TESTS
- *
- * @signature [a -> b] -> [a] -> [b]
+ * @signature [a] -> [b] -> [a(b)]
  *
  * @example
+ *   evolveArray([[identity, identity, identity], [2, 2, 2]]); // [2, 2, 2]
  *   evolveArray([inc, dec], [10, 20]); // => [11, 19]
  *   evolveArray([add(2), subtract(5), divide(3)], [10, 20, 30]); // => [12, 15, 10]
  */

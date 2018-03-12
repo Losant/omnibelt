@@ -1,8 +1,8 @@
 const {
-  curry, map, pipe,
+  curry, map, pipe
 } = require('ramda');
-const format = require('../src/losant/format');
-const stringify = require('../src/losant/stringify');
+const format = require('./format');
+const stringify = require('./stringify');
 
 // TODO: REMOVE THIS! This has been deprecated!
 //       See `test-harness` for its successor (and `test-cases`)

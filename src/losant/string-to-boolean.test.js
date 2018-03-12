@@ -1,8 +1,8 @@
 const {
-  map, apply,
+  map, apply
 } = require('ramda');
 
-const testHarnessUnary = require('../../test/test-harness-unary');
+const testHarnessUnary = require('./test-harness-unary');
 const stringToBoolean = require('./string-to-boolean');
 
 const cases = [
@@ -21,7 +21,7 @@ const cases = [
   ['', false],
   ['sdlkfj_true_lsdkjf', false],
   [null, false],
-  [undefined, false],
+  [undefined, false]
 ];
 
 map(

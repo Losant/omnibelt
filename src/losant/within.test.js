@@ -1,6 +1,6 @@
 const { map, apply } = require('ramda');
 
-const testHarnessUnary = require('../../test/test-harness-unary');
+const testHarnessUnary = require('./test-harness-unary');
 const within = require('./within');
 
 const withinRange = within(5, 15);
@@ -9,7 +9,7 @@ const cases = [
   [10, true],
   [14.5, true],
   [5, false],
-  [15, false],
+  [15, false]
 ];
 
 map(

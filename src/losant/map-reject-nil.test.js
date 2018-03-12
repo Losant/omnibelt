@@ -1,6 +1,6 @@
 const { map, isNil } = require('ramda');
 
-const testHarnessUnary = require('../../test/test-harness-unary');
+const testHarnessUnary = require('./test-harness-unary');
 const mapRejectNil = require('./map-reject-nil');
 
 const cases = [
@@ -17,8 +17,8 @@ const cases = [
         [null, 1, 2, undefined, 1, 4, 0, '', false],
         [-1, 'a2', -1, 'a0', 'a', 'afalse']
       ]
-    ],
-  },
+    ]
+  }
 ];
 
 const testHarnessAdapter = ({ label, cases }) => {

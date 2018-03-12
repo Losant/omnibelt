@@ -1,10 +1,10 @@
 const { compose } = require('ramda');
 
-const testCases = require('../../test/test-cases');
+const testCases = require('./test-cases');
 const tap = require('./tap');
 
 testCases(tap, [
-  [[() => 'bar', 'foo'], 'foo'],
+  [[() => 'bar', 'foo'], 'foo']
 ]);
 
 it('Side effects happen', () => {
