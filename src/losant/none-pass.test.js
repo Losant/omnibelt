@@ -2,7 +2,7 @@ const {
   pipe, map, apply, adjust, equals, is
 } = require('ramda');
 
-const testHarnessUnary = require('../../test/test-harness-unary');
+const testHarnessUnary = require('./test-harness-unary');
 const nonePass = require('./none-pass');
 
 const isFoo = equals('foo');
