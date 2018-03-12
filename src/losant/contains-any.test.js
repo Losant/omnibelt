@@ -1,6 +1,6 @@
 const { pipe, map, apply, adjust } = require('ramda');
 
-const testHarnessUnary = require('../../test/test-harness-unary');
+const testHarnessUnary = require('./test-harness-unary');
 const containsAny = require('./contains-any');
 
 const cases = [
@@ -9,7 +9,7 @@ const cases = [
   [[null], [null, 'foo'], true],
   [[1], ['foo'], false],
   [[], ['foo'], false],
-  [['foo'], [], false],
+  [['foo'], [], false]
 ];
 
 const testHarnessAdapter = pipe(

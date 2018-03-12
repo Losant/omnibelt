@@ -32,7 +32,7 @@
     "stringify-object": "^3.2.1"
   },
   "devDependencies": {
-    "@losant/eslint-config-losant": "^1.2.3",
+    "@losant/eslint-config-losant": "^1.2.8",
     "@losant/scripts": "^1.0.10",
     "fs-extra": "^4.0.3",
     "husky": "^0.14.3",

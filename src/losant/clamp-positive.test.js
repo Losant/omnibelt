@@ -1,6 +1,6 @@
 const { map, apply } = require('ramda');
 
-const testHarnessUnary = require('../../test/test-harness-unary');
+const testHarnessUnary = require('./test-harness-unary');
 const clampPositive = require('./clamp-positive');
 
 const cases = [
@@ -12,7 +12,7 @@ const cases = [
   [NaN, NaN],
   ['1', '1'],
   ['-1', 0],
-  ['foo', 'foo'],
+  ['foo', 'foo']
 ];
 
 map(

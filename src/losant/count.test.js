@@ -1,4 +1,4 @@
-const testCases = require('../../test/test-cases');
+const testCases = require('./test-cases');
 const count = require('./count');
 
 testCases(count, [
@@ -14,5 +14,5 @@ testCases(count, [
   [
     [[{ a: 'a' }, { b: 'b' }, { a: 'a' }]],
     { '[object Object]': 3 }
-  ],
+  ]
 ]);

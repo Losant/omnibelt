@@ -1,8 +1,8 @@
 const {
-  curry, map, always, when, compose, evolve, is,
+  curry, compose, evolve, map
 } = require('ramda');
-const format = require('../src/losant/format');
-const stringify = require('../src/losant/stringify');
+const format = require('./format');
+const stringify = require('./stringify');
 
 // TODO: Write tests for this?
 // TODO: Write README entry for this?
@@ -11,11 +11,8 @@ const stringify = require('../src/losant/stringify');
 const testCaseToString = compose(
   format('[{args}] ==> {expected}'),
   evolve({
-    args: map(compose(
-      stringify,
-      when(is(Function), always('[Function]')),
-    )),
-    expected: stringify,
+    args: map(stringify),
+    expected: stringify
   }),
 );
 

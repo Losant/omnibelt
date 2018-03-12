@@ -2,7 +2,7 @@ const fs = require('fs-extra');
 const { camelCase } = require('lodash/fp');
 const {
   filter, allPass, endsWith, complement, equals, slice, map, pipe, keys,
-  all, is, concat,
+  all, is, concat
 } = require('ramda');
 
 const index = require('./index');

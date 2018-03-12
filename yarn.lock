@@ -10,11 +10,12 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
-"@losant/eslint-config-losant@^1.2.3":
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/@losant/eslint-config-losant/-/eslint-config-losant-1.2.6.tgz#3cf1452b8ae9a459770ee7371122f1d825e067f0"
+"@losant/eslint-config-losant@^1.2.8":
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/@losant/eslint-config-losant/-/eslint-config-losant-1.2.8.tgz#fefb608e11f5aabb044a2ed017345b91e0b234e2"
   dependencies:
     babel-eslint "^7.2.3"
+    confusing-browser-globals "^0.0.0"
     eslint "^4.0.0"
     eslint-plugin-lodash "^2.4.4"
     eslint-plugin-react "^7.1.0"
@@ -696,6 +697,10 @@ concat-stream@^1.6.0:
     inherits "^2.0.3"
     readable-stream "^2.2.2"
     typedarray "^0.0.6"
+
+confusing-browser-globals@^0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/confusing-browser-globals/-/confusing-browser-globals-0.0.0.tgz#cacf8de5bc35d419f708ea850df7315caa503049"
 
 console-control-strings@^1.0.0, console-control-strings@~1.1.0:
   version "1.1.0"
