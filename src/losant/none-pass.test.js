@@ -1,4 +1,6 @@
-const { pipe, map, apply, adjust, equals, is } = require('ramda');
+const {
+  pipe, map, apply, adjust, equals, is
+} = require('ramda');
 
 const testHarnessUnary = require('../../test/test-harness-unary');
 const nonePass = require('./none-pass');
@@ -12,17 +14,17 @@ const cases = [
     cases: [
       [[isFoo, isBar], 'foo', false],
       [[isFoo, isBar], 'bar', false],
-      [[isFoo, isBar], 'baz', true],
-    ],
+      [[isFoo, isBar], 'baz', true]
+    ]
   },
   {
     label: 'is not Number or String',
     cases: [
       [[is(Number), is(String)], 1, false],
       [[is(Number), is(String)], 'foo', false],
-      [[is(Number), is(String)], { foo: 'bar' }, true],
-    ],
-  },
+      [[is(Number), is(String)], { foo: 'bar' }, true]
+    ]
+  }
 ];
 
 const testHarnessAdapter = ({ label, cases }) => {

@@ -10,5 +10,5 @@ testCases(evolveArray, [
   [
     [ [ inc, dec, inc ], [ 2, 2, 2 ] ],
     [ 3, 1, 3 ]
-  ],
+  ]
 ]);

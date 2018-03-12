@@ -11,16 +11,16 @@ const cases = [
         ['a', 'b'],
         { a: { b: 1 } },
         { a: { b: 1 } },
-        true,
+        true
       ],
       [
         ['a', 'b'],
         { a: { b: 1 } },
         { a: { b: 2 } },
-        false,
-      ],
-    ],
-  },
+        false
+      ]
+    ]
+  }
 ];
 
 const testHarnessAdapter = ({ label, cases }) => {

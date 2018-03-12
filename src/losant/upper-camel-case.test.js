@@ -6,7 +6,7 @@ const cases = [
   ['foo', 'Foo'],
   ['foo-bar-baz', 'FooBarBaz'],
   ['foo_bar_baz', 'FooBarBaz'],
-  ['foo bar baz', 'FooBarBaz'],
+  ['foo bar baz', 'FooBarBaz']
 ];
 
 map(

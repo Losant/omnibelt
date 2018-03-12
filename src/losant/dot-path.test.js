@@ -7,8 +7,8 @@ const testObj = {
   foo: 'bar',
   a: {
     b: 1,
-    c: [1, 2, 3],
-  },
+    c: [1, 2, 3]
+  }
 };
 
 const testArr = [1, 2, 3];
@@ -21,7 +21,7 @@ const cases = [
   ['not.valid', testObj, undefined],
   ['nullObj', null, undefined],
   ['0', testArr, 1],
-  ['0.0', [testArr], 1],
+  ['0.0', [testArr], 1]
 ];
 
 const testHarnessAdapter = pipe(

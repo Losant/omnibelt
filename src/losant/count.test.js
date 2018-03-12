@@ -14,5 +14,5 @@ testCases(count, [
   [
     [[{ a: 'a' }, { b: 'b' }, { a: 'a' }]],
     { '[object Object]': 3 }
-  ],
+  ]
 ]);

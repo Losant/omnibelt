@@ -9,7 +9,7 @@ const cases = [
   [[null], [null, 'foo'], true],
   [[1], ['foo'], false],
   [[], ['foo'], false],
-  [['foo'], [], false],
+  [['foo'], [], false]
 ];
 
 const testHarnessAdapter = pipe(

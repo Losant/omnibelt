@@ -7,8 +7,8 @@ const testObj = {
   foo: 'bar',
   a: {
     b: 1,
-    c: [1, 2, 3],
-  },
+    c: [1, 2, 3]
+  }
 };
 
 const testArr = [1, 2, 3];
@@ -21,7 +21,7 @@ const cases = [
   ['N/A', 'not.valid', testObj, 'N/A'],
   ['N/A', 'nullObj', null, 'N/A'],
   ['N/A', '0', testArr, 1],
-  ['N/A', '0.0', [testArr], 1],
+  ['N/A', '0.0', [testArr], 1]
 ];
 
 const testHarnessAdapter = (testCase) => {

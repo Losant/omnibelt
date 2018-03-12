@@ -1,5 +1,5 @@
 const {
-  curry, compose, evolve, map,
+  curry, compose, evolve, map
 } = require('ramda');
 const format = require('../src/losant/format');
 const stringify = require('../src/losant/stringify');
@@ -12,7 +12,7 @@ const testCaseToString = compose(
   format('[{args}] ==> {expected}'),
   evolve({
     args: map(stringify),
-    expected: stringify,
+    expected: stringify
   }),
 );
 

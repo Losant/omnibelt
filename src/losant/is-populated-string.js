@@ -17,7 +17,7 @@ const isNotEmpty = require('./is-not-empty');
  */
 const isPopulatedString = allPass([
   is(String),
-  isNotEmpty,
+  isNotEmpty
 ]);
 
 module.exports = isPopulatedString;
