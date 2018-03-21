@@ -1,6 +1,8 @@
-const {
-  curry, compose, evolve, map
-} = require('ramda');
+const curry = require('ramda/src/curry');
+const compose = require('ramda/src/compose');
+const evolve = require('ramda/src/evolve');
+const map = require('ramda/src/map');
+const expect = require('expect');
 const format = require('./format');
 const stringify = require('./stringify');
 
