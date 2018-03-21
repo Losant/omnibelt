@@ -4,7 +4,7 @@ Below should serve as an "upgrade guide" jumping off point as you are migrating 
 
 - `?.?.?` - *WIP*
    - External changes:
-      - `expect` no longer is assumed to be in your environment through `jest` and is an explicit dependency now.
+      - `testHarness` and the like, no longer assume that `expect` is available in your environment through `jest`. Instead, you must pass `expect` in as a dependency. See [this issue](https://github.com/Losant/losant-utils/issues/40) for more info.
    - Internal changes:
       - linter update to `1.3.2`
       - tests for `equalsAny`

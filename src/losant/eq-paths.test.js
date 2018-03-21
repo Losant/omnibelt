@@ -1,6 +1,6 @@
 const { map } = require('ramda');
 
-const testHarnessUnary = require('./test-harness-unary');
+const { testHarnessUnary } = require('../../test/utils');
 const eqPaths = require('./eq-paths');
 
 const cases = [

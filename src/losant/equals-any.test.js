@@ -1,4 +1,4 @@
-const testCases = require('./test-cases');
+const { testCases } = require('../../test/utils');
 const equalsAny = require('./equals-any');
 
 testCases(equalsAny, [

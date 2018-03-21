@@ -1,6 +1,6 @@
 const { pipe, map, apply, adjust } = require('ramda');
 
-const testHarnessUnary = require('./test-harness-unary');
+const { testHarnessUnary } = require('../../test/utils');
 const equalsShallow = require('./equals-shallow');
 
 const getTestDate = () => new Date(2017, 1, 1);
