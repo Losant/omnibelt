@@ -3,6 +3,12 @@
 Below should serve as an "upgrade guide" jumping off point as you are migrating projects to newer versions of this package. Ideally, interface changes will be called out specifically and one should not have to go sifting through git diffs to discern what changed.
 
 - `?.?.?` - *WIP*
+   - External changes:
+      - `testHarness` and the like, no longer assume that `expect` is available in your environment through `jest`. Instead, you must pass `expect` in as a dependency. See [this issue](https://github.com/Losant/losant-utils/issues/40) for more info.
+   - Internal changes:
+      - linter update to `1.3.2`
+      - tests for `equalsAny`
+      - tests for `containsAll`
 - `1.1.5`
    - Added methods:
       - `testHarness`

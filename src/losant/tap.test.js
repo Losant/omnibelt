@@ -1,6 +1,6 @@
 const { compose } = require('ramda');
 
-const testCases = require('./test-cases');
+const { testCases } = require('../../test/utils');
 const tap = require('./tap');
 
 testCases(tap, [

@@ -1,6 +1,6 @@
 const { map } = require('ramda');
 
-const testHarnessUnary = require('./test-harness-unary');
+const { testHarnessUnary } = require('../../test/utils');
 const filterMap = require('./filter-map');
 
 const cases = [

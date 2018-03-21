@@ -1,6 +1,6 @@
 const { map, isNil } = require('ramda');
 
-const testHarnessUnary = require('./test-harness-unary');
+const { testHarnessUnary } = require('../../test/utils');
 const mapRejectNil = require('./map-reject-nil');
 
 const cases = [

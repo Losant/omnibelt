@@ -1,6 +1,6 @@
 const { map, apply } = require('ramda');
 
-const testHarnessUnary = require('./test-harness-unary');
+const { testHarnessUnary } = require('../../test/utils');
 const ensureArray = require('./ensure-array');
 
 const getFunctionArguments = () => {

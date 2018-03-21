@@ -1,17 +1,18 @@
+// TODO: Write tests for this?
+// TODO: Write README entry for this?
+// TODO: https://github.com/Losant/losant-utils/issues/40
+// NOTE: See `tap` or `count` tests for example usage.
+
 const curry = require('ramda/src/curry');
 const map = require('ramda/src/map');
 const apply = require('ramda/src/apply');
 
 const testHarness = require('./test-harness');
 
-// TODO: Write tests for this?
-// TODO: Write README entry for this?
-// NOTE: See `tap` or `count` tests for example usage.
-
-// testCases :: Function -> [[[*], *]]
-const testCases = curry((fn, cases) => {
+// testCases :: Expect -> Function -> [[[*], *]]
+const testCases = curry((expect, fn, cases) => {
   map(
-    apply(testHarness(fn))
+    apply(testHarness(expect, fn))
   )(cases);
 });
 

@@ -2,7 +2,7 @@ const {
   map, apply
 } = require('ramda');
 
-const testHarnessUnary = require('./test-harness-unary');
+const { testHarnessUnary } = require('../../test/utils');
 const stringToBoolean = require('./string-to-boolean');
 
 const cases = [

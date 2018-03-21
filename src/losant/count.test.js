@@ -1,14 +1,14 @@
-const testCases = require('./test-cases');
+const { testCases } = require('../../test/utils');
 const count = require('./count');
 
 testCases(count, [
   [
     [[1, 1, 2]],
-    { '1': 2, '2': 1 }
+    { 1: 2, 2: 1 }
   ],
   [
     [['a', 'b', 'a']],
-    { 'a': 2, 'b': 1 }
+    { a: 2, b: 1 }
   ],
   // NOTE: This is just to show not to do this
   [
