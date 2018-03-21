@@ -8,10 +8,10 @@ testCases(containsAll, [
   ],
   [
     [[1, 2, 3], [1, 2]],
-    false 
+    false
   ],
   [
     [[3, 2, 1], [1, 2, 3]],
-    true 
+    true
   ]
 ]);

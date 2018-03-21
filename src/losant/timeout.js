@@ -20,7 +20,7 @@ const timeout = curry((ms, promise) => {
 
   const timeoutId = setTimeout(() => {
     const error = new Error(`Promise timed out after ${ms} ms`);
-    error.code = "ETIMEDOUT";
+    error.code = 'ETIMEDOUT';
     error.promise = promise;
     deferred.reject(error);
   }, ms);
