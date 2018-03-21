@@ -5,13 +5,13 @@ const length = require('ramda/src/length');
 const equals = require('ramda/src/equals');
 
 /**
- * TODO: TESTS
- * TODO: DOCS
+ * Predicate that checks to see if each element in an array
+ * exists in a larger array.
  *
  * @signature Array<* a> -> Array<* a> -> Boolean
  *
  * @example
- *   containsAll([1, 2, 3], [1, 2, 3, 4, 5]); // => true
+ *   containsAll([1, 3, 2], [1, 2, 3, 4, 5]); // => true
  */
 const containsAll = curry((smaller, larger) =>
   pipe(
