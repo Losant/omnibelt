@@ -5,16 +5,14 @@ const concat = require('ramda/src/concat');
 const flip = require('ramda/src/flip');
 
 /**
- * Ensures a string / array value ends with the specified prefix. If not, the
- * prefix is appended to the value.
+ * Ensures a string / array value ends with the specified suffix. If not, the
+ * suffix is appended to the value.
  *
  * @signature String|Array -> String|Array -> String|Array
  */
-const ensureStartsWith = curry((prefix, currentValue) =>
+module.exports = curry((suffix, currentValue) =>
   unless(
-    endsWith(prefix),
-    flip(concat)(prefix),
+    endsWith(suffix),
+    flip(concat)(suffix),
   )(currentValue)
 );
-
-module.exports = ensureStartsWith;
