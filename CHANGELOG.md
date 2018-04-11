@@ -3,6 +3,9 @@
 Below should serve as an "upgrade guide" jumping off point as you are migrating projects to newer versions of this package. Ideally, interface changes will be called out specifically and one should not have to go sifting through git diffs to discern what changed.
 
 - `?.?.?` - *WIP*
+- `1.1.7`
+   - Added methods:
+      - `ensureEndsWith`
 - `1.1.6`
    - External changes:
       - `testHarness` and the like, no longer assume that `expect` is available in your environment through `jest`. Instead, you must pass `expect` in as a dependency. See [this issue](https://github.com/Losant/losant-utils/issues/40) for more info.
