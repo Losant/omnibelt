@@ -19,7 +19,8 @@
     "test:watch": "yarn test --watch -o",
     "precommit": "lint-staged",
     "postmerge": "losant-scripts git-hook post-merge",
-    "postversion": "losant-scripts git-hook post-version"
+    "postversion": "losant-scripts git-hook post-version",
+    "docs": "jsdoc -c jsdoc.json"
   },
   "lint-staged": {
     "*.js": "esw"
@@ -34,10 +35,12 @@
   "devDependencies": {
     "@losant/eslint-config-losant": "^1.3.2",
     "@losant/scripts": "^1.0.10",
+    "docdash": "^0.4.0",
     "expect": "^22.4.3",
     "fs-extra": "^4.0.3",
     "husky": "^0.14.3",
     "jest": "^21.0.2",
+    "jsdoc": "^3.5.5",
     "lint-staged": "^6.0.0",
     "present": "^1.0.0",
     "treis": "^2.5.0"
