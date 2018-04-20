@@ -12,7 +12,7 @@ module.exports = pick([
   /**
    * @func
    * @memberof module:lodash
-   * @name camelCase 
+   * @name camelCase
    * @see {@link https://gist.github.com/jfmengels/6b973b69c491375117dc#_camelcasestring|_.camelCase}
    */
   'camelCase',
@@ -20,7 +20,7 @@ module.exports = pick([
   /**
    * @func
    * @memberof module:lodash
-   * @name capitalize 
+   * @name capitalize
    * @see {@link https://gist.github.com/jfmengels/6b973b69c491375117dc#_https://gist.github.com/jfmengels/6b973b69c491375117dc#_capitalizestring|_.capitalize}
    */
   'capitalize',
@@ -28,7 +28,7 @@ module.exports = pick([
   /**
    * @func
    * @memberof module:lodash
-   * @name castArray 
+   * @name castArray
    * @see {@link https://gist.github.com/jfmengels/6b973b69c491375117dc#_https://gist.github.com/jfmengels/6b973b69c491375117dc#_castarrayvalue|_.castArray}
    */
   'castArray',

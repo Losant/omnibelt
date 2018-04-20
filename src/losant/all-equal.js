@@ -8,7 +8,7 @@ const equals = require('ramda/src/equals');
  *
  * @func
  * @memberof module:losant
- * @name allEqual 
+ * @name allEqual
  * @param {Array} array - An array of any values
  * @return {Boolean} True when all same, false otherwise
  * @summary Array -> Boolean

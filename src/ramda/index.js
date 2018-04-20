@@ -1,7 +1,7 @@
 const r = require('ramda');
 
 /**
- * @module ramda 
+ * @module ramda
  */
 module.exports = r.omit([
   'flip',
@@ -18,7 +18,7 @@ module.exports = r.omit([
 /**
  * @func
  * @memberof module:ramda
- * @name __ 
+ * @name __
  * @see {@link http://ramdajs.com/docs/#__|R.__}
  */
 /**
