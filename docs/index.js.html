@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>losant/try-catch-safe.js - Documentation</title>
+    <title>index.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,7 +27,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">losant/try-catch-safe.js</h1>
+    <h1 class="page-title">index.js</h1>
     
 
     
@@ -37,27 +37,15 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>const curry = require('ramda/src/curry');
-
-/**
- * A safe version of `try/catch` that returns an [error, result] tuple instead
- * of throwing an error.
- *
- * @signature Function -> Array&lt;*> -> Array&lt;?Error, *>
- *
- * @example
- *   const [error, result] = tryCatchSafe(someFnThatMightThrow, [arg1, arg2]);
+            <pre class="prettyprint source linenums"><code>/**
+ * @name hi
  */
-const tryCatchSafe = curry((tryFn, args) => {
-  try {
-    const result = tryFn(...args);
-    return [null, result];
-  } catch (error) {
-    return [error, null];
-  }
-});
-
-module.exports = tryCatchSafe;
+module.exports = Object.assign(
+  {},
+  require('./lodash'),
+  require('./ramda'),
+  require('./losant'),
+);
 </code></pre>
         </article>
     </section>

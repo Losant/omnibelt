@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ramda/index-docs.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-lodash.html">lodash</a><ul class='methods'><li data-type='method'><a href="module-lodash.html#.camelCase">camelCase</a></li><li data-type='method'><a href="module-lodash.html#.capitalize">capitalize</a></li><li data-type='method'><a href="module-lodash.html#.castArray">castArray</a></li></ul></li><li><a href="module-losant.html">losant</a><ul class='methods'><li data-type='method'><a href="module-losant.html#.allEqual">allEqual</a></li><li data-type='method'><a href="module-losant.html#.argsToObj">argsToObj</a></li></ul></li><li><a href="module-ramda.html">ramda</a><ul class='methods'><li data-type='method'><a href="module-ramda.html#.__">__</a></li><li data-type='method'><a href="module-ramda.html#.add">add</a></li><li data-type='method'><a href="module-ramda.html#.addIndex">addIndex</a></li><li data-type='method'><a href="module-ramda.html#.adjust">adjust</a></li><li data-type='method'><a href="module-ramda.html#.all">all</a></li><li data-type='method'><a href="module-ramda.html#.allPass">allPass</a></li><li data-type='method'><a href="module-ramda.html#.always">always</a></li><li data-type='method'><a href="module-ramda.html#.and">and</a></li><li data-type='method'><a href="module-ramda.html#.any">any</a></li><li data-type='method'><a href="module-ramda.html#.anyPass">anyPass</a></li><li data-type='method'><a href="module-ramda.html#.ap">ap</a></li><li data-type='method'><a href="module-ramda.html#.aperture">aperture</a></li><li data-type='method'><a href="module-ramda.html#.append">append</a></li><li data-type='method'><a href="module-ramda.html#.apply">apply</a></li><li data-type='method'><a href="module-ramda.html#.applySpec">applySpec</a></li><li data-type='method'><a href="module-ramda.html#.applyTo">applyTo</a></li><li data-type='method'><a href="module-ramda.html#.ascend">ascend</a></li><li data-type='method'><a href="module-ramda.html#.assoc">assoc</a></li><li data-type='method'><a href="module-ramda.html#.assocPath">assocPath</a></li><li data-type='method'><a href="module-ramda.html#.binary">binary</a></li><li data-type='method'><a href="module-ramda.html#.bind">bind</a></li><li data-type='method'><a href="module-ramda.html#.both">both</a></li><li data-type='method'><a href="module-ramda.html#.call">call</a></li><li data-type='method'><a href="module-ramda.html#.chain">chain</a></li><li data-type='method'><a href="module-ramda.html#.clamp">clamp</a></li><li data-type='method'><a href="module-ramda.html#.clone">clone</a></li><li data-type='method'><a href="module-ramda.html#.comparator">comparator</a></li><li data-type='method'><a href="module-ramda.html#.complement">complement</a></li><li data-type='method'><a href="module-ramda.html#.compose">compose</a></li><li data-type='method'><a href="module-ramda.html#.composeK">composeK</a></li><li data-type='method'><a href="module-ramda.html#.composeP">composeP</a></li><li data-type='method'><a href="module-ramda.html#.concat">concat</a></li><li data-type='method'><a href="module-ramda.html#.cond">cond</a></li><li data-type='method'><a href="module-ramda.html#.construct">construct</a></li><li data-type='method'><a href="module-ramda.html#.constructN">constructN</a></li><li data-type='method'><a href="module-ramda.html#.contains">contains</a></li><li data-type='method'><a href="module-ramda.html#.converge">converge</a></li><li data-type='method'><a href="module-ramda.html#.countBy">countBy</a></li><li data-type='method'><a href="module-ramda.html#.curry">curry</a></li><li data-type='method'><a href="module-ramda.html#.curryN">curryN</a></li><li data-type='method'><a href="module-ramda.html#.dec">dec</a></li><li data-type='method'><a href="module-ramda.html#.defaultTo">defaultTo</a></li><li data-type='method'><a href="module-ramda.html#.descend">descend</a></li><li data-type='method'><a href="module-ramda.html#.difference">difference</a></li><li data-type='method'><a href="module-ramda.html#.differenceWith">differenceWith</a></li><li data-type='method'><a href="module-ramda.html#.dissoc">dissoc</a></li><li data-type='method'><a href="module-ramda.html#.dissocPath">dissocPath</a></li><li data-type='method'><a href="module-ramda.html#.divide">divide</a></li><li data-type='method'><a href="module-ramda.html#.drop">drop</a></li><li data-type='method'><a href="module-ramda.html#.dropLast">dropLast</a></li><li data-type='method'><a href="module-ramda.html#.dropLastWhile">dropLastWhile</a></li><li data-type='method'><a href="module-ramda.html#.dropRepeats">dropRepeats</a></li><li data-type='method'><a href="module-ramda.html#.dropRepeatsWith">dropRepeatsWith</a></li><li data-type='method'><a href="module-ramda.html#.dropWhile">dropWhile</a></li><li data-type='method'><a href="module-ramda.html#.either">either</a></li><li data-type='method'><a href="module-ramda.html#.empty">empty</a></li><li data-type='method'><a href="module-ramda.html#.endsWith">endsWith</a></li><li data-type='method'><a href="module-ramda.html#.eqBy">eqBy</a></li><li data-type='method'><a href="module-ramda.html#.eqProps">eqProps</a></li><li data-type='method'><a href="module-ramda.html#.equals">equals</a></li><li data-type='method'><a href="module-ramda.html#.evolve">evolve</a></li><li data-type='method'><a href="module-ramda.html#.F">F</a></li><li data-type='method'><a href="module-ramda.html#.filter">filter</a></li><li data-type='method'><a href="module-ramda.html#.find">find</a></li><li data-type='method'><a href="module-ramda.html#.findIndex">findIndex</a></li><li data-type='method'><a href="module-ramda.html#.findLast">findLast</a></li><li data-type='method'><a href="module-ramda.html#.findLastIndex">findLastIndex</a></li><li data-type='method'><a href="module-ramda.html#.flatten">flatten</a></li><li data-type='method'><a href="module-ramda.html#.forEachObjIndexed">forEachObjIndexed</a></li><li data-type='method'><a href="module-ramda.html#.fromPairs">fromPairs</a></li><li data-type='method'><a href="module-ramda.html#.groupBy">groupBy</a></li><li data-type='method'><a href="module-ramda.html#.groupWith">groupWith</a></li><li data-type='method'><a href="module-ramda.html#.gt">gt</a></li><li data-type='method'><a href="module-ramda.html#.gte">gte</a></li><li data-type='method'><a href="module-ramda.html#.has">has</a></li><li data-type='method'><a href="module-ramda.html#.hasIn">hasIn</a></li><li data-type='method'><a href="module-ramda.html#.head">head</a></li><li data-type='method'><a href="module-ramda.html#.identical">identical</a></li><li data-type='method'><a href="module-ramda.html#.identity">identity</a></li><li data-type='method'><a href="module-ramda.html#.ifElse">ifElse</a></li><li data-type='method'><a href="module-ramda.html#.inc">inc</a></li><li data-type='method'><a href="module-ramda.html#.indexOf">indexOf</a></li><li data-type='method'><a href="module-ramda.html#.init">init</a></li><li data-type='method'><a href="module-ramda.html#.innerJoin">innerJoin</a></li><li data-type='method'><a href="module-ramda.html#.insert">insert</a></li><li data-type='method'><a href="module-ramda.html#.insertAll">insertAll</a></li><li data-type='method'><a href="module-ramda.html#.intersection">intersection</a></li><li data-type='method'><a href="module-ramda.html#.intersperse">intersperse</a></li><li data-type='method'><a href="module-ramda.html#.into">into</a></li><li data-type='method'><a href="module-ramda.html#.invert">invert</a></li><li data-type='method'><a href="module-ramda.html#.invertObj">invertObj</a></li><li data-type='method'><a href="module-ramda.html#.invoker">invoker</a></li><li data-type='method'><a href="module-ramda.html#.is">is</a></li><li data-type='method'><a href="module-ramda.html#.isEmpty">isEmpty</a></li><li data-type='method'><a href="module-ramda.html#.isNil">isNil</a></li><li data-type='method'><a href="module-ramda.html#.join">join</a></li><li data-type='method'><a href="module-ramda.html#.juxt">juxt</a></li><li data-type='method'><a href="module-ramda.html#.keys">keys</a></li><li data-type='method'><a href="module-ramda.html#.keysIn">keysIn</a></li><li data-type='method'><a href="module-ramda.html#.last">last</a></li><li data-type='method'><a href="module-ramda.html#.lastIndexOf">lastIndexOf</a></li><li data-type='method'><a href="module-ramda.html#.length">length</a></li><li data-type='method'><a href="module-ramda.html#.lens">lens</a></li><li data-type='method'><a href="module-ramda.html#.lensIndex">lensIndex</a></li><li data-type='method'><a href="module-ramda.html#.lensPath">lensPath</a></li><li data-type='method'><a href="module-ramda.html#.lensProp">lensProp</a></li><li data-type='method'><a href="module-ramda.html#.lift">lift</a></li><li data-type='method'><a href="module-ramda.html#.liftN">liftN</a></li><li data-type='method'><a href="module-ramda.html#.lt">lt</a></li><li data-type='method'><a href="module-ramda.html#.lte">lte</a></li><li data-type='method'><a href="module-ramda.html#.map">map</a></li><li data-type='method'><a href="module-ramda.html#.mapAccum">mapAccum</a></li><li data-type='method'><a href="module-ramda.html#.mapAccumRight">mapAccumRight</a></li><li data-type='method'><a href="module-ramda.html#.mapObjIndexed">mapObjIndexed</a></li><li data-type='method'><a href="module-ramda.html#.match">match</a></li><li data-type='method'><a href="module-ramda.html#.mathMod">mathMod</a></li><li data-type='method'><a href="module-ramda.html#.max">max</a></li><li data-type='method'><a href="module-ramda.html#.maxBy">maxBy</a></li><li data-type='method'><a href="module-ramda.html#.mean">mean</a></li><li data-type='method'><a href="module-ramda.html#.median">median</a></li><li data-type='method'><a href="module-ramda.html#.memoize">memoize</a></li><li data-type='method'><a href="module-ramda.html#.memoizeWith">memoizeWith</a></li><li data-type='method'><a href="module-ramda.html#.merge">merge</a></li><li data-type='method'><a href="module-ramda.html#.mergeAll">mergeAll</a></li><li data-type='method'><a href="module-ramda.html#.mergeDeepLeft">mergeDeepLeft</a></li><li data-type='method'><a href="module-ramda.html#.mergeDeepRight">mergeDeepRight</a></li><li data-type='method'><a href="module-ramda.html#.mergeDeepWith">mergeDeepWith</a></li><li data-type='method'><a href="module-ramda.html#.mergeDeepWithKey">mergeDeepWithKey</a></li><li data-type='method'><a href="module-ramda.html#.mergeWith">mergeWith</a></li><li data-type='method'><a href="module-ramda.html#.mergeWithKey">mergeWithKey</a></li><li data-type='method'><a href="module-ramda.html#.min">min</a></li><li data-type='method'><a href="module-ramda.html#.minBy">minBy</a></li><li data-type='method'><a href="module-ramda.html#.modulo">modulo</a></li><li data-type='method'><a href="module-ramda.html#.multiply">multiply</a></li><li data-type='method'><a href="module-ramda.html#.nAry">nAry</a></li><li data-type='method'><a href="module-ramda.html#.negate">negate</a></li><li data-type='method'><a href="module-ramda.html#.none">none</a></li><li data-type='method'><a href="module-ramda.html#.not">not</a></li><li data-type='method'><a href="module-ramda.html#.nth">nth</a></li><li data-type='method'><a href="module-ramda.html#.nthArg">nthArg</a></li><li data-type='method'><a href="module-ramda.html#.o">o</a></li><li data-type='method'><a href="module-ramda.html#.objOf">objOf</a></li><li data-type='method'><a href="module-ramda.html#.of">of</a></li><li data-type='method'><a href="module-ramda.html#.omit">omit</a></li><li data-type='method'><a href="module-ramda.html#.once">once</a></li><li data-type='method'><a href="module-ramda.html#.or">or</a></li><li data-type='method'><a href="module-ramda.html#.over">over</a></li><li data-type='method'><a href="module-ramda.html#.pair">pair</a></li><li data-type='method'><a href="module-ramda.html#.partial">partial</a></li><li data-type='method'><a href="module-ramda.html#.partialRight">partialRight</a></li><li data-type='method'><a href="module-ramda.html#.partition">partition</a></li><li data-type='method'><a href="module-ramda.html#.path">path</a></li><li data-type='method'><a href="module-ramda.html#.pathEq">pathEq</a></li><li data-type='method'><a href="module-ramda.html#.pathOr">pathOr</a></li><li data-type='method'><a href="module-ramda.html#.pathSatisfies">pathSatisfies</a></li><li data-type='method'><a href="module-ramda.html#.pick">pick</a></li><li data-type='method'><a href="module-ramda.html#.pickAll">pickAll</a></li><li data-type='method'><a href="module-ramda.html#.pickBy">pickBy</a></li><li data-type='method'><a href="module-ramda.html#.pipe">pipe</a></li><li data-type='method'><a href="module-ramda.html#.pipeK">pipeK</a></li><li data-type='method'><a href="module-ramda.html#.pipeP">pipeP</a></li><li data-type='method'><a href="module-ramda.html#.pluck">pluck</a></li><li data-type='method'><a href="module-ramda.html#.prepend">prepend</a></li><li data-type='method'><a href="module-ramda.html#.product">product</a></li><li data-type='method'><a href="module-ramda.html#.project">project</a></li><li data-type='method'><a href="module-ramda.html#.prop">prop</a></li><li data-type='method'><a href="module-ramda.html#.propEq">propEq</a></li><li data-type='method'><a href="module-ramda.html#.propIs">propIs</a></li><li data-type='method'><a href="module-ramda.html#.propOr">propOr</a></li><li data-type='method'><a href="module-ramda.html#.props">props</a></li><li data-type='method'><a href="module-ramda.html#.propSatisfies">propSatisfies</a></li><li data-type='method'><a href="module-ramda.html#.range">range</a></li><li data-type='method'><a href="module-ramda.html#.reduce">reduce</a></li><li data-type='method'><a href="module-ramda.html#.reduceBy">reduceBy</a></li><li data-type='method'><a href="module-ramda.html#.reduced">reduced</a></li><li data-type='method'><a href="module-ramda.html#.reduceRight">reduceRight</a></li><li data-type='method'><a href="module-ramda.html#.reduceWhile">reduceWhile</a></li><li data-type='method'><a href="module-ramda.html#.reject">reject</a></li><li data-type='method'><a href="module-ramda.html#.remove">remove</a></li><li data-type='method'><a href="module-ramda.html#.repeat">repeat</a></li><li data-type='method'><a href="module-ramda.html#.replace">replace</a></li><li data-type='method'><a href="module-ramda.html#.reverse">reverse</a></li><li data-type='method'><a href="module-ramda.html#.scan">scan</a></li><li data-type='method'><a href="module-ramda.html#.sequence">sequence</a></li><li data-type='method'><a href="module-ramda.html#.set">set</a></li><li data-type='method'><a href="module-ramda.html#.slice">slice</a></li><li data-type='method'><a href="module-ramda.html#.sort">sort</a></li><li data-type='method'><a href="module-ramda.html#.sortBy">sortBy</a></li><li data-type='method'><a href="module-ramda.html#.sortWith">sortWith</a></li><li data-type='method'><a href="module-ramda.html#.splitAt">splitAt</a></li><li data-type='method'><a href="module-ramda.html#.splitEvery">splitEvery</a></li><li data-type='method'><a href="module-ramda.html#.splitWhen">splitWhen</a></li><li data-type='method'><a href="module-ramda.html#.startsWith">startsWith</a></li><li data-type='method'><a href="module-ramda.html#.subtract">subtract</a></li><li data-type='method'><a href="module-ramda.html#.sum">sum</a></li><li data-type='method'><a href="module-ramda.html#.symmetricDifference">symmetricDifference</a></li><li data-type='method'><a href="module-ramda.html#.symmetricDifferenceWith">symmetricDifferenceWith</a></li><li data-type='method'><a href="module-ramda.html#.T">T</a></li><li data-type='method'><a href="module-ramda.html#.tail">tail</a></li><li data-type='method'><a href="module-ramda.html#.take">take</a></li><li data-type='method'><a href="module-ramda.html#.takeLast">takeLast</a></li><li data-type='method'><a href="module-ramda.html#.takeLastWhile">takeLastWhile</a></li><li data-type='method'><a href="module-ramda.html#.takeWhile">takeWhile</a></li><li data-type='method'><a href="module-ramda.html#.test">test</a></li><li data-type='method'><a href="module-ramda.html#.times">times</a></li><li data-type='method'><a href="module-ramda.html#.toPairs">toPairs</a></li><li data-type='method'><a href="module-ramda.html#.toPairsIn">toPairsIn</a></li><li data-type='method'><a href="module-ramda.html#.transduce">transduce</a></li><li data-type='method'><a href="module-ramda.html#.transpose">transpose</a></li><li data-type='method'><a href="module-ramda.html#.traverse">traverse</a></li><li data-type='method'><a href="module-ramda.html#.tryCatch">tryCatch</a></li><li data-type='method'><a href="module-ramda.html#.type">type</a></li><li data-type='method'><a href="module-ramda.html#.unapply">unapply</a></li><li data-type='method'><a href="module-ramda.html#.unary">unary</a></li><li data-type='method'><a href="module-ramda.html#.uncurryN">uncurryN</a></li><li data-type='method'><a href="module-ramda.html#.unfold">unfold</a></li><li data-type='method'><a href="module-ramda.html#.union">union</a></li><li data-type='method'><a href="module-ramda.html#.unionWith">unionWith</a></li><li data-type='method'><a href="module-ramda.html#.uniq">uniq</a></li><li data-type='method'><a href="module-ramda.html#.uniqBy">uniqBy</a></li><li data-type='method'><a href="module-ramda.html#.uniqWith">uniqWith</a></li><li data-type='method'><a href="module-ramda.html#.unless">unless</a></li><li data-type='method'><a href="module-ramda.html#.unnest">unnest</a></li><li data-type='method'><a href="module-ramda.html#.until">until</a></li><li data-type='method'><a href="module-ramda.html#.update">update</a></li><li data-type='method'><a href="module-ramda.html#.useWith">useWith</a></li><li data-type='method'><a href="module-ramda.html#.values">values</a></li><li data-type='method'><a href="module-ramda.html#.valuesIn">valuesIn</a></li><li data-type='method'><a href="module-ramda.html#.view">view</a></li><li data-type='method'><a href="module-ramda.html#.when">when</a></li><li data-type='method'><a href="module-ramda.html#.where">where</a></li><li data-type='method'><a href="module-ramda.html#.whereEq">whereEq</a></li><li data-type='method'><a href="module-ramda.html#.without">without</a></li><li data-type='method'><a href="module-ramda.html#.xprod">xprod</a></li><li data-type='method'><a href="module-ramda.html#.zip">zip</a></li><li data-type='method'><a href="module-ramda.html#.zipObj">zipObj</a></li><li data-type='method'><a href="module-ramda.html#.zipWith">zipWith</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#clampPositive">clampPositive</a></li><li><a href="global.html#containsAll">containsAll</a></li><li><a href="global.html#containsAny">containsAny</a></li><li><a href="global.html#count">count</a></li><li><a href="global.html#debounce">debounce</a></li><li><a href="global.html#defaultToStrict">defaultToStrict</a></li><li><a href="global.html#defer">defer</a></li><li><a href="global.html#dotPath">dotPath</a></li><li><a href="global.html#dotPathOr">dotPathOr</a></li><li><a href="global.html#ensureArray">ensureArray</a></li><li><a href="global.html#ensureStartsWith">ensureStartsWith</a></li><li><a href="global.html#eqDotPaths">eqDotPaths</a></li><li><a href="global.html#eqDotPathsShallow">eqDotPathsShallow</a></li><li><a href="global.html#eqPaths">eqPaths</a></li><li><a href="global.html#equalsAny">equalsAny</a></li><li><a href="global.html#equalsShallow">equalsShallow</a></li><li><a href="global.html#evolveArray">evolveArray</a></li><li><a href="global.html#filterMap">filterMap</a></li><li><a href="global.html#format">format</a></li><li><a href="global.html#fpThrow">fpThrow</a></li><li><a href="global.html#hi">hi</a></li><li><a href="global.html#intersectAny">intersectAny</a></li><li><a href="global.html#isNilOrEmpty">isNilOrEmpty</a></li><li><a href="global.html#isNot">isNot</a></li><li><a href="global.html#isNotEmpty">isNotEmpty</a></li><li><a href="global.html#isNotNil">isNotNil</a></li><li><a href="global.html#isPopulatedString">isPopulatedString</a></li><li><a href="global.html#jsonParseSafe">jsonParseSafe</a></li><li><a href="global.html#keyByWith">keyByWith</a></li><li><a href="global.html#list">list</a></li><li><a href="global.html#mapFilter">mapFilter</a></li><li><a href="global.html#mapRejectNil">mapRejectNil</a></li><li><a href="global.html#mergeSpec">mergeSpec</a></li><li><a href="global.html#mergeWithArrays">mergeWithArrays</a></li><li><a href="global.html#nonePass">nonePass</a></li><li><a href="global.html#noopAsync">noopAsync</a></li><li><a href="global.html#propOrStrict">propOrStrict</a></li><li><a href="global.html#rejectNilMap">rejectNilMap</a></li><li><a href="global.html#replaceAll">replaceAll</a></li><li><a href="global.html#resolveProps">resolveProps</a></li><li><a href="global.html#round">round</a></li><li><a href="global.html#sleep">sleep</a></li><li><a href="global.html#stringify">stringify</a></li><li><a href="global.html#stringToBoolean">stringToBoolean</a></li><li><a href="global.html#tap">tap</a></li><li><a href="global.html#throttle">throttle</a></li><li><a href="global.html#throttleLeading">throttleLeading</a></li><li><a href="global.html#throttleTrailing">throttleTrailing</a></li><li><a href="global.html#thunkify">thunkify</a></li><li><a href="global.html#timeout">timeout</a></li><li><a href="global.html#trace">trace</a></li><li><a href="global.html#tryCatchSafe">tryCatchSafe</a></li><li><a href="global.html#upperCamelCase">upperCamelCase</a></li><li><a href="global.html#within">within</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">ramda/index-docs.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @func
+ * @memberof module:ramda
+ * @name F
+ * @see {@link http://ramdajs.com/docs/#F|R.F}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name T
+ * @see {@link http://ramdajs.com/docs/#T|R.T}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name __
+ * @see {@link http://ramdajs.com/docs/#__|R.__}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name add
+ * @see {@link http://ramdajs.com/docs/#add|R.add}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name addIndex
+ * @see {@link http://ramdajs.com/docs/#addIndex|R.addIndex}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name adjust
+ * @see {@link http://ramdajs.com/docs/#adjust|R.adjust}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name all
+ * @see {@link http://ramdajs.com/docs/#all|R.all}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name allPass
+ * @see {@link http://ramdajs.com/docs/#allPass|R.allPass}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name always
+ * @see {@link http://ramdajs.com/docs/#always|R.always}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name and
+ * @see {@link http://ramdajs.com/docs/#and|R.and}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name any
+ * @see {@link http://ramdajs.com/docs/#any|R.any}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name anyPass
+ * @see {@link http://ramdajs.com/docs/#anyPass|R.anyPass}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name ap
+ * @see {@link http://ramdajs.com/docs/#ap|R.ap}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name aperture
+ * @see {@link http://ramdajs.com/docs/#aperture|R.aperture}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name append
+ * @see {@link http://ramdajs.com/docs/#append|R.append}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name apply
+ * @see {@link http://ramdajs.com/docs/#apply|R.apply}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name applySpec
+ * @see {@link http://ramdajs.com/docs/#applySpec|R.applySpec}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name applyTo
+ * @see {@link http://ramdajs.com/docs/#applyTo|R.applyTo}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name ascend
+ * @see {@link http://ramdajs.com/docs/#ascend|R.ascend}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name assoc
+ * @see {@link http://ramdajs.com/docs/#assoc|R.assoc}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name assocPath
+ * @see {@link http://ramdajs.com/docs/#assocPath|R.assocPath}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name binary
+ * @see {@link http://ramdajs.com/docs/#binary|R.binary}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name bind
+ * @see {@link http://ramdajs.com/docs/#bind|R.bind}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name both
+ * @see {@link http://ramdajs.com/docs/#both|R.both}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name call
+ * @see {@link http://ramdajs.com/docs/#call|R.call}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name chain
+ * @see {@link http://ramdajs.com/docs/#chain|R.chain}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name clamp
+ * @see {@link http://ramdajs.com/docs/#clamp|R.clamp}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name clone
+ * @see {@link http://ramdajs.com/docs/#clone|R.clone}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name comparator
+ * @see {@link http://ramdajs.com/docs/#comparator|R.comparator}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name complement
+ * @see {@link http://ramdajs.com/docs/#complement|R.complement}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name compose
+ * @see {@link http://ramdajs.com/docs/#compose|R.compose}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name composeK
+ * @see {@link http://ramdajs.com/docs/#composeK|R.composeK}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name composeP
+ * @see {@link http://ramdajs.com/docs/#composeP|R.composeP}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name concat
+ * @see {@link http://ramdajs.com/docs/#concat|R.concat}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name cond
+ * @see {@link http://ramdajs.com/docs/#cond|R.cond}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name construct
+ * @see {@link http://ramdajs.com/docs/#construct|R.construct}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name constructN
+ * @see {@link http://ramdajs.com/docs/#constructN|R.constructN}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name contains
+ * @see {@link http://ramdajs.com/docs/#contains|R.contains}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name converge
+ * @see {@link http://ramdajs.com/docs/#converge|R.converge}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name countBy
+ * @see {@link http://ramdajs.com/docs/#countBy|R.countBy}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name curry
+ * @see {@link http://ramdajs.com/docs/#curry|R.curry}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name curryN
+ * @see {@link http://ramdajs.com/docs/#curryN|R.curryN}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name dec
+ * @see {@link http://ramdajs.com/docs/#dec|R.dec}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name defaultTo
+ * @see {@link http://ramdajs.com/docs/#defaultTo|R.defaultTo}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name descend
+ * @see {@link http://ramdajs.com/docs/#descend|R.descend}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name difference
+ * @see {@link http://ramdajs.com/docs/#difference|R.difference}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name differenceWith
+ * @see {@link http://ramdajs.com/docs/#differenceWith|R.differenceWith}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name dissoc
+ * @see {@link http://ramdajs.com/docs/#dissoc|R.dissoc}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name dissocPath
+ * @see {@link http://ramdajs.com/docs/#dissocPath|R.dissocPath}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name divide
+ * @see {@link http://ramdajs.com/docs/#divide|R.divide}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name drop
+ * @see {@link http://ramdajs.com/docs/#drop|R.drop}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name dropLast
+ * @see {@link http://ramdajs.com/docs/#dropLast|R.dropLast}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name dropLastWhile
+ * @see {@link http://ramdajs.com/docs/#dropLastWhile|R.dropLastWhile}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name dropRepeats
+ * @see {@link http://ramdajs.com/docs/#dropRepeats|R.dropRepeats}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name dropRepeatsWith
+ * @see {@link http://ramdajs.com/docs/#dropRepeatsWith|R.dropRepeatsWith}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name dropWhile
+ * @see {@link http://ramdajs.com/docs/#dropWhile|R.dropWhile}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name either
+ * @see {@link http://ramdajs.com/docs/#either|R.either}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name empty
+ * @see {@link http://ramdajs.com/docs/#empty|R.empty}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name endsWith
+ * @see {@link http://ramdajs.com/docs/#endsWith|R.endsWith}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name eqBy
+ * @see {@link http://ramdajs.com/docs/#eqBy|R.eqBy}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name eqProps
+ * @see {@link http://ramdajs.com/docs/#eqProps|R.eqProps}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name equals
+ * @see {@link http://ramdajs.com/docs/#equals|R.equals}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name evolve
+ * @see {@link http://ramdajs.com/docs/#evolve|R.evolve}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name filter
+ * @see {@link http://ramdajs.com/docs/#filter|R.filter}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name find
+ * @see {@link http://ramdajs.com/docs/#find|R.find}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name findIndex
+ * @see {@link http://ramdajs.com/docs/#findIndex|R.findIndex}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name findLast
+ * @see {@link http://ramdajs.com/docs/#findLast|R.findLast}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name findLastIndex
+ * @see {@link http://ramdajs.com/docs/#findLastIndex|R.findLastIndex}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name flatten
+ * @see {@link http://ramdajs.com/docs/#flatten|R.flatten}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name forEachObjIndexed
+ * @see {@link http://ramdajs.com/docs/#forEachObjIndexed|R.forEachObjIndexed}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name fromPairs
+ * @see {@link http://ramdajs.com/docs/#fromPairs|R.fromPairs}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name groupBy
+ * @see {@link http://ramdajs.com/docs/#groupBy|R.groupBy}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name groupWith
+ * @see {@link http://ramdajs.com/docs/#groupWith|R.groupWith}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name gt
+ * @see {@link http://ramdajs.com/docs/#gt|R.gt}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name gte
+ * @see {@link http://ramdajs.com/docs/#gte|R.gte}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name has
+ * @see {@link http://ramdajs.com/docs/#has|R.has}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name hasIn
+ * @see {@link http://ramdajs.com/docs/#hasIn|R.hasIn}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name head
+ * @see {@link http://ramdajs.com/docs/#head|R.head}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name identical
+ * @see {@link http://ramdajs.com/docs/#identical|R.identical}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name identity
+ * @see {@link http://ramdajs.com/docs/#identity|R.identity}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name ifElse
+ * @see {@link http://ramdajs.com/docs/#ifElse|R.ifElse}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name inc
+ * @see {@link http://ramdajs.com/docs/#inc|R.inc}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name indexOf
+ * @see {@link http://ramdajs.com/docs/#indexOf|R.indexOf}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name init
+ * @see {@link http://ramdajs.com/docs/#init|R.init}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name innerJoin
+ * @see {@link http://ramdajs.com/docs/#innerJoin|R.innerJoin}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name insert
+ * @see {@link http://ramdajs.com/docs/#insert|R.insert}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name insertAll
+ * @see {@link http://ramdajs.com/docs/#insertAll|R.insertAll}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name intersection
+ * @see {@link http://ramdajs.com/docs/#intersection|R.intersection}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name intersperse
+ * @see {@link http://ramdajs.com/docs/#intersperse|R.intersperse}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name into
+ * @see {@link http://ramdajs.com/docs/#into|R.into}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name invert
+ * @see {@link http://ramdajs.com/docs/#invert|R.invert}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name invertObj
+ * @see {@link http://ramdajs.com/docs/#invertObj|R.invertObj}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name invoker
+ * @see {@link http://ramdajs.com/docs/#invoker|R.invoker}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name is
+ * @see {@link http://ramdajs.com/docs/#is|R.is}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name isEmpty
+ * @see {@link http://ramdajs.com/docs/#isEmpty|R.isEmpty}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name isNil
+ * @see {@link http://ramdajs.com/docs/#isNil|R.isNil}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name join
+ * @see {@link http://ramdajs.com/docs/#join|R.join}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name juxt
+ * @see {@link http://ramdajs.com/docs/#juxt|R.juxt}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name keys
+ * @see {@link http://ramdajs.com/docs/#keys|R.keys}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name keysIn
+ * @see {@link http://ramdajs.com/docs/#keysIn|R.keysIn}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name last
+ * @see {@link http://ramdajs.com/docs/#last|R.last}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name lastIndexOf
+ * @see {@link http://ramdajs.com/docs/#lastIndexOf|R.lastIndexOf}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name length
+ * @see {@link http://ramdajs.com/docs/#length|R.length}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name lens
+ * @see {@link http://ramdajs.com/docs/#lens|R.lens}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name lensIndex
+ * @see {@link http://ramdajs.com/docs/#lensIndex|R.lensIndex}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name lensPath
+ * @see {@link http://ramdajs.com/docs/#lensPath|R.lensPath}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name lensProp
+ * @see {@link http://ramdajs.com/docs/#lensProp|R.lensProp}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name lift
+ * @see {@link http://ramdajs.com/docs/#lift|R.lift}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name liftN
+ * @see {@link http://ramdajs.com/docs/#liftN|R.liftN}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name lt
+ * @see {@link http://ramdajs.com/docs/#lt|R.lt}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name lte
+ * @see {@link http://ramdajs.com/docs/#lte|R.lte}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name map
+ * @see {@link http://ramdajs.com/docs/#map|R.map}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name mapAccum
+ * @see {@link http://ramdajs.com/docs/#mapAccum|R.mapAccum}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name mapAccumRight
+ * @see {@link http://ramdajs.com/docs/#mapAccumRight|R.mapAccumRight}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name mapObjIndexed
+ * @see {@link http://ramdajs.com/docs/#mapObjIndexed|R.mapObjIndexed}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name match
+ * @see {@link http://ramdajs.com/docs/#match|R.match}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name mathMod
+ * @see {@link http://ramdajs.com/docs/#mathMod|R.mathMod}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name max
+ * @see {@link http://ramdajs.com/docs/#max|R.max}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name maxBy
+ * @see {@link http://ramdajs.com/docs/#maxBy|R.maxBy}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name mean
+ * @see {@link http://ramdajs.com/docs/#mean|R.mean}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name median
+ * @see {@link http://ramdajs.com/docs/#median|R.median}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name memoize
+ * @see {@link http://ramdajs.com/docs/#memoize|R.memoize}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name memoizeWith
+ * @see {@link http://ramdajs.com/docs/#memoizeWith|R.memoizeWith}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name merge
+ * @see {@link http://ramdajs.com/docs/#merge|R.merge}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name mergeAll
+ * @see {@link http://ramdajs.com/docs/#mergeAll|R.mergeAll}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name mergeDeepLeft
+ * @see {@link http://ramdajs.com/docs/#mergeDeepLeft|R.mergeDeepLeft}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name mergeDeepRight
+ * @see {@link http://ramdajs.com/docs/#mergeDeepRight|R.mergeDeepRight}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name mergeDeepWith
+ * @see {@link http://ramdajs.com/docs/#mergeDeepWith|R.mergeDeepWith}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name mergeDeepWithKey
+ * @see {@link http://ramdajs.com/docs/#mergeDeepWithKey|R.mergeDeepWithKey}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name mergeWith
+ * @see {@link http://ramdajs.com/docs/#mergeWith|R.mergeWith}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name mergeWithKey
+ * @see {@link http://ramdajs.com/docs/#mergeWithKey|R.mergeWithKey}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name min
+ * @see {@link http://ramdajs.com/docs/#min|R.min}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name minBy
+ * @see {@link http://ramdajs.com/docs/#minBy|R.minBy}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name modulo
+ * @see {@link http://ramdajs.com/docs/#modulo|R.modulo}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name multiply
+ * @see {@link http://ramdajs.com/docs/#multiply|R.multiply}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name nAry
+ * @see {@link http://ramdajs.com/docs/#nAry|R.nAry}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name negate
+ * @see {@link http://ramdajs.com/docs/#negate|R.negate}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name none
+ * @see {@link http://ramdajs.com/docs/#none|R.none}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name not
+ * @see {@link http://ramdajs.com/docs/#not|R.not}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name nth
+ * @see {@link http://ramdajs.com/docs/#nth|R.nth}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name nthArg
+ * @see {@link http://ramdajs.com/docs/#nthArg|R.nthArg}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name o
+ * @see {@link http://ramdajs.com/docs/#o|R.o}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name objOf
+ * @see {@link http://ramdajs.com/docs/#objOf|R.objOf}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name of
+ * @see {@link http://ramdajs.com/docs/#of|R.of}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name omit
+ * @see {@link http://ramdajs.com/docs/#omit|R.omit}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name once
+ * @see {@link http://ramdajs.com/docs/#once|R.once}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name or
+ * @see {@link http://ramdajs.com/docs/#or|R.or}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name over
+ * @see {@link http://ramdajs.com/docs/#over|R.over}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name pair
+ * @see {@link http://ramdajs.com/docs/#pair|R.pair}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name partial
+ * @see {@link http://ramdajs.com/docs/#partial|R.partial}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name partialRight
+ * @see {@link http://ramdajs.com/docs/#partialRight|R.partialRight}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name partition
+ * @see {@link http://ramdajs.com/docs/#partition|R.partition}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name path
+ * @see {@link http://ramdajs.com/docs/#path|R.path}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name pathEq
+ * @see {@link http://ramdajs.com/docs/#pathEq|R.pathEq}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name pathOr
+ * @see {@link http://ramdajs.com/docs/#pathOr|R.pathOr}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name pathSatisfies
+ * @see {@link http://ramdajs.com/docs/#pathSatisfies|R.pathSatisfies}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name pick
+ * @see {@link http://ramdajs.com/docs/#pick|R.pick}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name pickAll
+ * @see {@link http://ramdajs.com/docs/#pickAll|R.pickAll}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name pickBy
+ * @see {@link http://ramdajs.com/docs/#pickBy|R.pickBy}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name pipe
+ * @see {@link http://ramdajs.com/docs/#pipe|R.pipe}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name pipeK
+ * @see {@link http://ramdajs.com/docs/#pipeK|R.pipeK}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name pipeP
+ * @see {@link http://ramdajs.com/docs/#pipeP|R.pipeP}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name pluck
+ * @see {@link http://ramdajs.com/docs/#pluck|R.pluck}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name prepend
+ * @see {@link http://ramdajs.com/docs/#prepend|R.prepend}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name product
+ * @see {@link http://ramdajs.com/docs/#product|R.product}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name project
+ * @see {@link http://ramdajs.com/docs/#project|R.project}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name prop
+ * @see {@link http://ramdajs.com/docs/#prop|R.prop}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name propEq
+ * @see {@link http://ramdajs.com/docs/#propEq|R.propEq}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name propIs
+ * @see {@link http://ramdajs.com/docs/#propIs|R.propIs}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name propOr
+ * @see {@link http://ramdajs.com/docs/#propOr|R.propOr}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name propSatisfies
+ * @see {@link http://ramdajs.com/docs/#propSatisfies|R.propSatisfies}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name props
+ * @see {@link http://ramdajs.com/docs/#props|R.props}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name range
+ * @see {@link http://ramdajs.com/docs/#range|R.range}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name reduce
+ * @see {@link http://ramdajs.com/docs/#reduce|R.reduce}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name reduceBy
+ * @see {@link http://ramdajs.com/docs/#reduceBy|R.reduceBy}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name reduceRight
+ * @see {@link http://ramdajs.com/docs/#reduceRight|R.reduceRight}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name reduceWhile
+ * @see {@link http://ramdajs.com/docs/#reduceWhile|R.reduceWhile}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name reduced
+ * @see {@link http://ramdajs.com/docs/#reduced|R.reduced}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name reject
+ * @see {@link http://ramdajs.com/docs/#reject|R.reject}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name remove
+ * @see {@link http://ramdajs.com/docs/#remove|R.remove}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name repeat
+ * @see {@link http://ramdajs.com/docs/#repeat|R.repeat}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name replace
+ * @see {@link http://ramdajs.com/docs/#replace|R.replace}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name reverse
+ * @see {@link http://ramdajs.com/docs/#reverse|R.reverse}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name scan
+ * @see {@link http://ramdajs.com/docs/#scan|R.scan}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name sequence
+ * @see {@link http://ramdajs.com/docs/#sequence|R.sequence}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name set
+ * @see {@link http://ramdajs.com/docs/#set|R.set}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name slice
+ * @see {@link http://ramdajs.com/docs/#slice|R.slice}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name sort
+ * @see {@link http://ramdajs.com/docs/#sort|R.sort}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name sortBy
+ * @see {@link http://ramdajs.com/docs/#sortBy|R.sortBy}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name sortWith
+ * @see {@link http://ramdajs.com/docs/#sortWith|R.sortWith}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name splitAt
+ * @see {@link http://ramdajs.com/docs/#splitAt|R.splitAt}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name splitEvery
+ * @see {@link http://ramdajs.com/docs/#splitEvery|R.splitEvery}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name splitWhen
+ * @see {@link http://ramdajs.com/docs/#splitWhen|R.splitWhen}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name startsWith
+ * @see {@link http://ramdajs.com/docs/#startsWith|R.startsWith}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name subtract
+ * @see {@link http://ramdajs.com/docs/#subtract|R.subtract}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name sum
+ * @see {@link http://ramdajs.com/docs/#sum|R.sum}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name symmetricDifference
+ * @see {@link http://ramdajs.com/docs/#symmetricDifference|R.symmetricDifference}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name symmetricDifferenceWith
+ * @see {@link http://ramdajs.com/docs/#symmetricDifferenceWith|R.symmetricDifferenceWith}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name tail
+ * @see {@link http://ramdajs.com/docs/#tail|R.tail}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name take
+ * @see {@link http://ramdajs.com/docs/#take|R.take}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name takeLast
+ * @see {@link http://ramdajs.com/docs/#takeLast|R.takeLast}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name takeLastWhile
+ * @see {@link http://ramdajs.com/docs/#takeLastWhile|R.takeLastWhile}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name takeWhile
+ * @see {@link http://ramdajs.com/docs/#takeWhile|R.takeWhile}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name test
+ * @see {@link http://ramdajs.com/docs/#test|R.test}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name times
+ * @see {@link http://ramdajs.com/docs/#times|R.times}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name toPairs
+ * @see {@link http://ramdajs.com/docs/#toPairs|R.toPairs}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name toPairsIn
+ * @see {@link http://ramdajs.com/docs/#toPairsIn|R.toPairsIn}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name transduce
+ * @see {@link http://ramdajs.com/docs/#transduce|R.transduce}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name transpose
+ * @see {@link http://ramdajs.com/docs/#transpose|R.transpose}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name traverse
+ * @see {@link http://ramdajs.com/docs/#traverse|R.traverse}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name tryCatch
+ * @see {@link http://ramdajs.com/docs/#tryCatch|R.tryCatch}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name type
+ * @see {@link http://ramdajs.com/docs/#type|R.type}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name unapply
+ * @see {@link http://ramdajs.com/docs/#unapply|R.unapply}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name unary
+ * @see {@link http://ramdajs.com/docs/#unary|R.unary}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name uncurryN
+ * @see {@link http://ramdajs.com/docs/#uncurryN|R.uncurryN}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name unfold
+ * @see {@link http://ramdajs.com/docs/#unfold|R.unfold}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name union
+ * @see {@link http://ramdajs.com/docs/#union|R.union}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name unionWith
+ * @see {@link http://ramdajs.com/docs/#unionWith|R.unionWith}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name uniq
+ * @see {@link http://ramdajs.com/docs/#uniq|R.uniq}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name uniqBy
+ * @see {@link http://ramdajs.com/docs/#uniqBy|R.uniqBy}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name uniqWith
+ * @see {@link http://ramdajs.com/docs/#uniqWith|R.uniqWith}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name unless
+ * @see {@link http://ramdajs.com/docs/#unless|R.unless}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name unnest
+ * @see {@link http://ramdajs.com/docs/#unnest|R.unnest}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name until
+ * @see {@link http://ramdajs.com/docs/#until|R.until}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name update
+ * @see {@link http://ramdajs.com/docs/#update|R.update}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name useWith
+ * @see {@link http://ramdajs.com/docs/#useWith|R.useWith}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name values
+ * @see {@link http://ramdajs.com/docs/#values|R.values}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name valuesIn
+ * @see {@link http://ramdajs.com/docs/#valuesIn|R.valuesIn}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name view
+ * @see {@link http://ramdajs.com/docs/#view|R.view}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name when
+ * @see {@link http://ramdajs.com/docs/#when|R.when}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name where
+ * @see {@link http://ramdajs.com/docs/#where|R.where}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name whereEq
+ * @see {@link http://ramdajs.com/docs/#whereEq|R.whereEq}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name without
+ * @see {@link http://ramdajs.com/docs/#without|R.without}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name xprod
+ * @see {@link http://ramdajs.com/docs/#xprod|R.xprod}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name zip
+ * @see {@link http://ramdajs.com/docs/#zip|R.zip}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name zipObj
+ * @see {@link http://ramdajs.com/docs/#zipObj|R.zipObj}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name zipWith
+ * @see {@link http://ramdajs.com/docs/#zipWith|R.zipWith}
+ */
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sat Apr 21 2018 00:15:32 GMT-0400 (EDT) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
