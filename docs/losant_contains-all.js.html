@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>losant/contains-all.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-lodash.html">lodash</a><ul class='methods'><li data-type='method'><a href="module-lodash.html#.camelCase">camelCase</a></li><li data-type='method'><a href="module-lodash.html#.capitalize">capitalize</a></li><li data-type='method'><a href="module-lodash.html#.castArray">castArray</a></li></ul></li><li><a href="module-losant.html">losant</a><ul class='methods'><li data-type='method'><a href="module-losant.html#.allEqual">allEqual</a></li><li data-type='method'><a href="module-losant.html#.argsToObj">argsToObj</a></li></ul></li><li><a href="module-ramda.html">ramda</a><ul class='methods'><li data-type='method'><a href="module-ramda.html#.__">__</a></li><li data-type='method'><a href="module-ramda.html#.add">add</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#clampPositive">clampPositive</a></li><li><a href="global.html#containsAll">containsAll</a></li><li><a href="global.html#containsAny">containsAny</a></li><li><a href="global.html#count">count</a></li><li><a href="global.html#debounce">debounce</a></li><li><a href="global.html#defaultToStrict">defaultToStrict</a></li><li><a href="global.html#defer">defer</a></li><li><a href="global.html#dotPath">dotPath</a></li><li><a href="global.html#dotPathOr">dotPathOr</a></li><li><a href="global.html#ensureArray">ensureArray</a></li><li><a href="global.html#ensureStartsWith">ensureStartsWith</a></li><li><a href="global.html#eqDotPaths">eqDotPaths</a></li><li><a href="global.html#eqDotPathsShallow">eqDotPathsShallow</a></li><li><a href="global.html#eqPaths">eqPaths</a></li><li><a href="global.html#equalsAny">equalsAny</a></li><li><a href="global.html#equalsShallow">equalsShallow</a></li><li><a href="global.html#evolveArray">evolveArray</a></li><li><a href="global.html#filterMap">filterMap</a></li><li><a href="global.html#format">format</a></li><li><a href="global.html#fpThrow">fpThrow</a></li><li><a href="global.html#intersectAny">intersectAny</a></li><li><a href="global.html#isNilOrEmpty">isNilOrEmpty</a></li><li><a href="global.html#isNot">isNot</a></li><li><a href="global.html#isNotEmpty">isNotEmpty</a></li><li><a href="global.html#isNotNil">isNotNil</a></li><li><a href="global.html#isPopulatedString">isPopulatedString</a></li><li><a href="global.html#jsonParseSafe">jsonParseSafe</a></li><li><a href="global.html#keyByWith">keyByWith</a></li><li><a href="global.html#list">list</a></li><li><a href="global.html#mapFilter">mapFilter</a></li><li><a href="global.html#mapRejectNil">mapRejectNil</a></li><li><a href="global.html#mergeSpec">mergeSpec</a></li><li><a href="global.html#mergeWithArrays">mergeWithArrays</a></li><li><a href="global.html#nonePass">nonePass</a></li><li><a href="global.html#noopAsync">noopAsync</a></li><li><a href="global.html#propOrStrict">propOrStrict</a></li><li><a href="global.html#rejectNilMap">rejectNilMap</a></li><li><a href="global.html#replaceAll">replaceAll</a></li><li><a href="global.html#resolveProps">resolveProps</a></li><li><a href="global.html#round">round</a></li><li><a href="global.html#sleep">sleep</a></li><li><a href="global.html#stringify">stringify</a></li><li><a href="global.html#stringToBoolean">stringToBoolean</a></li><li><a href="global.html#tap">tap</a></li><li><a href="global.html#throttle">throttle</a></li><li><a href="global.html#throttleLeading">throttleLeading</a></li><li><a href="global.html#throttleTrailing">throttleTrailing</a></li><li><a href="global.html#thunkify">thunkify</a></li><li><a href="global.html#timeout">timeout</a></li><li><a href="global.html#trace">trace</a></li><li><a href="global.html#tryCatchSafe">tryCatchSafe</a></li><li><a href="global.html#upperCamelCase">upperCamelCase</a></li><li><a href="global.html#within">within</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">losant/contains-all.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const curry = require('ramda/src/curry');
+const pipe = require('ramda/src/pipe');
+const intersection = require('ramda/src/intersection');
+const length = require('ramda/src/length');
+const equals = require('ramda/src/equals');
+
+/**
+ * Predicate that checks to see if each element in an array
+ * exists in a larger array.
+ *
+ * @signature Array&lt;* a> -> Array&lt;* a> -> Boolean
+ *
+ * @example
+ *   containsAll([1, 3, 2], [1, 2, 3, 4, 5]); // => true
+ */
+const containsAll = curry((smaller, larger) =>
+  pipe(
+    intersection(smaller),
+    length,
+    equals(length(smaller)),
+  )(larger)
+);
+
+module.exports = containsAll;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Apr 20 2018 16:48:05 GMT-0400 (EDT) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
