@@ -20,6 +20,8 @@
     "precommit": "lint-staged",
     "postmerge": "losant-scripts git-hook post-merge",
     "postversion": "losant-scripts git-hook post-version",
+    "docs:gen-ramda": "./scripts/ramda-docs-gen.js",
+    "predocs": "yarn docs:gen-ramda",
     "docs": "jsdoc -c jsdoc.json"
   },
   "lint-staged": {
@@ -37,7 +39,8 @@
     "@losant/scripts": "^1.0.10",
     "docdash": "^0.4.0",
     "expect": "^22.4.3",
-    "fs-extra": "^4.0.3",
+    "fs-extra": "^5.0.0",
+    "handlebars": "^4.0.11",
     "husky": "^0.14.3",
     "jest": "^21.0.2",
     "jsdoc": "^3.5.5",
