@@ -20,8 +20,10 @@
     "precommit": "lint-staged",
     "postmerge": "losant-scripts git-hook post-merge",
     "postversion": "losant-scripts git-hook post-version",
-    "predocs": "./scripts/gen-3rd-party-docs.js",
-    "docs": "jsdoc -c jsdoc.json"
+    "docs": "yarn docs:open",
+    "predocs:build": "./scripts/gen-3rd-party-docs.js",
+    "docs:build": "jsdoc -c jsdoc.json",
+    "docs:open": "open ./docs/index.html"
   },
   "lint-staged": {
     "*.js": "esw"

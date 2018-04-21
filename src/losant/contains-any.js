@@ -18,6 +18,7 @@ const isNotEmpty = require('./is-not-empty');
  *
  * @example
  * containsAny([1, 2], [1, 2, 3]); // => true
+ * containsAny([0, 2, 4, 5, 6], [1, 2, 3]); // => true
  * containsAny(['foo'], ['foo', 'bar']); // => true
  * containsAny([null], [null, 'foo']); // => true
  * containsAny([1], ['foo']); // => false
