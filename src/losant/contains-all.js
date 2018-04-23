@@ -8,17 +8,23 @@ const equals = require('ramda/src/equals');
  * Predicate that checks to see if each element in an array
  * exists in a larger array.
  *
- * @signature Array<* a> -> Array<* a> -> Boolean
+ * @func
+ * @memberof module:losant
+ * @name containsAll
+ * @param {Array} needle - list to check with
+ * @param {Array} haystack - list to check against
+ * @return {Boolean} True if all are found, false otherwise
+ * @summary Array<* a> -> Array<* a> -> Boolean
  *
  * @example
- *   containsAll([1, 3, 2], [1, 2, 3, 4, 5]); // => true
+ * containsAll([1, 3, 2], [1, 2, 3, 4, 5]); // => true
  */
-const containsAll = curry((smaller, larger) =>
+const containsAll = curry((needle, haystack) =>
   pipe(
-    intersection(smaller),
+    intersection(needle),
     length,
-    equals(length(smaller)),
-  )(larger)
+    equals(length(needle)),
+  )(haystack)
 );
 
 module.exports = containsAll;
