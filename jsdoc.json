@@ -10,6 +10,7 @@
   ],
   "opts": {
     "template": "node_modules/docdash",
+    "readme": "./README.md",
     "destination": "docs/",
     "recurse": true,
     "verbose": true
