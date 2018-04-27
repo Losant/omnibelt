@@ -8,7 +8,17 @@ const list = require('./list');
  * (e.g. NodeList, arguments) it will be converted to an array; otherwise, it
  * will be wrapped in a new array.
  *
- * @signature * a -> Array a
+ * @func
+ * @memberof module:losant
+ * @name ensureArray
+ * @param {Any} data - Any value to ensure
+ * @return {Array} An array with `data` unless already an array
+ * @summary Any a -> [a]
+ *
+ * @example
+ * ensureArray('foo'); // => ['foo']
+ * ensureArray(['foo']); // => ['foo']
+ * ensureArray(null); // => [null]
  */
 const ensureArray = ifElse(
   isArrayLikeObject,

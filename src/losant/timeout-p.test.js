@@ -1,16 +1,16 @@
-const timeout = require('./timeout');
+const timeoutP = require('./timeout-p');
 
 it('should correctly deal with promise timeouts', async () => {
   const p1 = new Promise((f) => { setTimeout(() => { f('a'); }, 100); });
-  await expect(timeout(1000, p1)).resolves.toBe('a');
+  await expect(timeoutP(1000, p1)).resolves.toBe('a');
 
   let error = new Error('b');
   const p2 = new Promise((f, r) => { setTimeout(() => { r(error); }, 100); });
-  await expect(timeout(1000, p2)).rejects.toBe(error);
+  await expect(timeoutP(1000, p2)).rejects.toBe(error);
 
   const p3 = new Promise((f) => { setTimeout(() => { f('a'); }, 1000); });
   try {
-    await timeout(100, p3);
+    await timeoutP(100, p3);
   } catch (e) { error = e; }
 
   expect(error.name).toEqual('Error');

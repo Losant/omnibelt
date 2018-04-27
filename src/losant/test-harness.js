@@ -12,7 +12,7 @@ const format = require('./format');
 const stringify = require('./stringify');
 
 const testCaseToString = compose(
-  format('[{args}] ==> {expected}'),
+  format('({args}) => {expected}'),
   evolve({
     args: map(stringify),
     expected: stringify
