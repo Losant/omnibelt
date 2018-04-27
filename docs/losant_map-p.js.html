@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>losant/reject-nil-map.js - Documentation</title>
+    <title>losant/map-p.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,7 +27,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">losant/reject-nil-map.js</h1>
+    <h1 class="page-title">losant/map-p.js</h1>
     
 
     
@@ -37,18 +37,51 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>const filterMap = require('./filter-map');
-const isNotNil  = require('./is-not-nil');
+            <pre class="prettyprint source linenums"><code>const curry = require('ramda/src/curry');
+const compose = require('ramda/src/compose');
+const map = require('ramda/src/map');
+const cond = require('ramda/src/cond');
+const is = require('ramda/src/is');
+const T = require('ramda/src/T');
+const identity = require('ramda/src/identity');
+const resolveProps = require('./resolve-props');
+
+const resolveArray = (x) => Promise.all(x);
 
 /**
- * Maps an array by the given transform, but only values that are not nil
- * are transformed and included in the resulting array.
+ * Just like a normal `map` function, but handles an asyncronous iteration function
  *
- * @signature xf -> [*] -> [*]
+ * @func
+ * @memberof module:losant
+ * @name mapP
+ * @param {Function} xf - Asyncronous tranformation function
+ * @param {Array|Object} data - Data source to iterate over
+ * @return {Array|Object} Transformed values inside the `data` original structure
+ * @summary (a -> Promise&lt; b >) -> Array|Object b&lt; a > -> Promise&lt; b&lt; a > >;
+ *
+ * @example
+ * mapP((x) => Promise.resolve(x + 1), [1, 2, 3]).then(identity); // => [2, 3, 4]
+ * mapP(
+ *   async (x) => {
+ *     await sleep(50);
+ *     return toUpper(x);
+ *   },
+ *   { foo: 'foo', bar: 'bar', baz: 'baz' }
+ * ).then(identity);
+ * // { foo: 'FOO', bar: 'BAR', baz: 'BAZ' }
  */
-const rejectNilMap = filterMap(isNotNil);
+const mapP = curry(
+  (xf, data) => compose(
+    cond([
+      [is(Array), resolveArray],
+      [is(Object), resolveProps],
+      [T, identity]
+    ]),
+    map(xf)
+  )(data)
+);
 
-module.exports = rejectNilMap;
+module.exports = mapP;
 </code></pre>
         </article>
     </section>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>losant/reject-nil-map.js - Documentation</title>
+    <title>losant/timeout-p.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,7 +27,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">losant/reject-nil-map.js</h1>
+    <h1 class="page-title">losant/timeout-p.js</h1>
     
 
     
@@ -37,18 +37,53 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>const filterMap = require('./filter-map');
-const isNotNil  = require('./is-not-nil');
+            <pre class="prettyprint source linenums"><code>const { curry } = require('ramda');
+const defer = require('./defer');
 
 /**
- * Maps an array by the given transform, but only values that are not nil
- * are transformed and included in the resulting array.
+ * A promise timeout helper. If the given promise does not resolve within the given
+ * number of milliseconds, the promise is rejected. Similar to [this](http://bluebirdjs.com/docs/api/timeout.html)
+ * or [this](https://github.com/kriskowal/q/wiki/API-Reference#promisetimeoutms-message).
+ * NOTE: this does NOT cancel the original promise.
  *
- * @signature xf -> [*] -> [*]
+ * @func
+ * @memberof module:losant
+ * @name timeoutP
+ * @param {Number} ms - Number of miliseconds before timing out the promise
+ * @param {Promise} promise - An in-flight promise
+ * @return {Any|Error} The return value of the promise or rejection
+ * @summary Number -> Promise&lt; * > -> Promise&lt; * >
+ *
+ * @example
+ * timeoutP(1000, Promise.resolve('hi')).then(identity); // => 'hi'
+ * timeoutP(1000, async (foo) => {
+ *   await sleep(1200);
+ *   return foo;
+ * }).catch(identity); // => Error&lt;{ code: ETIMEDOUT, name: 'Error', message: '...' }>
  */
-const rejectNilMap = filterMap(isNotNil);
+const timeoutP = curry((ms, promise) => {
+  const deferred = defer();
 
-module.exports = rejectNilMap;
+  const timeoutId = setTimeout(() => {
+    const error = new Error(`Promise timed out after ${ms} ms`);
+    error.code = 'ETIMEDOUT';
+    error.promise = promise;
+    deferred.reject(error);
+  }, ms);
+
+  promise
+    .then((value) => {
+      clearTimeout(timeoutId);
+      deferred.resolve(value);
+    }, (err) => {
+      clearTimeout(timeoutId);
+      deferred.reject(err);
+    });
+
+  return deferred.promise;
+});
+
+module.exports = timeoutP;
 </code></pre>
         </article>
     </section>
