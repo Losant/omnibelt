@@ -3,15 +3,9 @@ const defer = require('./defer');
 
 /**
  * A promise timeout helper. If the given promise does not resolve within the given
- * number of milliseconds, the promise is rejected.
- *
- * Similar to http://bluebirdjs.com/docs/api/timeout.html
- * or https://github.com/kriskowal/q/wiki/API-Reference#promisetimeoutms-message
- *
+ * number of milliseconds, the promise is rejected. Similar to [this](http://bluebirdjs.com/docs/api/timeout.html)
+ * or [this](https://github.com/kriskowal/q/wiki/API-Reference#promisetimeoutms-message).
  * NOTE: this does NOT cancel the original promise.
- *
- * REASONING: we are trying to no longer use libraries that create their own "Promise"
- * classes with special methods (q/bluebird) - i.e., we want to treat everything like a native promise
  *
  * @func
  * @memberof module:losant
@@ -19,7 +13,7 @@ const defer = require('./defer');
  * @param {Number} ms - Number of miliseconds before timing out the promise
  * @param {Promise} promise - An in-flight promise
  * @return {Any|Error} The return value of the promise or rejection
- * @summary Number -> Promise<*> -> Promise<*>
+ * @summary Number -> Promise< * > -> Promise< * >
  *
  * @example
  * timeoutP(1000, Promise.resolve('hi')).then(identity); // => 'hi'
