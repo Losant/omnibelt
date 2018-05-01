@@ -18,7 +18,7 @@ const resolveArray = (x) => Promise.all(x);
  * @param {Function} xf - Asyncronous tranformation function
  * @param {Array|Object} data - Data source to iterate over
  * @return {Array|Object} Transformed values inside the `data` original structure
- * @summary (a -> Promise< b >) -> Array|Object b< a > -> Promise< b< a > >;
+ * @summary (a -> Promise< b >) -> Array|Object c< a > -> Promise< c< b > >;
  *
  * @example
  * mapP((x) => Promise.resolve(x + 1), [1, 2, 3]).then(identity); // => [2, 3, 4]
