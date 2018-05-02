@@ -14,7 +14,11 @@ const addIndex = require('ramda/src/addIndex');
  * @see `R.map`, `R.addIndex`, `R.mapObjIndexed`
  *
  * @example
- * map((value, index) => `${value}-{index}`, ['a', 'b']); // ['a-0', 'b-1']
+ * map(
+ *   (value, index) => `${value}-{index}`,
+ *   ['a', 'b']
+ * );
+ * // ['a-0', 'b-1']
  */
 const mapIndexed = addIndex(map);
 
