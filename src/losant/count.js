@@ -10,7 +10,7 @@ const identity = require('ramda/src/identity');
  * @name count
  * @param {Array} toCount - list of elements to count
  * @return {Object} Where keys are the elements of `toCount` and the values are the number of occurrences
- * @summary [a] → { a: Number }
+ * @summary [a] -> { a: Number }
  * @see `R.countBy`
  *
  * @example
