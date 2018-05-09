@@ -36,9 +36,9 @@
   },
   "dependencies": {
     "@rjhilgefort/export-dir": "^1.1.0",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.10",
     "ramda": "^0.25.0",
-    "string-format": "^0.5.0",
+    "string-format": "^1.0.0",
     "stringify-object": "^3.2.1"
   },
   "devDependencies": {
@@ -50,7 +50,7 @@
     "husky": "^0.14.3",
     "jest": "^21.0.2",
     "jsdoc": "^3.5.5",
-    "lint-staged": "^6.0.0",
+    "lint-staged": "^7.0.5",
     "present": "^1.0.0",
     "treis": "^2.5.0"
   },
