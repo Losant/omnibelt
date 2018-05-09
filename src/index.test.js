@@ -1,9 +1,9 @@
 const _ = require('./lodash');
-const r = require('./ramda');
-const l = require('./losant');
+const R = require('./ramda');
+const O = require('./omnibelt');
 
-const { compose, map, keys } = r;
-const { intersectAny } = l;
+const { compose, map, keys } = R;
+const { intersectAny } = O;
 
 // TODO: Make this an exposed util?
 // :: [{String a: * b}] -> [a]
@@ -12,6 +12,6 @@ const intersectAnyKeys =
 
 it('sub utilities don\'t contain duplicates', () => {
   expect(
-    intersectAnyKeys([_, r, l])
+    intersectAnyKeys([_, R, O])
   ).toEqual([]);
 });

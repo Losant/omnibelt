@@ -1,13 +1,13 @@
-# losant-utils
+# Omnibelt 
 
-Losant god utility belt. This lib wraps `Ramda` and `Lodash/FP` alongside our own utility methods. The order of precedence is: Does it exist in `Ramda`? Does it exist in `Lodash/FP`? Then it must be ours (in `src/losant`). That means that you can deconstruct methods from any of those three from the `losant-utils` exported object.
+A utility belt that normalizes and wraps `Ramda` and `Lodash/FP`. In addition, some other "adjunct" methods are included that solve common patterns. The order of precedence is: Does it exist in `Ramda`? Does it exist in `Lodash/FP`? Then it must be custom (in `src/omnibelt`). That means that you can deconstruct methods from any of those three from the `omnibelt` exported object.
 
 ```js
 const {
   merge, converge, toString,   // Ramda
   isNull, throttle, camelCase, // Lodash
-  isPopulatedString,           // Losant
-} = require('losant-utils');
+  isPopulatedString,           // Omnibelt
+} = require('omnibelt');
 ```
 
 ... I've only grouped them for demonstration purposes, please don't do that in your code.
@@ -28,7 +28,7 @@ yarn run test
 Deconstruction
 
 ```js
-const { isPopulatedString, toLower } = require('losant-utils');
+const { isPopulatedString, toLower } = require('omnibelt');
 const foo = 'foo';
 
 if (!isPopulatedString(foo)) {
@@ -38,16 +38,16 @@ if (!isPopulatedString(foo)) {
 }
 ```
 
-Namespaced - Use `l` by convention
+Namespaced - Use `O` by convention
 
 ```js
-const l = require('losant-utils');
+const O = require('omnibelt');
 const foo = 'foo';
 
-if (!l.isPopulatedString(foo)) {
+if (!O.isPopulatedString(foo)) {
   throw new Error('DANGER');
 } else {
-  return l.toLower(foo);
+  return O.toLower(foo);
 }
 ```
 
@@ -57,13 +57,13 @@ if (!l.isPopulatedString(foo)) {
 
 - What is this `method :: Type -> Type` stuff? It's [Hindley-Milner Notation](https://drboolean.gitbooks.io/mostly-adequate-guide/content/ch7.html).
 - Since most methods are striaght from the source, refer to the [Ramda](http://ramdajs.com/docs/) and [Lodash/FP](https://github.com/lodash/lodash/wiki/FP-Guide) on their respective sites.
-- Docs and examples for the Losant utils are colocated with the utility's definition. When contributing a new function, please provide docs (and tests).
+- Docs and examples for the `omnibelt` methods are colocated with the method's definition. When contributing a new function, please provide docs (and tests).
 
 
 
 ## Docs
 
-[JSDoc definitions](https://github.com/jsdoc3/jsdoc) at the top of each of the `losant` module functions should be kept up to date and are meant to describe the usage of each function in detail. From these doc comments, a documentation site is generated using the [Docdash](https://github.com/clenemt/docdash) template.
+[JSDoc definitions](https://github.com/jsdoc3/jsdoc) at the top of each of the `omnibelt` module functions should be kept up to date and are meant to describe the usage of each function in detail. From these doc comments, a documentation site is generated using the [Docdash](https://github.com/clenemt/docdash) template.
 
 #### Viewing
 
@@ -75,7 +75,7 @@ yarn run docs
 
 You can also see documentation for the latest tag on the GitHub pages for this project.
 
-[https://losant.github.io/losant-utils/](https://losant.github.io/losant-utils/)
+[https://losant.github.io/omnibelt/](https://losant.github.io/omnibelt/)
 
 #### Building
 
@@ -94,6 +94,8 @@ git commit -m "Regenerated docs"
 Below should serve as an "upgrade guide" jumping off point as you are migrating projects to newer versions of this package. Ideally, interface changes will be called out specifically and one should not have to go sifting through git diffs to discern what changed.
 
 - `?.?.?` - *WIP*
+   - Repo renamed and open sourced!
+      - `git remote set-url origin git@github.com:Losant/omnibelt.git`
    - Added methods:
       - `mapIndexed`
 - `1.1.9`
@@ -108,7 +110,7 @@ Below should serve as an "upgrade guide" jumping off point as you are migrating 
       - `ensureEndsWith`
 - `1.1.6`
    - External changes:
-      - `testHarness` and the like, no longer assume that `expect` is available in your environment through `jest`. Instead, you must pass `expect` in as a dependency. See [this issue](https://github.com/Losant/losant-utils/issues/40) for more info.
+      - `testHarness` and the like, no longer assume that `expect` is available in your environment through `jest`. Instead, you must pass `expect` in as a dependency. See [this issue](https://github.com/Losant/omnibelt/issues/40) for more info.
    - Internal changes:
       - linter update to `1.3.2`
       - tests for `equalsAny`
@@ -176,7 +178,7 @@ Below should serve as an "upgrade guide" jumping off point as you are migrating 
    - `ramda` back down to `0.24.1`.
 - `1.0.11`
    - Moved git repo from Bitbucket to GitHub, update your remotes!
-      - `git remote set-url origin git@github.com:Losant/losant-utils.git`
+      - `git remote set-url origin git@github.com:Losant/omnibelt.git`
    - Added methods:
       - `nonePass`
       - `eqPaths`
