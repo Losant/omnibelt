@@ -1,7 +1,7 @@
 const expect = require('expect');
-const testHarness = require('../src/losant/test-harness');
-const testCases = require('../src/losant/test-cases');
-const testHarnessUnary = require('../src/losant/test-harness-unary');
+const testHarness = require('../src/omnibelt/test-harness');
+const testCases = require('../src/omnibelt/test-cases');
+const testHarnessUnary = require('../src/omnibelt/test-harness-unary');
 
 module.exports = {
   testHarness: testHarness(expect),
