@@ -103,7 +103,7 @@ git push
 git checkout master
 git merge develop
 git release vX.X.X
-``` 
+```
 
 
 ## Changelog
