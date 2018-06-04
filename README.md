@@ -1,6 +1,6 @@
 # Omnibelt 
 
-A utility belt that normalizes and wraps `Ramda` and `Lodash/FP`. In addition, some other "adjunct" methods are included that solve common patterns. The order of precedence is: Does it exist in `Ramda`? Does it exist in `Lodash/FP`? Then it must be custom (in `src/omnibelt`). That means that you can deconstruct methods from any of those three from the `omnibelt` exported object.
+A utility belt that normalizes and wraps [Ramda](https://ramdajs.com/) and [Lodash/FP](https://github.com/lodash/lodash/wiki/FP-Guide). In addition, some other "adjunct" methods are included that solve common patterns. The order of precedence is: Does it exist in `Ramda`? Does it exist in `Lodash/FP`? Then it must be custom (in `src/omnibelt`). That means that you can deconstruct methods from any of those three from the `omnibelt` exported object.
 
 ```js
 const {
