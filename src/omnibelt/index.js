@@ -1,4 +1,4 @@
-const fromFiles = require('@rjhilgefort/export-dir/src/from-files');
+const { fromFiles } = require('@rjhilgefort/export-dir');
 
 /**
  * @module omnibelt
