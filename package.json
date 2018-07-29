@@ -2,9 +2,11 @@
   "name": "omnibelt",
   "description": "A utility belt that normalizes and wraps `Ramda` and `Lodash/FP`.",
   "version": "1.2.0",
-  "license": "MIT",
-  "main": "src/index.js",
+  "main": "build/main/index.js",
+  "typings": "build/main/index.d.ts",
+  "module": "build/module/index.js",
   "repository": "git@github.com/Losant/omnibelt.git",
+  "license": "MIT",
   "author": "@Losant",
   "contributors": [
     {
@@ -18,52 +20,81 @@
   },
   "scripts": {
     "reinstall": "rm -rf node_modules && yarn install",
-    "lint": "esw *.js src test",
-    "lint:fix": "yarn lint --fix",
-    "lint:watch": "yarn lint --watch",
-    "lint:staged": "lint-staged",
-    "test": "jest --verbose",
-    "test:watch": "yarn test --watch -o",
+    "clean": "trash build test",
+    "build": "run-s clean && run-p build:*",
+    "build:main": "tsc -p tsconfig.json",
+    "build:module": "tsc -p tsconfig.module.json",
+    "lint": "tslint --format stylish --project .",
+    "lint:fix": "run-s lint:fix:*",
+    "lint:fix:prettier": "prettier \"src/**/*.ts\" --write",
+    "lint:fix:tslint": "tslint --format stylish --fix --project .",
+    "test": "run-s test:*",
+    "test:lint": "tslint --format stylish --project . && prettier \"src/**/*.ts\" --list-different",
+    "test:unit": "jest --verbose",
+    "test:unit:watch": "jest --verbose --watch",
     "precommit": "lint-staged",
     "docs": "yarn docs:open",
-    "predocs:build": "./scripts/gen-3rd-party-docs.js",
-    "docs:build": "jsdoc -c jsdoc.json",
+    "docs:build": "run-s docs:build:*",
+    "docs:build:3rdParty": "./scripts/gen-3rd-party-docs.js",
+    "docs:build:src": "jsdoc -c jsdoc.json",
     "docs:open": "open ./docs/index.html"
   },
   "lint-staged": {
-    "*.js": "esw"
+    "*.js": "tslint --format stylish"
   },
   "dependencies": {
-    "@rjhilgefort/export-dir": "^1.1.0",
     "lodash": "^4.17.10",
     "ramda": "^0.25.0",
     "string-format": "^1.0.0",
     "stringify-object": "^3.2.1"
   },
   "devDependencies": {
-    "@losant/eslint-config-losant": "^1.3.3",
+    "@types/jest": "^23.1.1",
+    "@types/lodash": "^4.14.115",
+    "@types/ramda": "types/npm-ramda#dist",
+    "@types/stringify-object": "^3.2.0",
     "docdash": "^0.4.0",
     "expect": "^22.4.3",
     "fs-extra": "^5.0.0",
     "handlebars": "^4.0.11",
     "husky": "^0.14.3",
-    "jest": "^21.0.2",
+    "jest": "^22.4.0",
     "jsdoc": "^3.5.5",
     "lint-staged": "^7.0.5",
+    "npm-run-all": "^4.1.3",
+    "onchange": "^4.0.0",
     "present": "^1.0.0",
-    "treis": "^2.5.0"
+    "prettier": "^1.13.4",
+    "trash-cli": "^1.4.0",
+    "treis": "^2.5.0",
+    "ts-jest": "^22.4.6",
+    "ts-node": "^7.0.0",
+    "tslint": "^5.10.0",
+    "tslint-config-prettier": "^1.13.0",
+    "typedoc": "^0.11.1",
+    "typescript": "^2.9.1"
   },
-  "eslintConfig": {
-    "extends": "@losant/eslint-config-losant/env/node",
-    "env": {
-      "jest": true
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
     },
-    "rules": {
-      "arrow-body-style": 0,
-      "valid-jsdoc": 0
-    }
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/build/"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "testEnvironment": "node"
   },
-  "eslintIgnore": [
-    "docs"
-  ]
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all"
+  }
 }
