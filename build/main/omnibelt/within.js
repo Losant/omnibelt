@@ -1,0 +1,13 @@
+var __ = require('ramda/src/__');
+var curry = require('ramda/src/curry');
+var gt = require('ramda/src/gt');
+var lt = require('ramda/src/lt');
+var both = require('ramda/src/both');
+/**
+ * @signature Number -> Number -> Number -> Boolean
+ */
+var within = curry(function (start, end, value) {
+    return both(gt(__, start), lt(__, end))(value);
+});
+module.exports = within;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoid2l0aGluLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vc3JjL29tbmliZWx0L3dpdGhpbi5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxJQUFNLEVBQUUsR0FBRyxPQUFPLENBQUMsY0FBYyxDQUFDLENBQUM7QUFDbkMsSUFBTSxLQUFLLEdBQUcsT0FBTyxDQUFDLGlCQUFpQixDQUFDLENBQUM7QUFDekMsSUFBTSxFQUFFLEdBQUcsT0FBTyxDQUFDLGNBQWMsQ0FBQyxDQUFDO0FBQ25DLElBQU0sRUFBRSxHQUFHLE9BQU8sQ0FBQyxjQUFjLENBQUMsQ0FBQztBQUNuQyxJQUFNLElBQUksR0FBRyxPQUFPLENBQUMsZ0JBQWdCLENBQUMsQ0FBQztBQUV2Qzs7R0FFRztBQUNILElBQU0sTUFBTSxHQUFHLEtBQUssQ0FDbEIsVUFBQyxLQUFLLEVBQUUsR0FBRyxFQUFFLEtBQUs7SUFDaEIsT0FBQSxJQUFJLENBQ0YsRUFBRSxDQUFDLEVBQUUsRUFBRSxLQUFLLENBQUMsRUFDYixFQUFFLENBQUMsRUFBRSxFQUFFLEdBQUcsQ0FBQyxDQUNaLENBQUMsS0FBSyxDQUFDO0FBSFIsQ0FHUSxDQUNYLENBQUM7QUFFRixNQUFNLENBQUMsT0FBTyxHQUFHLE1BQU0sQ0FBQyJ9

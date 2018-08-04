@@ -1,0 +1,14 @@
+const resolveProps = require('./resolve-props');
+it('should resolve the props on an object', async () => {
+    const obj = {
+        one: 1,
+        two: Promise.resolve(2),
+        three: Promise.resolve('3')
+    };
+    expect(await resolveProps(obj)).toEqual({
+        one: 1,
+        two: 2,
+        three: '3'
+    });
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicmVzb2x2ZS1wcm9wcy50ZXN0LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vc3JjL29tbmliZWx0L3Jlc29sdmUtcHJvcHMudGVzdC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxNQUFNLFlBQVksR0FBRyxPQUFPLENBQUMsaUJBQWlCLENBQUMsQ0FBQztBQUVoRCxFQUFFLENBQUMsdUNBQXVDLEVBQUUsS0FBSyxJQUFJLEVBQUU7SUFDckQsTUFBTSxHQUFHLEdBQUc7UUFDVixHQUFHLEVBQUUsQ0FBQztRQUNOLEdBQUcsRUFBRSxPQUFPLENBQUMsT0FBTyxDQUFDLENBQUMsQ0FBQztRQUN2QixLQUFLLEVBQUUsT0FBTyxDQUFDLE9BQU8sQ0FBQyxHQUFHLENBQUM7S0FDNUIsQ0FBQztJQUVGLE1BQU0sQ0FBQyxNQUFNLFlBQVksQ0FBQyxHQUFHLENBQUMsQ0FBQyxDQUFDLE9BQU8sQ0FBQztRQUN0QyxHQUFHLEVBQUUsQ0FBQztRQUNOLEdBQUcsRUFBRSxDQUFDO1FBQ04sS0FBSyxFQUFFLEdBQUc7S0FDWCxDQUFDLENBQUM7QUFDTCxDQUFDLENBQUMsQ0FBQyJ9

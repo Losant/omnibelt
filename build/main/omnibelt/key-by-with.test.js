@@ -1,0 +1,23 @@
+var _a = require('ramda'), pipe = _a.pipe, unary = _a.unary, map = _a.map, prop = _a.prop, always = _a.always, tryCatch = _a.tryCatch;
+var testHarnessUnary = require('../../test/utils').testHarnessUnary;
+var keyByWith = require('./key-by-with');
+var testHarnessAdapter = function (obj) {
+    var list = obj.list, keyFn = obj.keyFn, valueFn = obj.valueFn, expectedResult = obj.expectedResult;
+    testHarnessUnary(keyByWith(keyFn, valueFn), list, expectedResult);
+};
+var cases = [
+    {
+        list: [{ key: 'foo', value: 'bar' }, { key: 'a', value: 1 }],
+        keyFn: prop('key'),
+        valueFn: prop('value'),
+        expectedResult: { foo: 'bar', a: 1 }
+    },
+    {
+        list: [{ key: 'foo', json: '"bar"' }, { key: 'a', json: 1 }],
+        keyFn: prop('key'),
+        valueFn: pipe(prop('json'), tryCatch(unary(JSON.parse), always(null))),
+        expectedResult: { foo: 'bar', a: 1 }
+    }
+];
+map(testHarnessAdapter)(cases);
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoia2V5LWJ5LXdpdGgudGVzdC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9vbW5pYmVsdC9rZXktYnktd2l0aC50ZXN0LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFNLElBQUEscUJBRWMsRUFEbEIsY0FBSSxFQUFFLGdCQUFLLEVBQUUsWUFBRyxFQUFFLGNBQUksRUFBRSxrQkFBTSxFQUFFLHNCQUFRLENBQ3JCO0FBRWIsSUFBQSwrREFBZ0IsQ0FBaUM7QUFDekQsSUFBTSxTQUFTLEdBQUcsT0FBTyxDQUFDLGVBQWUsQ0FBQyxDQUFDO0FBRTNDLElBQU0sa0JBQWtCLEdBQUcsVUFBQyxHQUFHO0lBQ3JCLElBQUEsZUFBSSxFQUFFLGlCQUFLLEVBQUUscUJBQU8sRUFBRSxtQ0FBYyxDQUFTO0lBRXJELGdCQUFnQixDQUFDLFNBQVMsQ0FBQyxLQUFLLEVBQUUsT0FBTyxDQUFDLEVBQUUsSUFBSSxFQUFFLGNBQWMsQ0FBQyxDQUFDO0FBQ3BFLENBQUMsQ0FBQztBQUVGLElBQU0sS0FBSyxHQUFHO0lBQ1o7UUFDRSxJQUFJLEVBQUUsQ0FBQyxFQUFFLEdBQUcsRUFBRSxLQUFLLEVBQUUsS0FBSyxFQUFFLEtBQUssRUFBRSxFQUFFLEVBQUUsR0FBRyxFQUFFLEdBQUcsRUFBRSxLQUFLLEVBQUUsQ0FBQyxFQUFFLENBQUM7UUFDNUQsS0FBSyxFQUFFLElBQUksQ0FBQyxLQUFLLENBQUM7UUFDbEIsT0FBTyxFQUFFLElBQUksQ0FBQyxPQUFPLENBQUM7UUFDdEIsY0FBYyxFQUFFLEVBQUUsR0FBRyxFQUFFLEtBQUssRUFBRSxDQUFDLEVBQUUsQ0FBQyxFQUFFO0tBQ3JDO0lBQ0Q7UUFDRSxJQUFJLEVBQUUsQ0FBQyxFQUFFLEdBQUcsRUFBRSxLQUFLLEVBQUUsSUFBSSxFQUFFLE9BQU8sRUFBRSxFQUFFLEVBQUUsR0FBRyxFQUFFLEdBQUcsRUFBRSxJQUFJLEVBQUUsQ0FBQyxFQUFFLENBQUM7UUFDNUQsS0FBSyxFQUFFLElBQUksQ0FBQyxLQUFLLENBQUM7UUFDbEIsT0FBTyxFQUFFLElBQUksQ0FDWCxJQUFJLENBQUMsTUFBTSxDQUFDLEVBQ1osUUFBUSxDQUFDLEtBQUssQ0FBQyxJQUFJLENBQUMsS0FBSyxDQUFDLEVBQUUsTUFBTSxDQUFDLElBQUksQ0FBQyxDQUFDLENBQzFDO1FBQ0QsY0FBYyxFQUFFLEVBQUUsR0FBRyxFQUFFLEtBQUssRUFBRSxDQUFDLEVBQUUsQ0FBQyxFQUFFO0tBQ3JDO0NBQ0YsQ0FBQztBQUVGLEdBQUcsQ0FBQyxrQkFBa0IsQ0FBQyxDQUFDLEtBQUssQ0FBQyxDQUFDIn0=

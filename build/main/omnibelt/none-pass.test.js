@@ -1,0 +1,31 @@
+var _a = require('ramda'), pipe = _a.pipe, map = _a.map, apply = _a.apply, adjust = _a.adjust, equals = _a.equals, is = _a.is;
+var testHarnessUnary = require('../../test/utils').testHarnessUnary;
+var nonePass = require('./none-pass');
+var isFoo = equals('foo');
+var isBar = equals('bar');
+var cases = [
+    {
+        label: 'is not "foo" or "bar"',
+        cases: [
+            [[isFoo, isBar], 'foo', false],
+            [[isFoo, isBar], 'bar', false],
+            [[isFoo, isBar], 'baz', true]
+        ]
+    },
+    {
+        label: 'is not Number or String',
+        cases: [
+            [[is(Number), is(String)], 1, false],
+            [[is(Number), is(String)], 'foo', false],
+            [[is(Number), is(String)], { foo: 'bar' }, true]
+        ]
+    }
+];
+var testHarnessAdapter = function (_a) {
+    var label = _a.label, cases = _a.cases;
+    describe(label, function () {
+        return map(pipe(adjust(nonePass, 0), apply(testHarnessUnary)), cases);
+    });
+};
+map(testHarnessAdapter)(cases);
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibm9uZS1wYXNzLnRlc3QuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi9zcmMvb21uaWJlbHQvbm9uZS1wYXNzLnRlc3QuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQU0sSUFBQSxxQkFFYyxFQURsQixjQUFJLEVBQUUsWUFBRyxFQUFFLGdCQUFLLEVBQUUsa0JBQU0sRUFBRSxrQkFBTSxFQUFFLFVBQUUsQ0FDakI7QUFFYixJQUFBLCtEQUFnQixDQUFpQztBQUN6RCxJQUFNLFFBQVEsR0FBRyxPQUFPLENBQUMsYUFBYSxDQUFDLENBQUM7QUFFeEMsSUFBTSxLQUFLLEdBQUcsTUFBTSxDQUFDLEtBQUssQ0FBQyxDQUFDO0FBQzVCLElBQU0sS0FBSyxHQUFHLE1BQU0sQ0FBQyxLQUFLLENBQUMsQ0FBQztBQUU1QixJQUFNLEtBQUssR0FBRztJQUNaO1FBQ0UsS0FBSyxFQUFFLHVCQUF1QjtRQUM5QixLQUFLLEVBQUU7WUFDTCxDQUFDLENBQUMsS0FBSyxFQUFFLEtBQUssQ0FBQyxFQUFFLEtBQUssRUFBRSxLQUFLLENBQUM7WUFDOUIsQ0FBQyxDQUFDLEtBQUssRUFBRSxLQUFLLENBQUMsRUFBRSxLQUFLLEVBQUUsS0FBSyxDQUFDO1lBQzlCLENBQUMsQ0FBQyxLQUFLLEVBQUUsS0FBSyxDQUFDLEVBQUUsS0FBSyxFQUFFLElBQUksQ0FBQztTQUM5QjtLQUNGO0lBQ0Q7UUFDRSxLQUFLLEVBQUUseUJBQXlCO1FBQ2hDLEtBQUssRUFBRTtZQUNMLENBQUMsQ0FBQyxFQUFFLENBQUMsTUFBTSxDQUFDLEVBQUUsRUFBRSxDQUFDLE1BQU0sQ0FBQyxDQUFDLEVBQUUsQ0FBQyxFQUFFLEtBQUssQ0FBQztZQUNwQyxDQUFDLENBQUMsRUFBRSxDQUFDLE1BQU0sQ0FBQyxFQUFFLEVBQUUsQ0FBQyxNQUFNLENBQUMsQ0FBQyxFQUFFLEtBQUssRUFBRSxLQUFLLENBQUM7WUFDeEMsQ0FBQyxDQUFDLEVBQUUsQ0FBQyxNQUFNLENBQUMsRUFBRSxFQUFFLENBQUMsTUFBTSxDQUFDLENBQUMsRUFBRSxFQUFFLEdBQUcsRUFBRSxLQUFLLEVBQUUsRUFBRSxJQUFJLENBQUM7U0FDakQ7S0FDRjtDQUNGLENBQUM7QUFFRixJQUFNLGtCQUFrQixHQUFHLFVBQUMsRUFBZ0I7UUFBZCxnQkFBSyxFQUFFLGdCQUFLO0lBQ3hDLFFBQVEsQ0FBQyxLQUFLLEVBQUU7UUFDZCxPQUFPLEdBQUcsQ0FBQyxJQUFJLENBQ2IsTUFBTSxDQUFDLFFBQVEsRUFBRSxDQUFDLENBQUMsRUFDbkIsS0FBSyxDQUFDLGdCQUFnQixDQUFDLENBQ3hCLEVBQUUsS0FBSyxDQUFDLENBQUM7SUFDWixDQUFDLENBQUMsQ0FBQztBQUNMLENBQUMsQ0FBQztBQUVGLEdBQUcsQ0FBQyxrQkFBa0IsQ0FBQyxDQUFDLEtBQUssQ0FBQyxDQUFDIn0=

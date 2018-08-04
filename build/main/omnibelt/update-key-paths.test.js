@@ -1,0 +1,9 @@
+var _a = require('ramda'), map = _a.map, apply = _a.apply;
+var testHarnessUnary = require('../../test/utils').testHarnessUnary;
+var updateKeyPaths = require('./update-key-paths');
+var updateFooKeyPath = updateKeyPaths({ foo: ['params', 'bar'] });
+var cases = [
+    [{ foo: 1 }, { params: { bar: 1 } }]
+];
+map(apply(testHarnessUnary(updateFooKeyPath)))(cases);
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidXBkYXRlLWtleS1wYXRocy50ZXN0LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vc3JjL29tbmliZWx0L3VwZGF0ZS1rZXktcGF0aHMudGVzdC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBTSxJQUFBLHFCQUFpQyxFQUEvQixZQUFHLEVBQUUsZ0JBQUssQ0FBc0I7QUFFaEMsSUFBQSwrREFBZ0IsQ0FBaUM7QUFDekQsSUFBTSxjQUFjLEdBQUcsT0FBTyxDQUFDLG9CQUFvQixDQUFDLENBQUM7QUFFckQsSUFBTSxnQkFBZ0IsR0FBRyxjQUFjLENBQUMsRUFBRSxHQUFHLEVBQUUsQ0FBQyxRQUFRLEVBQUUsS0FBSyxDQUFDLEVBQUUsQ0FBQyxDQUFDO0FBRXBFLElBQU0sS0FBSyxHQUFHO0lBQ1osQ0FBQyxFQUFFLEdBQUcsRUFBRSxDQUFDLEVBQUUsRUFBRSxFQUFFLE1BQU0sRUFBRSxFQUFFLEdBQUcsRUFBRSxDQUFDLEVBQUUsRUFBRSxDQUFDO0NBQ3JDLENBQUM7QUFFRixHQUFHLENBQ0QsS0FBSyxDQUFDLGdCQUFnQixDQUFDLGdCQUFnQixDQUFDLENBQUMsQ0FDMUMsQ0FBQyxLQUFLLENBQUMsQ0FBQyJ9
