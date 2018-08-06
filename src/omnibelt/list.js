@@ -1,5 +1,4 @@
-const unapply = require('ramda/src/unapply');
-const identity = require('ramda/src/identity');
+import { unapply, identity } from 'ramda';
 
 /**
  * TODO: TESTS
@@ -9,4 +8,4 @@ const identity = require('ramda/src/identity');
  */
 const list = unapply(identity);
 
-module.exports = list;
+export default list;

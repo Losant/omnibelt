@@ -7,7 +7,8 @@
  * @signature -> Object
  */
 const defer = () => {
-  let resolve, reject;
+  let resolve;
+  let reject;
   const promise = new Promise((f, r) => {
     resolve = f;
     reject = r;
@@ -15,4 +16,4 @@ const defer = () => {
   return { resolve, reject, promise };
 };
 
-module.exports = defer;
+export default defer;

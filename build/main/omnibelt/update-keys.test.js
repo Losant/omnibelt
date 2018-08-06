@@ -1,9 +1,0 @@
-var _a = require('ramda'), map = _a.map, apply = _a.apply;
-var testHarnessUnary = require('../../test/utils').testHarnessUnary;
-var updateKeys = require('./update-keys');
-var updateFooKey = updateKeys({ foo: 'bar' });
-var cases = [
-    [{ foo: 1 }, { bar: 1 }]
-];
-map(apply(testHarnessUnary(updateFooKey)))(cases);
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidXBkYXRlLWtleXMudGVzdC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9vbW5pYmVsdC91cGRhdGUta2V5cy50ZXN0LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFNLElBQUEscUJBQWlDLEVBQS9CLFlBQUcsRUFBRSxnQkFBSyxDQUFzQjtBQUVoQyxJQUFBLCtEQUFnQixDQUFpQztBQUN6RCxJQUFNLFVBQVUsR0FBRyxPQUFPLENBQUMsZUFBZSxDQUFDLENBQUM7QUFFNUMsSUFBTSxZQUFZLEdBQUcsVUFBVSxDQUFDLEVBQUUsR0FBRyxFQUFFLEtBQUssRUFBRSxDQUFDLENBQUM7QUFFaEQsSUFBTSxLQUFLLEdBQUc7SUFDWixDQUFDLEVBQUUsR0FBRyxFQUFFLENBQUMsRUFBRSxFQUFFLEVBQUUsR0FBRyxFQUFFLENBQUMsRUFBRSxDQUFDO0NBQ3pCLENBQUM7QUFFRixHQUFHLENBQ0QsS0FBSyxDQUFDLGdCQUFnQixDQUFDLFlBQVksQ0FBQyxDQUFDLENBQ3RDLENBQUMsS0FBSyxDQUFDLENBQUMifQ==

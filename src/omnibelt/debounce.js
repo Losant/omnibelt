@@ -1,11 +1,12 @@
-const compose = require('ramda/src/compose');
-const curryN = require('ramda/src/curryN');
-const flip = require('lodash/fp/flip');
-const _debounce = require('lodash/debounce');
+import {
+  compose, curryN,
+} from 'ramda';
+import { flip } from 'lodash/fp';
+import lodash_debounce from 'lodash/debounce';
 
 /**
  * @signature Object -> Number -> Function -> Function
  */
-const debounce = compose(curryN(3), flip)(_debounce);
+const debounce = compose(curryN(3), flip)(lodash_debounce);
 
-module.exports = debounce;
+export default debounce;

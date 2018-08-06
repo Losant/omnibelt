@@ -1,13 +1,12 @@
-const { testCases } = require('../../test/utils');
-const ensureArray = require('./ensure-array');
+import { testCases } from '../../test/utils';
+import ensureArray from './ensure-array';
 
 const args = (() => {
-  let args;
-  // eslint-disable-next-line wrap-iife
+  let rtn;
   (function() {
-    args = arguments; // eslint-disable-line prefer-rest-params
+    rtn = arguments;
   })(1, 2, 3);
-  return args;
+  return rtn;
 })();
 const dateNow = new Date();
 const symbolFoo = Symbol('foo');

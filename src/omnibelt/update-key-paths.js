@@ -1,11 +1,7 @@
-const pipe = require('ramda/src/pipe');
-const assocPath = require('ramda/src/assocPath');
-const adjust = require('ramda/src/adjust');
-const apply = require('ramda/src/apply');
-
-const list = require('./list');
-const ensureArray = require('./ensure-array');
-const updateKeysWith = require('./update-keys-with');
+import { pipe, assocPath, adjust, apply } from 'ramda';
+import list from './list';
+import ensureArray from './ensure-array';
+import updateKeysWith from './update-keys-with';
 
 /**
  * Updates the key paths for a given object according to the provided map of
@@ -23,4 +19,4 @@ const updateKeyPaths = updateKeysWith(pipe(
   apply(assocPath),
 ));
 
-module.exports = updateKeyPaths;
+export default updateKeyPaths;

@@ -1,8 +1,6 @@
-const curry = require('ramda/src/curry');
-const pipe = require('ramda/src/pipe');
-const intersection = require('ramda/src/intersection');
-const length = require('ramda/src/length');
-const equals = require('ramda/src/equals');
+import {
+  curry, pipe, intersection, length, equals
+} from 'ramda';
 
 /**
  * Predicate that checks to see if each element in an array
@@ -27,4 +25,4 @@ const containsAll = curry((needle, haystack) =>
   )(haystack)
 );
 
-module.exports = containsAll;
+export default containsAll;

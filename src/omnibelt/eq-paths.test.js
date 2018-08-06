@@ -1,9 +1,8 @@
-const { map } = require('ramda');
+import { map } from 'ramda';
+import { testHarnessUnary } from '../../test/utils';
+import eqPaths from './eq-paths';
 
-const { testHarnessUnary } = require('../../test/utils');
-const eqPaths = require('./eq-paths');
-
-const cases = [
+const tests = [
   {
     label: 'a.b === 1',
     cases: [
@@ -38,4 +37,4 @@ const testHarnessAdapter = ({ label, cases }) => {
   });
 };
 
-map(testHarnessAdapter)(cases);
+map(testHarnessAdapter)(tests);

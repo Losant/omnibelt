@@ -1,4 +1,4 @@
-const clamp = require('ramda/src/clamp');
+import { clamp } from 'ramda';
 
 /**
  * Clamps a numeric value so that it's guaranteed to be 0 or higher. Works with
@@ -24,4 +24,4 @@ const clamp = require('ramda/src/clamp');
  */
 const clampPositive = clamp(0, Infinity);
 
-module.exports = clampPositive;
+export default clampPositive;

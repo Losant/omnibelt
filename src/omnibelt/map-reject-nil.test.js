@@ -1,9 +1,8 @@
-const { map, isNil } = require('ramda');
+import { map, isNil } from 'ramda';
+import { testHarnessUnary } from '../../test/utils';
+import mapRejectNil from './map-reject-nil';
 
-const { testHarnessUnary } = require('../../test/utils');
-const mapRejectNil = require('./map-reject-nil');
-
-const cases = [
+const tests = [
   {
     label: 'map reject nil',
     cases: [
@@ -35,4 +34,4 @@ const testHarnessAdapter = ({ label, cases }) => {
   });
 };
 
-map(testHarnessAdapter)(cases);
+map(testHarnessAdapter)(tests);

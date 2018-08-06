@@ -1,4 +1,4 @@
-const curry = require('ramda/src/curry');
+import { curry } from 'ramda';
 
 /**
  * Runs the given function with the supplied object, then returns the object.
@@ -21,4 +21,4 @@ const tap = curry((fn, x) => {
   return x;
 });
 
-module.exports = tap;
+export default tap;

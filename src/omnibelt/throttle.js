@@ -1,11 +1,12 @@
-const compose = require('ramda/src/compose');
-const curryN = require('ramda/src/curryN');
-const flip = require('lodash/fp/flip');
-const _throttle = require('lodash/throttle');
+import {
+  compose, curryN,
+} from 'ramda';
+import { flip } from 'lodash/fp';
+import lodash_throttle from 'lodash/trottle';
 
 /**
  * @signature Object -> Number -> Function -> Function
  */
-const throttle = compose(curryN(3), flip)(_throttle);
+const throttle = compose(curryN(3), flip)(lodash_throttle);
 
-module.exports = throttle;
+export default throttle;

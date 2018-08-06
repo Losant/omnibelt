@@ -1,5 +1,4 @@
-const complement = require('ramda/src/complement');
-const isNil = require('ramda/src/isNil');
+import { complement, isNil } from 'ramda';
 
 /**
  * Takes a value and returns true if the value is neither null nor undefined;
@@ -9,4 +8,4 @@ const isNil = require('ramda/src/isNil');
  */
 const isNotNil = complement(isNil);
 
-module.exports = isNotNil;
+export default isNotNil;

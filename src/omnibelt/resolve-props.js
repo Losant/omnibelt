@@ -1,4 +1,4 @@
-const { map, keys } = require('ramda');
+import { map, keys } from 'ramda';
 
 /**
  * Takes an object where the values may be promises
@@ -20,4 +20,4 @@ const resolveProps = async (obj) => {
   return result;
 };
 
-module.exports = resolveProps;
+export default resolveProps;

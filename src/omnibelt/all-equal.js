@@ -1,7 +1,4 @@
-const compose = require('ramda/src/compose');
-const uniq = require('ramda/src/uniq');
-const length = require('ramda/src/length');
-const equals = require('ramda/src/equals');
+import { compose, uniq, length, equals } from 'ramda';
 
 /**
  * Checks to see if all elements in an array are the same.
@@ -18,4 +15,4 @@ const equals = require('ramda/src/equals');
  */
 const allEqual = compose(equals(1), length, uniq);
 
-module.exports = allEqual;
+export default allEqual;

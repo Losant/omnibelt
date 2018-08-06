@@ -1,7 +1,6 @@
-const pipe = require('ramda/src/pipe');
-
-const list = require('./list');
-const tryCatchSafe = require('./try-catch-safe');
+import { pipe } from 'ramda';
+import list from './list';
+import tryCatchSafe from './try-catch-safe';
 
 /**
  * A safe version of `JSON.parse` that returns an [error, result] tuple instead
@@ -18,4 +17,4 @@ const jsonParseSafe = pipe(
   tryCatchSafe(JSON.parse),
 );
 
-module.exports = jsonParseSafe;
+export default jsonParseSafe;

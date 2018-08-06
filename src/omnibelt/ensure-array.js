@@ -1,7 +1,6 @@
-const ifElse = require('ramda/src/ifElse');
-const isArrayLikeObject = require('lodash/fp/isArrayLikeObject');
-
-const list = require('./list');
+import { ifElse } from 'ramda';
+import { isArrayLikeObject } from 'lodash/fp';
+import list from './list';
 
 /**
  * Takes a value of any type and returns an array. If the value is array-like
@@ -26,4 +25,4 @@ const ensureArray = ifElse(
   list,
 );
 
-module.exports = ensureArray;
+export default ensureArray;

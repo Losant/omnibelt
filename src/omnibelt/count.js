@@ -1,5 +1,6 @@
-const countBy = require('ramda/src/countBy');
-const identity = require('ramda/src/identity');
+import {
+  countBy, identity,
+} from 'ramda';
 
 /**
  * `countBy` the raw values in an array (`identity`). All values are
@@ -19,4 +20,4 @@ const identity = require('ramda/src/identity');
  */
 const count = countBy(identity);
 
-module.exports = count;
+export default count;

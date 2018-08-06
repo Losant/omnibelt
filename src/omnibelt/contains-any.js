@@ -1,8 +1,7 @@
-const curry = require('ramda/src/curry');
-const pipe = require('ramda/src/pipe');
-const intersection = require('ramda/src/intersection');
-
-const isNotEmpty = require('./is-not-empty');
+import {
+  curry, pipe, intersection
+} from 'ramda';
+import isNotEmpty from './is-not-empty';
 
 /**
  * Takes two arrays and returns true if any of the values in the first array
@@ -32,4 +31,4 @@ const containsAny = curry((needle, haystack) =>
   )(haystack)
 );
 
-module.exports = containsAny;
+export default containsAny;

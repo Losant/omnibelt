@@ -1,7 +1,6 @@
-const { map, apply } = require('ramda');
-
-const { testHarnessUnary } = require('../../test/utils');
-const isNot = require('./is-not');
+import { map, apply } from 'ramda';
+import { testHarnessUnary } from '../../test/utils';
+import isNot from './is-not';
 
 const caseSections = [
   [Object, [
@@ -26,7 +25,7 @@ const caseSections = [
   ]],
   [Function, [
     ['', true],
-    [function() {}, false]
+    [() => undefined, false]
   ]],
   [Symbol, [
     ['', true],

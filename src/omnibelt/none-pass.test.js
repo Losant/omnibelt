@@ -1,14 +1,13 @@
-const {
+import {
   pipe, map, apply, adjust, equals, is
-} = require('ramda');
-
-const { testHarnessUnary } = require('../../test/utils');
-const nonePass = require('./none-pass');
+} from 'ramda';
+import { testHarnessUnary } from '../../test/utils';
+import nonePass from './none-pass';
 
 const isFoo = equals('foo');
 const isBar = equals('bar');
 
-const cases = [
+const tests = [
   {
     label: 'is not "foo" or "bar"',
     cases: [
@@ -36,4 +35,4 @@ const testHarnessAdapter = ({ label, cases }) => {
   });
 };
 
-map(testHarnessAdapter)(cases);
+map(testHarnessAdapter)(tests);

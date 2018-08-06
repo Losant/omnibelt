@@ -1,9 +1,8 @@
-const { map } = require('ramda');
+import { map, isNil } from 'ramda';
+import { testHarnessUnary } from '../../test/utils';
+import mapFilter from './map-filter';
 
-const { testHarnessUnary } = require('../../test/utils');
-const mapFilter = require('./map-filter');
-
-const cases = [
+const tests = [
   {
     label: 'mapFilter - add 1, then filter even',
     cases: [
@@ -31,4 +30,4 @@ const testHarnessAdapter = ({ label, cases }) => {
   });
 };
 
-map(testHarnessAdapter)(cases);
+map(testHarnessAdapter)(tests);

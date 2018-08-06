@@ -1,15 +1,15 @@
-const resolveProps = require('./resolve-props');
+import resolveProps from './resolve-props';
 
 it('should resolve the props on an object', async () => {
   const obj = {
-    one: 1,
-    two: Promise.resolve(2),
-    three: Promise.resolve('3')
+    bar: Promise.resolve(2),
+    baz: Promise.resolve('3'),
+    foo: 1,
   };
 
   expect(await resolveProps(obj)).toEqual({
-    one: 1,
-    two: 2,
-    three: '3'
+    bar: 2,
+    baz: '3',
+    foo: 1,
   });
 });

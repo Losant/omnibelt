@@ -32,7 +32,7 @@ yarn-error.log*
 
 #Build generated
 dist/
-# build/
+build/
 
 
 ### SublimeText ###

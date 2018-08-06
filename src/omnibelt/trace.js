@@ -1,6 +1,5 @@
-/* eslint-disable no-console */
-
-const curry = require('ramda/src/curry');
+// tslint:disable:no-console
+import { curry } from 'ramda';
 
 /**
  * Effectively a curried `console.log` that also returns it's input.
@@ -21,4 +20,4 @@ const trace = curry((tag, x) => {
   return x;
 });
 
-module.exports = trace;
+export default trace;

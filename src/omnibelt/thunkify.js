@@ -1,4 +1,4 @@
-const curry = require('ramda/src/curry');
+import { curry } from 'ramda';
 
 /**
  * Takes a function and returns a function that takes any number of arguments
@@ -13,4 +13,4 @@ const curry = require('ramda/src/curry');
  */
 const thunkify = curry((fn, value) => () => fn(value));
 
-module.exports = thunkify;
+export default thunkify;

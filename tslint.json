@@ -1,9 +1,7 @@
 {
   "extends": ["tslint:latest", "tslint-config-prettier"],
   "linterOptions": {
-    "exclude": [
-      "build"
-    ]
+    "exclude": ["build/**"]
   },
   "rules": {
     "interface-name": [true, "never-prefix"],
@@ -11,5 +9,8 @@
     // waiting on https://github.com/palantir/tslint/pull/3708
     "no-implicit-dependencies": [true, "dev"],
     "no-submodule-imports": [true, "lodash/fp"]
+  },
+  "jsRules": {
+    "object-literal-sort-keys": false
   }
 }
