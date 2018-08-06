@@ -2,7 +2,7 @@ import {
   compose, curryN,
 } from 'ramda';
 import { flip } from 'lodash/fp';
-import lodash_throttle from 'lodash/trottle';
+import { throttle as lodash_throttle } from 'lodash';
 
 /**
  * @signature Object -> Number -> Function -> Function

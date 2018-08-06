@@ -1,9 +1,7 @@
-const pipe = require('ramda/src/pipe');
-const toLower = require('ramda/src/toLower');
-const trim = require('ramda/src/trim');
-const defaultTo = require('ramda/src/defaultTo');
-
-const equalsAny = require('./equals-any');
+import {
+  pipe, toLower, trim, defaultTo,
+} from 'ramda';
+import equalsAny from './equals-any';
 
 /**
  * Cast a configuration string to a boolean value by looking for common "truth" directives.
@@ -26,4 +24,4 @@ const stringToBoolean = pipe(
   equalsAny(['true', 't', 'yes', 'y']),
 );
 
-module.exports = stringToBoolean;
+export default stringToBoolean;

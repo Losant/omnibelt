@@ -2,7 +2,7 @@ import {
   compose, curryN,
 } from 'ramda';
 import { flip } from 'lodash/fp';
-import lodash_round from 'lodash/round';
+import { round as lodash_round } from 'lodash';
 
 /**
  * Curried FP version of `lodash.round`

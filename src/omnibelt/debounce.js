@@ -2,7 +2,7 @@ import {
   compose, curryN,
 } from 'ramda';
 import { flip } from 'lodash/fp';
-import lodash_debounce from 'lodash/debounce';
+import { debounce as lodash_debounce } from 'lodash';
 
 /**
  * @signature Object -> Number -> Function -> Function

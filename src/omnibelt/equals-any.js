@@ -1,5 +1,6 @@
-const flip = require('ramda/src/flip');
-const contains = require('ramda/src/contains');
+import {
+  flip, contains,
+} from 'ramda';
 
 /**
  * Predicate that checks to see if a value exists in an array.
@@ -12,4 +13,4 @@ const contains = require('ramda/src/contains');
  */
 const equalsAny = flip(contains);
 
-module.exports = equalsAny;
+export default equalsAny;
