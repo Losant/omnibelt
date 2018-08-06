@@ -5,7 +5,7 @@
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
-  "repository": "git@github.com/Losant/omnibelt.git",
+  "repository": "git@github.com:Losant/omnibelt.git",
   "license": "MIT",
   "author": "@Losant",
   "contributors": [
@@ -19,9 +19,11 @@
     "node": ">=8"
   },
   "scripts": {
-    "reinstall": "rm -rf node_modules && yarn install",
-    "clean": "trash build test",
-    "build": "run-s clean && run-p build:*",
+    "reinstall": "yarn clean && yarn install",
+    "clean": "run-p clean:*",
+    "clean:modules": "trash node_modules",
+    "clean:build": "trash build",
+    "build": "run-s clean:build && run-p build:*",
     "build:main": "tsc -p tsconfig.json",
     "build:module": "tsc -p tsconfig.module.json",
     "lint": "tslint --format stylish --project .",
@@ -37,7 +39,12 @@
     "docs:build": "run-s docs:build:*",
     "docs:build:3rdParty": "./scripts/gen-3rd-party-docs.js",
     "docs:build:src": "jsdoc -c jsdoc.json",
-    "docs:open": "open ./docs/index.html"
+    "docs:open": "open ./docs/index.html",
+    "prepare": "yarn build",
+    "prepublishOnly": "run-s test lint",
+    "preversion": "yarn lint",
+    "version": "yarn lint:fix && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "lint-staged": {
     "*.js": "tslint --format stylish"
