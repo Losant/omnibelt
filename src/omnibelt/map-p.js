@@ -10,12 +10,12 @@ const resolveProps = require('./resolve-props');
 const resolveArray = (x) => Promise.all(x);
 
 /**
- * Just like a normal `map` function, but handles an asyncronous iteration function
+ * Just like a normal `map` function, but handles an asynchronous iteration function
  *
  * @func
  * @memberof module:omnibelt
  * @name mapP
- * @param {Function} xf - Asyncronous tranformation function
+ * @param {Function} xf - Asynchronous tranformation function
  * @param {Array|Object} data - Data source to iterate over
  * @return {Array|Object} Transformed values inside the `data` original structure
  * @summary (a -> Promise< b >) -> Array|Object c< a > -> Promise< c< b > >;

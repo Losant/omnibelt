@@ -10,12 +10,12 @@ testCases(tap, [
 it('Side effects happen', () => {
   let sideEffected = 'not foo';
   const desiredEffect = 'foo';
-  const uneffected = 'whatever';
+  const unaffected = 'whatever';
 
   const actual = compose(
     tap(() => { sideEffected = desiredEffect; })
-  )(uneffected);
+  )(unaffected);
 
-  expect(actual).toEqual(uneffected);
+  expect(actual).toEqual(unaffected);
   expect(sideEffected).toEqual(desiredEffect);
 });

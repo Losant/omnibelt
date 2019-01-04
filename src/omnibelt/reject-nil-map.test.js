@@ -3,7 +3,7 @@ const { map, isNil } = require('ramda');
 const { testHarnessUnary } = require('../../test/utils');
 const rejectNilMap = require('./reject-nil-map');
 
-const cases = [
+const allCases = [
   {
     label: 'reject nil map',
     cases: [
@@ -35,4 +35,4 @@ const testHarnessAdapter = ({ label, cases }) => {
   });
 };
 
-map(testHarnessAdapter)(cases);
+map(testHarnessAdapter)(allCases);

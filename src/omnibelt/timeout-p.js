@@ -10,7 +10,7 @@ const defer = require('./defer');
  * @func
  * @memberof module:omnibelt
  * @name timeoutP
- * @param {Number} ms - Number of miliseconds before timing out the promise
+ * @param {Number} ms - Number of milliseconds before timing out the promise
  * @param {Promise} promise - An in-flight promise
  * @return {Any|Error} The return value of the promise or rejection
  * @summary Number -> Promise< * > -> Promise< * >
