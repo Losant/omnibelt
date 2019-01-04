@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>omnibelt/contains-all.js - Documentation</title>
+    <title>omnibelt/serial-for-each-p.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,7 +27,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">omnibelt/contains-all.js</h1>
+    <h1 class="page-title">omnibelt/serial-for-each-p.js</h1>
     
 
     
@@ -37,36 +37,39 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>const curry = require('ramda/src/curry');
-const pipe = require('ramda/src/pipe');
-const intersection = require('ramda/src/intersection');
-const length = require('ramda/src/length');
-const equals = require('ramda/src/equals');
+            <pre class="prettyprint source linenums"><code>const { curry } = require('ramda');
+
+const evaluator = async (func, iterator) => {
+  const next = iterator.next();
+  if (next.done) { return; }
+  await func(next.value);
+  return evaluator(func, iterator);
+};
 
 /**
- * Predicate that checks to see if each element in an array
- * exists in a larger array.
+ * A promise for each helper (serial). Given an asynchronous function
+ * and an iterable or an object, this will evaluate the function against
+ * each value of the iterable, serially.
  *
  * @func
  * @memberof module:omnibelt
- * @name containsAll
- * @param {Array} needle - list to check with
- * @param {Array} haystack - list to check against
- * @return {Boolean} True if all are found, false otherwise
- * @summary Array&lt;* a> -> Array&lt;* a> -> Boolean
- *
- * @example
- * containsAll([1, 3, 2], [1, 2, 3, 4, 5]); // => true
- */
-const containsAll = curry((needle, haystack) =>
-  pipe(
-    intersection(needle),
-    length,
-    equals(length(needle)),
-  )(haystack)
-);
+ * @name serialForEachP
 
-module.exports = containsAll;
+ * @param {Function} func - An async function
+ * @param {Iterable} iterable - Object or iterable
+ * @return {Promise} A promise that will resolve to undefined when iteration is done
+ * @summary Function -> Iterable -> Promise&lt;undefined>
+ */
+const serialForEachP = curry((func, iterable) => {
+  if (!iterable) { return; }
+
+  const iterator = iterable[Symbol.iterator] ?
+    iterable[Symbol.iterator]() :
+    Object.entries(iterable)[Symbol.iterator]();
+  return evaluator(func, iterator);
+});
+
+module.exports = serialForEachP;
 </code></pre>
         </article>
     </section>
