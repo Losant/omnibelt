@@ -100,6 +100,13 @@ git release vX.X.X
 Below should serve as an "upgrade guide" jumping off point as you are migrating projects to newer versions of this package. Ideally, interface changes will be called out specifically and one should not have to go sifting through git diffs to discern what changed.
 
 - `?.?.?` - *WIP*
+  - Updating linting, fix various spelling and linting errors
+  - `lodash` bumped to `4.17.11`
+  - `stringify-object` bumped to `3.3.0`
+  - Added methods:
+    - `allSettledP`
+    - `parallelLimitMapP`
+    - `serialForEachP`
 - `1.2.0`
   - Repo renamed and open sourced!
   - `git remote set-url origin git@github.com:Losant/omnibelt.git`
