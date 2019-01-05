@@ -19,15 +19,16 @@ const evaluator = async (func, iterator) => {
  * @param {Function} func - An async function
  * @param {Iterable} iterable - Object or iterable
  * @return {Promise} A promise that will resolve to undefined when iteration is done
- * @summary Function -> Iterable -> Promise<undefined>
+ * @summary Function -> Iterable -> Promise<iterable>
  */
-const serialForEachP = curry((func, iterable) => {
-  if (!iterable) { return; }
+const serialForEachP = curry(async (func, iterable) => {
+  if (!iterable) { return iterable; }
 
   const iterator = iterable[Symbol.iterator] ?
     iterable[Symbol.iterator]() :
     Object.entries(iterable)[Symbol.iterator]();
-  return evaluator(func, iterator);
+  await evaluator(func, iterator);
+  return iterable;
 });
 
 module.exports = serialForEachP;
