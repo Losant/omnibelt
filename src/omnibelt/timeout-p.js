@@ -1,4 +1,4 @@
-const { curry } = require('ramda');
+const curry = require('ramda/src/curry');
 const defer = require('./defer');
 
 /**
