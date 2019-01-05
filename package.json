@@ -18,7 +18,7 @@
   },
   "scripts": {
     "reinstall": "rm -rf node_modules && yarn install",
-    "lint": "esw *.js src test",
+    "lint": "esw . --ext .js",
     "lint:fix": "yarn lint --fix",
     "lint:watch": "yarn lint --watch",
     "lint:staged": "lint-staged",
