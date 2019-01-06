@@ -1,0 +1,2485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>omnibelt - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-lodash.html">lodash</a><ul class='methods'><li data-type='method'><a href="module-lodash.html#.camelCase">camelCase</a></li><li data-type='method'><a href="module-lodash.html#.capitalize">capitalize</a></li><li data-type='method'><a href="module-lodash.html#.castArray">castArray</a></li><li data-type='method'><a href="module-lodash.html#.compact">compact</a></li><li data-type='method'><a href="module-lodash.html#.escape">escape</a></li><li data-type='method'><a href="module-lodash.html#.escapeRegExp">escapeRegExp</a></li><li data-type='method'><a href="module-lodash.html#.flip">flip</a></li><li data-type='method'><a href="module-lodash.html#.forEach">forEach</a></li><li data-type='method'><a href="module-lodash.html#.isArrayLike">isArrayLike</a></li><li data-type='method'><a href="module-lodash.html#.isNull">isNull</a></li><li data-type='method'><a href="module-lodash.html#.isUndefined">isUndefined</a></li><li data-type='method'><a href="module-lodash.html#.kebabCase">kebabCase</a></li><li data-type='method'><a href="module-lodash.html#.keyBy">keyBy</a></li><li data-type='method'><a href="module-lodash.html#.lowerFirst">lowerFirst</a></li><li data-type='method'><a href="module-lodash.html#.mapKeys">mapKeys</a></li><li data-type='method'><a href="module-lodash.html#.noop">noop</a></li><li data-type='method'><a href="module-lodash.html#.pad">pad</a></li><li data-type='method'><a href="module-lodash.html#.padChars">padChars</a></li><li data-type='method'><a href="module-lodash.html#.padCharsEnd">padCharsEnd</a></li><li data-type='method'><a href="module-lodash.html#.padCharsStart">padCharsStart</a></li><li data-type='method'><a href="module-lodash.html#.padEnd">padEnd</a></li><li data-type='method'><a href="module-lodash.html#.padStart">padStart</a></li><li data-type='method'><a href="module-lodash.html#.snakeCase">snakeCase</a></li><li data-type='method'><a href="module-lodash.html#.split">split</a></li><li data-type='method'><a href="module-lodash.html#.startCase">startCase</a></li><li data-type='method'><a href="module-lodash.html#.toInteger">toInteger</a></li><li data-type='method'><a href="module-lodash.html#.toLower">toLower</a></li><li data-type='method'><a href="module-lodash.html#.toNumber">toNumber</a></li><li data-type='method'><a href="module-lodash.html#.toPlainObject">toPlainObject</a></li><li data-type='method'><a href="module-lodash.html#.toString">toString</a></li><li data-type='method'><a href="module-lodash.html#.toUpper">toUpper</a></li><li data-type='method'><a href="module-lodash.html#.trim">trim</a></li><li data-type='method'><a href="module-lodash.html#.trimEnd">trimEnd</a></li><li data-type='method'><a href="module-lodash.html#.trimStart">trimStart</a></li><li data-type='method'><a href="module-lodash.html#.unescape">unescape</a></li><li data-type='method'><a href="module-lodash.html#.upperFirst">upperFirst</a></li><li data-type='method'><a href="module-lodash.html#.words">words</a></li></ul></li><li><a href="module-omnibelt.html">omnibelt</a><ul class='methods'><li data-type='method'><a href="module-omnibelt.html#.allEqual">allEqual</a></li><li data-type='method'><a href="module-omnibelt.html#.allSettledP">allSettledP</a></li><li data-type='method'><a href="module-omnibelt.html#.argsToObj">argsToObj</a></li><li data-type='method'><a href="module-omnibelt.html#.clampPositive">clampPositive</a></li><li data-type='method'><a href="module-omnibelt.html#.containsAll">containsAll</a></li><li data-type='method'><a href="module-omnibelt.html#.containsAny">containsAny</a></li><li data-type='method'><a href="module-omnibelt.html#.count">count</a></li><li data-type='method'><a href="module-omnibelt.html#.ensureArray">ensureArray</a></li><li data-type='method'><a href="module-omnibelt.html#.mapIndexed">mapIndexed</a></li><li data-type='method'><a href="module-omnibelt.html#.mapP">mapP</a></li><li data-type='method'><a href="module-omnibelt.html#.parallelLimitMapP">parallelLimitMapP</a></li><li data-type='method'><a href="module-omnibelt.html#.serialForEachP">serialForEachP</a></li><li data-type='method'><a href="module-omnibelt.html#.timeoutP">timeoutP</a></li></ul></li><li><a href="module-ramda.html">ramda</a><ul class='methods'><li data-type='method'><a href="module-ramda.html#.__">__</a></li><li data-type='method'><a href="module-ramda.html#.add">add</a></li><li data-type='method'><a href="module-ramda.html#.addIndex">addIndex</a></li><li data-type='method'><a href="module-ramda.html#.adjust">adjust</a></li><li data-type='method'><a href="module-ramda.html#.all">all</a></li><li data-type='method'><a href="module-ramda.html#.allPass">allPass</a></li><li data-type='method'><a href="module-ramda.html#.always">always</a></li><li data-type='method'><a href="module-ramda.html#.and">and</a></li><li data-type='method'><a href="module-ramda.html#.any">any</a></li><li data-type='method'><a href="module-ramda.html#.anyPass">anyPass</a></li><li data-type='method'><a href="module-ramda.html#.ap">ap</a></li><li data-type='method'><a href="module-ramda.html#.aperture">aperture</a></li><li data-type='method'><a href="module-ramda.html#.append">append</a></li><li data-type='method'><a href="module-ramda.html#.apply">apply</a></li><li data-type='method'><a href="module-ramda.html#.applySpec">applySpec</a></li><li data-type='method'><a href="module-ramda.html#.applyTo">applyTo</a></li><li data-type='method'><a href="module-ramda.html#.ascend">ascend</a></li><li data-type='method'><a href="module-ramda.html#.assoc">assoc</a></li><li data-type='method'><a href="module-ramda.html#.assocPath">assocPath</a></li><li data-type='method'><a href="module-ramda.html#.binary">binary</a></li><li data-type='method'><a href="module-ramda.html#.bind">bind</a></li><li data-type='method'><a href="module-ramda.html#.both">both</a></li><li data-type='method'><a href="module-ramda.html#.call">call</a></li><li data-type='method'><a href="module-ramda.html#.chain">chain</a></li><li data-type='method'><a href="module-ramda.html#.clamp">clamp</a></li><li data-type='method'><a href="module-ramda.html#.clone">clone</a></li><li data-type='method'><a href="module-ramda.html#.comparator">comparator</a></li><li data-type='method'><a href="module-ramda.html#.complement">complement</a></li><li data-type='method'><a href="module-ramda.html#.compose">compose</a></li><li data-type='method'><a href="module-ramda.html#.composeK">composeK</a></li><li data-type='method'><a href="module-ramda.html#.composeP">composeP</a></li><li data-type='method'><a href="module-ramda.html#.composeWith">composeWith</a></li><li data-type='method'><a href="module-ramda.html#.concat">concat</a></li><li data-type='method'><a href="module-ramda.html#.cond">cond</a></li><li data-type='method'><a href="module-ramda.html#.construct">construct</a></li><li data-type='method'><a href="module-ramda.html#.constructN">constructN</a></li><li data-type='method'><a href="module-ramda.html#.contains">contains</a></li><li data-type='method'><a href="module-ramda.html#.converge">converge</a></li><li data-type='method'><a href="module-ramda.html#.countBy">countBy</a></li><li data-type='method'><a href="module-ramda.html#.curry">curry</a></li><li data-type='method'><a href="module-ramda.html#.curryN">curryN</a></li><li data-type='method'><a href="module-ramda.html#.dec">dec</a></li><li data-type='method'><a href="module-ramda.html#.defaultTo">defaultTo</a></li><li data-type='method'><a href="module-ramda.html#.descend">descend</a></li><li data-type='method'><a href="module-ramda.html#.difference">difference</a></li><li data-type='method'><a href="module-ramda.html#.differenceWith">differenceWith</a></li><li data-type='method'><a href="module-ramda.html#.dissoc">dissoc</a></li><li data-type='method'><a href="module-ramda.html#.dissocPath">dissocPath</a></li><li data-type='method'><a href="module-ramda.html#.divide">divide</a></li><li data-type='method'><a href="module-ramda.html#.drop">drop</a></li><li data-type='method'><a href="module-ramda.html#.dropLast">dropLast</a></li><li data-type='method'><a href="module-ramda.html#.dropLastWhile">dropLastWhile</a></li><li data-type='method'><a href="module-ramda.html#.dropRepeats">dropRepeats</a></li><li data-type='method'><a href="module-ramda.html#.dropRepeatsWith">dropRepeatsWith</a></li><li data-type='method'><a href="module-ramda.html#.dropWhile">dropWhile</a></li><li data-type='method'><a href="module-ramda.html#.either">either</a></li><li data-type='method'><a href="module-ramda.html#.empty">empty</a></li><li data-type='method'><a href="module-ramda.html#.endsWith">endsWith</a></li><li data-type='method'><a href="module-ramda.html#.eqBy">eqBy</a></li><li data-type='method'><a href="module-ramda.html#.eqProps">eqProps</a></li><li data-type='method'><a href="module-ramda.html#.equals">equals</a></li><li data-type='method'><a href="module-ramda.html#.evolve">evolve</a></li><li data-type='method'><a href="module-ramda.html#.F">F</a></li><li data-type='method'><a href="module-ramda.html#.filter">filter</a></li><li data-type='method'><a href="module-ramda.html#.find">find</a></li><li data-type='method'><a href="module-ramda.html#.findIndex">findIndex</a></li><li data-type='method'><a href="module-ramda.html#.findLast">findLast</a></li><li data-type='method'><a href="module-ramda.html#.findLastIndex">findLastIndex</a></li><li data-type='method'><a href="module-ramda.html#.flatten">flatten</a></li><li data-type='method'><a href="module-ramda.html#.forEachObjIndexed">forEachObjIndexed</a></li><li data-type='method'><a href="module-ramda.html#.fromPairs">fromPairs</a></li><li data-type='method'><a href="module-ramda.html#.groupBy">groupBy</a></li><li data-type='method'><a href="module-ramda.html#.groupWith">groupWith</a></li><li data-type='method'><a href="module-ramda.html#.gt">gt</a></li><li data-type='method'><a href="module-ramda.html#.gte">gte</a></li><li data-type='method'><a href="module-ramda.html#.has">has</a></li><li data-type='method'><a href="module-ramda.html#.hasIn">hasIn</a></li><li data-type='method'><a href="module-ramda.html#.hasPath">hasPath</a></li><li data-type='method'><a href="module-ramda.html#.head">head</a></li><li data-type='method'><a href="module-ramda.html#.identical">identical</a></li><li data-type='method'><a href="module-ramda.html#.identity">identity</a></li><li data-type='method'><a href="module-ramda.html#.ifElse">ifElse</a></li><li data-type='method'><a href="module-ramda.html#.inc">inc</a></li><li data-type='method'><a href="module-ramda.html#.includes">includes</a></li><li data-type='method'><a href="module-ramda.html#.indexOf">indexOf</a></li><li data-type='method'><a href="module-ramda.html#.init">init</a></li><li data-type='method'><a href="module-ramda.html#.innerJoin">innerJoin</a></li><li data-type='method'><a href="module-ramda.html#.insert">insert</a></li><li data-type='method'><a href="module-ramda.html#.insertAll">insertAll</a></li><li data-type='method'><a href="module-ramda.html#.intersection">intersection</a></li><li data-type='method'><a href="module-ramda.html#.intersperse">intersperse</a></li><li data-type='method'><a href="module-ramda.html#.into">into</a></li><li data-type='method'><a href="module-ramda.html#.invert">invert</a></li><li data-type='method'><a href="module-ramda.html#.invertObj">invertObj</a></li><li data-type='method'><a href="module-ramda.html#.invoker">invoker</a></li><li data-type='method'><a href="module-ramda.html#.is">is</a></li><li data-type='method'><a href="module-ramda.html#.isEmpty">isEmpty</a></li><li data-type='method'><a href="module-ramda.html#.isNil">isNil</a></li><li data-type='method'><a href="module-ramda.html#.join">join</a></li><li data-type='method'><a href="module-ramda.html#.juxt">juxt</a></li><li data-type='method'><a href="module-ramda.html#.keys">keys</a></li><li data-type='method'><a href="module-ramda.html#.keysIn">keysIn</a></li><li data-type='method'><a href="module-ramda.html#.last">last</a></li><li data-type='method'><a href="module-ramda.html#.lastIndexOf">lastIndexOf</a></li><li data-type='method'><a href="module-ramda.html#.length">length</a></li><li data-type='method'><a href="module-ramda.html#.lens">lens</a></li><li data-type='method'><a href="module-ramda.html#.lensIndex">lensIndex</a></li><li data-type='method'><a href="module-ramda.html#.lensPath">lensPath</a></li><li data-type='method'><a href="module-ramda.html#.lensProp">lensProp</a></li><li data-type='method'><a href="module-ramda.html#.lift">lift</a></li><li data-type='method'><a href="module-ramda.html#.liftN">liftN</a></li><li data-type='method'><a href="module-ramda.html#.lt">lt</a></li><li data-type='method'><a href="module-ramda.html#.lte">lte</a></li><li data-type='method'><a href="module-ramda.html#.map">map</a></li><li data-type='method'><a href="module-ramda.html#.mapAccum">mapAccum</a></li><li data-type='method'><a href="module-ramda.html#.mapAccumRight">mapAccumRight</a></li><li data-type='method'><a href="module-ramda.html#.mapObjIndexed">mapObjIndexed</a></li><li data-type='method'><a href="module-ramda.html#.match">match</a></li><li data-type='method'><a href="module-ramda.html#.mathMod">mathMod</a></li><li data-type='method'><a href="module-ramda.html#.max">max</a></li><li data-type='method'><a href="module-ramda.html#.maxBy">maxBy</a></li><li data-type='method'><a href="module-ramda.html#.mean">mean</a></li><li data-type='method'><a href="module-ramda.html#.median">median</a></li><li data-type='method'><a href="module-ramda.html#.memoizeWith">memoizeWith</a></li><li data-type='method'><a href="module-ramda.html#.merge">merge</a></li><li data-type='method'><a href="module-ramda.html#.mergeAll">mergeAll</a></li><li data-type='method'><a href="module-ramda.html#.mergeDeepLeft">mergeDeepLeft</a></li><li data-type='method'><a href="module-ramda.html#.mergeDeepRight">mergeDeepRight</a></li><li data-type='method'><a href="module-ramda.html#.mergeDeepWith">mergeDeepWith</a></li><li data-type='method'><a href="module-ramda.html#.mergeDeepWithKey">mergeDeepWithKey</a></li><li data-type='method'><a href="module-ramda.html#.mergeLeft">mergeLeft</a></li><li data-type='method'><a href="module-ramda.html#.mergeRight">mergeRight</a></li><li data-type='method'><a href="module-ramda.html#.mergeWith">mergeWith</a></li><li data-type='method'><a href="module-ramda.html#.mergeWithKey">mergeWithKey</a></li><li data-type='method'><a href="module-ramda.html#.min">min</a></li><li data-type='method'><a href="module-ramda.html#.minBy">minBy</a></li><li data-type='method'><a href="module-ramda.html#.modulo">modulo</a></li><li data-type='method'><a href="module-ramda.html#.move">move</a></li><li data-type='method'><a href="module-ramda.html#.multiply">multiply</a></li><li data-type='method'><a href="module-ramda.html#.nAry">nAry</a></li><li data-type='method'><a href="module-ramda.html#.negate">negate</a></li><li data-type='method'><a href="module-ramda.html#.none">none</a></li><li data-type='method'><a href="module-ramda.html#.not">not</a></li><li data-type='method'><a href="module-ramda.html#.nth">nth</a></li><li data-type='method'><a href="module-ramda.html#.nthArg">nthArg</a></li><li data-type='method'><a href="module-ramda.html#.o">o</a></li><li data-type='method'><a href="module-ramda.html#.objOf">objOf</a></li><li data-type='method'><a href="module-ramda.html#.of">of</a></li><li data-type='method'><a href="module-ramda.html#.omit">omit</a></li><li data-type='method'><a href="module-ramda.html#.once">once</a></li><li data-type='method'><a href="module-ramda.html#.or">or</a></li><li data-type='method'><a href="module-ramda.html#.otherwise">otherwise</a></li><li data-type='method'><a href="module-ramda.html#.over">over</a></li><li data-type='method'><a href="module-ramda.html#.pair">pair</a></li><li data-type='method'><a href="module-ramda.html#.partial">partial</a></li><li data-type='method'><a href="module-ramda.html#.partialRight">partialRight</a></li><li data-type='method'><a href="module-ramda.html#.partition">partition</a></li><li data-type='method'><a href="module-ramda.html#.path">path</a></li><li data-type='method'><a href="module-ramda.html#.pathEq">pathEq</a></li><li data-type='method'><a href="module-ramda.html#.pathOr">pathOr</a></li><li data-type='method'><a href="module-ramda.html#.pathSatisfies">pathSatisfies</a></li><li data-type='method'><a href="module-ramda.html#.pick">pick</a></li><li data-type='method'><a href="module-ramda.html#.pickAll">pickAll</a></li><li data-type='method'><a href="module-ramda.html#.pickBy">pickBy</a></li><li data-type='method'><a href="module-ramda.html#.pipe">pipe</a></li><li data-type='method'><a href="module-ramda.html#.pipeK">pipeK</a></li><li data-type='method'><a href="module-ramda.html#.pipeP">pipeP</a></li><li data-type='method'><a href="module-ramda.html#.pipeWith">pipeWith</a></li><li data-type='method'><a href="module-ramda.html#.pluck">pluck</a></li><li data-type='method'><a href="module-ramda.html#.prepend">prepend</a></li><li data-type='method'><a href="module-ramda.html#.product">product</a></li><li data-type='method'><a href="module-ramda.html#.project">project</a></li><li data-type='method'><a href="module-ramda.html#.prop">prop</a></li><li data-type='method'><a href="module-ramda.html#.propEq">propEq</a></li><li data-type='method'><a href="module-ramda.html#.propIs">propIs</a></li><li data-type='method'><a href="module-ramda.html#.propOr">propOr</a></li><li data-type='method'><a href="module-ramda.html#.props">props</a></li><li data-type='method'><a href="module-ramda.html#.propSatisfies">propSatisfies</a></li><li data-type='method'><a href="module-ramda.html#.range">range</a></li><li data-type='method'><a href="module-ramda.html#.reduce">reduce</a></li><li data-type='method'><a href="module-ramda.html#.reduceBy">reduceBy</a></li><li data-type='method'><a href="module-ramda.html#.reduced">reduced</a></li><li data-type='method'><a href="module-ramda.html#.reduceRight">reduceRight</a></li><li data-type='method'><a href="module-ramda.html#.reduceWhile">reduceWhile</a></li><li data-type='method'><a href="module-ramda.html#.reject">reject</a></li><li data-type='method'><a href="module-ramda.html#.remove">remove</a></li><li data-type='method'><a href="module-ramda.html#.repeat">repeat</a></li><li data-type='method'><a href="module-ramda.html#.replace">replace</a></li><li data-type='method'><a href="module-ramda.html#.reverse">reverse</a></li><li data-type='method'><a href="module-ramda.html#.scan">scan</a></li><li data-type='method'><a href="module-ramda.html#.sequence">sequence</a></li><li data-type='method'><a href="module-ramda.html#.set">set</a></li><li data-type='method'><a href="module-ramda.html#.slice">slice</a></li><li data-type='method'><a href="module-ramda.html#.sort">sort</a></li><li data-type='method'><a href="module-ramda.html#.sortBy">sortBy</a></li><li data-type='method'><a href="module-ramda.html#.sortWith">sortWith</a></li><li data-type='method'><a href="module-ramda.html#.splitAt">splitAt</a></li><li data-type='method'><a href="module-ramda.html#.splitEvery">splitEvery</a></li><li data-type='method'><a href="module-ramda.html#.splitWhen">splitWhen</a></li><li data-type='method'><a href="module-ramda.html#.startsWith">startsWith</a></li><li data-type='method'><a href="module-ramda.html#.subtract">subtract</a></li><li data-type='method'><a href="module-ramda.html#.sum">sum</a></li><li data-type='method'><a href="module-ramda.html#.symmetricDifference">symmetricDifference</a></li><li data-type='method'><a href="module-ramda.html#.symmetricDifferenceWith">symmetricDifferenceWith</a></li><li data-type='method'><a href="module-ramda.html#.T">T</a></li><li data-type='method'><a href="module-ramda.html#.tail">tail</a></li><li data-type='method'><a href="module-ramda.html#.take">take</a></li><li data-type='method'><a href="module-ramda.html#.takeLast">takeLast</a></li><li data-type='method'><a href="module-ramda.html#.takeLastWhile">takeLastWhile</a></li><li data-type='method'><a href="module-ramda.html#.takeWhile">takeWhile</a></li><li data-type='method'><a href="module-ramda.html#.test">test</a></li><li data-type='method'><a href="module-ramda.html#.then">then</a></li><li data-type='method'><a href="module-ramda.html#.thunkify">thunkify</a></li><li data-type='method'><a href="module-ramda.html#.times">times</a></li><li data-type='method'><a href="module-ramda.html#.toPairs">toPairs</a></li><li data-type='method'><a href="module-ramda.html#.toPairsIn">toPairsIn</a></li><li data-type='method'><a href="module-ramda.html#.transduce">transduce</a></li><li data-type='method'><a href="module-ramda.html#.transpose">transpose</a></li><li data-type='method'><a href="module-ramda.html#.traverse">traverse</a></li><li data-type='method'><a href="module-ramda.html#.tryCatch">tryCatch</a></li><li data-type='method'><a href="module-ramda.html#.type">type</a></li><li data-type='method'><a href="module-ramda.html#.unapply">unapply</a></li><li data-type='method'><a href="module-ramda.html#.unary">unary</a></li><li data-type='method'><a href="module-ramda.html#.uncurryN">uncurryN</a></li><li data-type='method'><a href="module-ramda.html#.unfold">unfold</a></li><li data-type='method'><a href="module-ramda.html#.union">union</a></li><li data-type='method'><a href="module-ramda.html#.unionWith">unionWith</a></li><li data-type='method'><a href="module-ramda.html#.uniq">uniq</a></li><li data-type='method'><a href="module-ramda.html#.uniqBy">uniqBy</a></li><li data-type='method'><a href="module-ramda.html#.uniqWith">uniqWith</a></li><li data-type='method'><a href="module-ramda.html#.unless">unless</a></li><li data-type='method'><a href="module-ramda.html#.unnest">unnest</a></li><li data-type='method'><a href="module-ramda.html#.until">until</a></li><li data-type='method'><a href="module-ramda.html#.update">update</a></li><li data-type='method'><a href="module-ramda.html#.useWith">useWith</a></li><li data-type='method'><a href="module-ramda.html#.values">values</a></li><li data-type='method'><a href="module-ramda.html#.valuesIn">valuesIn</a></li><li data-type='method'><a href="module-ramda.html#.view">view</a></li><li data-type='method'><a href="module-ramda.html#.when">when</a></li><li data-type='method'><a href="module-ramda.html#.where">where</a></li><li data-type='method'><a href="module-ramda.html#.whereEq">whereEq</a></li><li data-type='method'><a href="module-ramda.html#.without">without</a></li><li data-type='method'><a href="module-ramda.html#.xprod">xprod</a></li><li data-type='method'><a href="module-ramda.html#.zip">zip</a></li><li data-type='method'><a href="module-ramda.html#.zipObj">zipObj</a></li><li data-type='method'><a href="module-ramda.html#.zipWith">zipWith</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#debounce">debounce</a></li><li><a href="global.html#defaultToStrict">defaultToStrict</a></li><li><a href="global.html#defer">defer</a></li><li><a href="global.html#dotPath">dotPath</a></li><li><a href="global.html#dotPathOr">dotPathOr</a></li><li><a href="global.html#ensureStartsWith">ensureStartsWith</a></li><li><a href="global.html#eqDotPaths">eqDotPaths</a></li><li><a href="global.html#eqDotPathsShallow">eqDotPathsShallow</a></li><li><a href="global.html#eqPaths">eqPaths</a></li><li><a href="global.html#equalsAny">equalsAny</a></li><li><a href="global.html#equalsShallow">equalsShallow</a></li><li><a href="global.html#filterMap">filterMap</a></li><li><a href="global.html#format">format</a></li><li><a href="global.html#fpThrow">fpThrow</a></li><li><a href="global.html#intersectAny">intersectAny</a></li><li><a href="global.html#isNilOrEmpty">isNilOrEmpty</a></li><li><a href="global.html#isNot">isNot</a></li><li><a href="global.html#isNotEmpty">isNotEmpty</a></li><li><a href="global.html#isNotNil">isNotNil</a></li><li><a href="global.html#isPopulatedString">isPopulatedString</a></li><li><a href="global.html#jsonParseSafe">jsonParseSafe</a></li><li><a href="global.html#keyByWith">keyByWith</a></li><li><a href="global.html#list">list</a></li><li><a href="global.html#mapFilter">mapFilter</a></li><li><a href="global.html#mapRejectNil">mapRejectNil</a></li><li><a href="global.html#mergeSpec">mergeSpec</a></li><li><a href="global.html#mergeWithArrays">mergeWithArrays</a></li><li><a href="global.html#nonePass">nonePass</a></li><li><a href="global.html#noopAsync">noopAsync</a></li><li><a href="global.html#propOrStrict">propOrStrict</a></li><li><a href="global.html#rejectNilMap">rejectNilMap</a></li><li><a href="global.html#replaceAll">replaceAll</a></li><li><a href="global.html#resolveProps">resolveProps</a></li><li><a href="global.html#round">round</a></li><li><a href="global.html#sleep">sleep</a></li><li><a href="global.html#stringify">stringify</a></li><li><a href="global.html#stringToBoolean">stringToBoolean</a></li><li><a href="global.html#tap">tap</a></li><li><a href="global.html#throttle">throttle</a></li><li><a href="global.html#throttleLeading">throttleLeading</a></li><li><a href="global.html#throttleTrailing">throttleTrailing</a></li><li><a href="global.html#trace">trace</a></li><li><a href="global.html#tryCatchSafe">tryCatchSafe</a></li><li><a href="global.html#updateKeyPaths">updateKeyPaths</a></li><li><a href="global.html#updateKeys">updateKeys</a></li><li><a href="global.html#updateKeysWith">updateKeysWith</a></li><li><a href="global.html#upperCamelCase">upperCamelCase</a></li><li><a href="global.html#within">within</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">omnibelt</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id=".allEqual"><span class="type-signature">(static) </span>allEqual<span class="signature">(array)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+
+    
+    <p class="summary">Array -> Boolean</p>
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="omnibelt_all-equal.js.html">omnibelt/all-equal.js</a>, <a href="omnibelt_all-equal.js.html#line6">line 6</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Checks to see if all elements in an array are the same.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>TODO</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>array</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">An array of any values</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    True when all same, false otherwise
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".allSettledP"><span class="type-signature">(static) </span>allSettledP<span class="signature">(promises)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+    <p class="summary">[Promise] -> Promise<[Object]></p>
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="omnibelt_all-settled-p.js.html">omnibelt/all-settled-p.js</a>, <a href="omnibelt_all-settled-p.js.html#line7">line 7</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    A 'promise all' that does not reject when promises are rejected. Instead returns an array of
+results. Each result will be an object. The object will have the following form for a
+successfully settled promise:
+{ state: 'fulfilled', value: <the result of the promise> }
+A rejected result will look like:
+{ state: 'rejected', reason: <the rejection reason/error> }
+
+Similar to [this](https://github.com/kriskowal/q/wiki/API-Reference#promiseallsettled).
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>promises</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">An array of promises</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A promise that will resolve to an array of settled/rejected results
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".argsToObj"><span class="type-signature">(static) </span>argsToObj<span class="signature">(keys, args)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+
+    
+    <p class="summary">[k1, k2, k3] -> (a, b, c, d) -> { k1: a, k2: b, k3: c }</p>
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="omnibelt_args-to-obj.js.html">omnibelt/args-to-obj.js</a>, <a href="omnibelt_args-to-obj.js.html#line6">line 6</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Converts function arguments to an object based on the provided array of keys.
+If an argument is passed that doesn't have a key it will be skipped.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>argsToObj(['foo', 'bar'])(1, 2); // { foo: 1, bar: 2 }
+
+function foo() {
+  return argsToObj(['a', 'b', 'c'])(arguments);
+}
+foo(1, 2, 3, 4); // { a: 1, b: 2, c: 3 }</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>keys</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A list of props to assign arguments to (in order)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>args</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Arguments</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Arguments to match to `keys` (in order)</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    Object of `keys` matched with `args`
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".clampPositive"><span class="type-signature">(static) </span>clampPositive<span class="signature">(toClamp)</span><span class="type-signature"> &rarr; {Number}</span></h4>
+
+    
+    <p class="summary">Number -> Number</p>
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="omnibelt_clamp-positive.js.html">omnibelt/clamp-positive.js</a>, <a href="omnibelt_clamp-positive.js.html#line3">line 3</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Clamps a numeric value so that it's guaranteed to be 0 or higher. Works with
+Numbers and other ordered types like Strings and Dates, though the behavior
+when given a String is inconsistent (e.g. `clampPositive('5')` returns the
+String '5', `clampPositive('-1')` returns the Number 0, and `clampPositive('foo')`
+returns the string 'foo'). If given NaN it will return NaN.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>clampPositive(-1); // => 0
+clampPositive(0); // => 0
+clampPositive(20); // => 20
+clampPositive(-Infinity); // => 0
+clampPositive(Infinity); // => Infinity
+clampPositive(NaN); // => NaN</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>toClamp</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Any number to clamp</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    `toClamp` or 0 if the number was negative
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".containsAll"><span class="type-signature">(static) </span>containsAll<span class="signature">(needle, haystack)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+
+    
+    <p class="summary">Array<* a> -> Array<* a> -> Boolean</p>
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="omnibelt_contains-all.js.html">omnibelt/contains-all.js</a>, <a href="omnibelt_contains-all.js.html#line7">line 7</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Predicate that checks to see if each element in an array
+exists in a larger array.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>containsAll([1, 3, 2], [1, 2, 3, 4, 5]); // => true</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>needle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">list to check with</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>haystack</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">list to check against</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    True if all are found, false otherwise
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".containsAny"><span class="type-signature">(static) </span>containsAny<span class="signature">(needle, haystack)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+
+    
+    <p class="summary">Array<* a> -> Array<* a> -> Boolean</p>
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="omnibelt_contains-any.js.html">omnibelt/contains-any.js</a>, <a href="omnibelt_contains-any.js.html#line7">line 7</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Takes two arrays and returns true if any of the values in the first array
+are found in the second array.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>containsAny([1, 2], [1, 2, 3]); // => true
+containsAny([0, 2, 4, 5, 6], [1, 2, 3]); // => true
+containsAny(['foo'], ['foo', 'bar']); // => true
+containsAny([null], [null, 'foo']); // => true
+containsAny([1], ['foo']); // => false
+containsAny([], ['foo']); // => false
+containsAny(['foo'], []); // => false</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>needle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">list to check with</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>haystack</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">list to check against</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    True if any are found, false otherwise
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".count"><span class="type-signature">(static) </span>count<span class="signature">(toCount)</span><span class="type-signature"> &rarr; {Object}</span></h4>
+
+    
+    <p class="summary">[a] -> { a: Number }</p>
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="omnibelt_count.js.html">omnibelt/count.js</a>, <a href="omnibelt_count.js.html#line4">line 4</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li>`R.countBy`</li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    `countBy` the raw values in an array (`identity`). All values are
+coerced to strings.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>count([1, 1, 2]);       // { '1': 2, '2': 1 }
+count(['a', 'b', 'a']); // { a: 2, b: 1 }</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>toCount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">list of elements to count</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    Where keys are the elements of `toCount` and the values are the number of occurrences
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".ensureArray"><span class="type-signature">(static) </span>ensureArray<span class="signature">(data)</span><span class="type-signature"> &rarr; {Array}</span></h4>
+
+    
+    <p class="summary">Any a -> [a]</p>
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="omnibelt_ensure-array.js.html">omnibelt/ensure-array.js</a>, <a href="omnibelt_ensure-array.js.html#line6">line 6</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Takes a value of any type and returns an array. If the value is array-like
+(e.g. NodeList, arguments) it will be converted to an array; otherwise, it
+will be wrapped in a new array.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>ensureArray('foo'); // => ['foo']
+ensureArray(['foo']); // => ['foo']
+ensureArray(null); // => [null]</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Any</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Any value to ensure</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    An array with `data` unless already an array
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".mapIndexed"><span class="type-signature">(static) </span>mapIndexed<span class="signature">(xf, data)</span><span class="type-signature"> &rarr; {Array|Object}</span></h4>
+
+    
+    <p class="summary">((Any a, Number) -> b) -> Array< a > -> Array< b ></p>
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="omnibelt_map-indexed.js.html">omnibelt/map-indexed.js</a>, <a href="omnibelt_map-indexed.js.html#line4">line 4</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li>`R.map`, `R.addIndex`, `R.mapObjIndexed`</li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    `R.map` with the index added.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>map(
+  (value, index) => `${value}-{index}`,
+  ['a', 'b']
+);
+// ['a-0', 'b-1']</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>xf</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">tranformation function, arity 2</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+|
+
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Data source to iterate over</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    Transformed values inside the `data` original structure
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array</span>
+|
+
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".mapP"><span class="type-signature">(static) </span>mapP<span class="signature">(xf, data)</span><span class="type-signature"> &rarr; {Array|Object}</span></h4>
+
+    
+    <p class="summary">(a -> Promise< b >) -> Array|Object c< a > -> Promise< c< b > >;</p>
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="omnibelt_map-p.js.html">omnibelt/map-p.js</a>, <a href="omnibelt_map-p.js.html#line12">line 12</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    Just like a normal `map` function, but handles an asynchronous iteration function
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>mapP((x) => Promise.resolve(x + 1), [1, 2, 3]).then(identity); // => [2, 3, 4]
+mapP(
+  async (x) => {
+    await sleep(50);
+    return toUpper(x);
+  },
+  { foo: 'foo', bar: 'bar', baz: 'baz' }
+).then(identity);
+// { foo: 'FOO', bar: 'BAR', baz: 'BAZ' }</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>xf</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Asynchronous tranformation function</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+|
+
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Data source to iterate over</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    Transformed values inside the `data` original structure
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array</span>
+|
+
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".parallelLimitMapP"><span class="type-signature">(static) </span>parallelLimitMapP<span class="signature">(maxParallel, func, iterable)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+    <p class="summary">Number -> Function -> Iterable -> Promise<iterable></p>
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="omnibelt_parallel-limit-map-p.js.html">omnibelt/parallel-limit-map-p.js</a>, <a href="omnibelt_parallel-limit-map-p.js.html#line19">line 19</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    A promise map helper, that limits the number of items being evaluated in parallel.
+Given an asynchronous function and an iterable or an object, this will evaluate the
+function against each value of the iterable, in parallel, limited by the maxParallel argument.
+
+If the given iterable is neither iterable nor an object, it is just returned.
+
+Note: An iterable will always return a promise for an array. An object will return a promise
+for an object.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>maxParallel</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Maximum number of items to be evaluating at once</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>func</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">An async function</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>iterable</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Iterable</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Object or iterable</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A promise that will resolve to either an array or object when iteration is done
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".serialForEachP"><span class="type-signature">(static) </span>serialForEachP<span class="signature">(func, iterable)</span><span class="type-signature"> &rarr; {Promise}</span></h4>
+
+    
+    <p class="summary">Function -> Iterable -> Promise<iterable></p>
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="omnibelt_serial-for-each-p.js.html">omnibelt/serial-for-each-p.js</a>, <a href="omnibelt_serial-for-each-p.js.html#line10">line 10</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    A promise for each helper (serial). Given an asynchronous function
+and an iterable or an object, this will evaluate the function against
+each value of the iterable, serially.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>func</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">An async function</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>iterable</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Iterable</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Object or iterable</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    A promise that will resolve to undefined when iteration is done
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+        
+            
+
+    
+
+    <h4 class="name" id=".timeoutP"><span class="type-signature">(static) </span>timeoutP<span class="signature">(ms, promise)</span><span class="type-signature"> &rarr; {Any|Error}</span></h4>
+
+    
+    <p class="summary">Number -> Promise< * > -> Promise< * ></p>
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="omnibelt_timeout-p.js.html">omnibelt/timeout-p.js</a>, <a href="omnibelt_timeout-p.js.html#line4">line 4</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    A promise timeout helper. If the given promise does not resolve within the given
+number of milliseconds, the promise is rejected. Similar to [this](http://bluebirdjs.com/docs/api/timeout.html)
+or [this](https://github.com/kriskowal/q/wiki/API-Reference#promisetimeoutms-message).
+NOTE: this does NOT cancel the original promise.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>timeoutP(1000, Promise.resolve('hi')).then(identity); // => 'hi'
+timeoutP(1000, async (foo) => {
+  await sleep(1200);
+  return foo;
+}).catch(identity); // => Error&lt;{ code: ETIMEDOUT, name: 'Error', message: '...' }></code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ms</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Number of milliseconds before timing out the promise</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>promise</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Promise</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">An in-flight promise</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The return value of the promise or rejection
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Any</span>
+|
+
+<span class="param-type">Error</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Jan 06 2019 15:49:36 GMT-0500 (EST) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
