@@ -1267,10 +1267,7 @@ eslint-plugin-node@^8.0.0:
 eslint-plugin-react@^7.11.1:
   version "7.12.3"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.12.3.tgz#b9ca4cd7cd3f5d927db418a1950366a12d4568fd"
-<<<<<<< HEAD
-=======
   integrity sha512-WTIA3cS8OzkPeCi4KWuPmjR33lgG9r9Y/7RmnLTRw08MZKgAfnK/n3BO4X0S67MPkVLazdfCNT/XWqcDu4BLTA==
->>>>>>> various-updates
   dependencies:
     array-includes "^3.0.3"
     doctrine "^2.1.0"
@@ -3618,10 +3615,7 @@ optionator@^0.8.1, optionator@^0.8.2:
 os-homedir@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/os-homedir/-/os-homedir-1.0.2.tgz#ffbc4988336e0e833de0c168c7ef152121aa7fb3"
-<<<<<<< HEAD
-=======
   integrity sha1-/7xJiDNuDoM94MFox+8VISGqf7M=
->>>>>>> various-updates
 
 os-locale@^2.0.0:
   version "2.1.0"
@@ -3635,10 +3629,7 @@ os-locale@^2.0.0:
 os-tmpdir@^1.0.0, os-tmpdir@^1.0.1, os-tmpdir@~1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/os-tmpdir/-/os-tmpdir-1.0.2.tgz#bbe67406c79aa85c5cfec766fe5734555dfa1274"
-<<<<<<< HEAD
-=======
   integrity sha1-u+Z0BseaqFxc/sdm/lc0VV36EnQ=
->>>>>>> various-updates
 
 osenv@^0.1.4:
   version "0.1.5"
@@ -3763,10 +3754,7 @@ path-exists@^3.0.0:
 path-is-absolute@^1.0.0, path-is-absolute@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/path-is-absolute/-/path-is-absolute-1.0.1.tgz#174b9268735534ffbc7ace6bf53a5a9e1b5c5f5f"
-<<<<<<< HEAD
-=======
   integrity sha1-F0uSaHNVNP+8es5r9TpanhtcX18=
->>>>>>> various-updates
 
 path-is-inside@^1.0.1, path-is-inside@^1.0.2:
   version "1.0.2"
@@ -3969,6 +3957,7 @@ ramda@^0.25.0:
 ramda@^0.26.1:
   version "0.26.1"
   resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.26.1.tgz#8d41351eb8111c55353617fc3bbffad8e4d35d06"
+  integrity sha512-hLWjpy7EnsDBb0p+Z3B7rPi3GDeRG5ZtiI33kJhTt+ORCd38AbAIjB/9zRIUoeTbE/AVX5ZkU7m6bznsvrf8eQ==
 
 randomatic@^3.0.0:
   version "3.1.1"
