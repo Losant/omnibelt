@@ -199,12 +199,6 @@
 /**
  * @func
  * @memberof module:ramda
- * @name composeWith
- * @see {@link http://ramdajs.com/docs/#composeWith|R.composeWith}
- */
-/**
- * @func
- * @memberof module:ramda
  * @name concat
  * @see {@link http://ramdajs.com/docs/#concat|R.concat}
  */
@@ -469,12 +463,6 @@
 /**
  * @func
  * @memberof module:ramda
- * @name hasPath
- * @see {@link http://ramdajs.com/docs/#hasPath|R.hasPath}
- */
-/**
- * @func
- * @memberof module:ramda
  * @name head
  * @see {@link http://ramdajs.com/docs/#head|R.head}
  */
@@ -501,12 +489,6 @@
  * @memberof module:ramda
  * @name inc
  * @see {@link http://ramdajs.com/docs/#inc|R.inc}
- */
-/**
- * @func
- * @memberof module:ramda
- * @name includes
- * @see {@link http://ramdajs.com/docs/#includes|R.includes}
  */
 /**
  * @func
@@ -745,6 +727,12 @@
 /**
  * @func
  * @memberof module:ramda
+ * @name memoize
+ * @see {@link http://ramdajs.com/docs/#memoize|R.memoize}
+ */
+/**
+ * @func
+ * @memberof module:ramda
  * @name memoizeWith
  * @see {@link http://ramdajs.com/docs/#memoizeWith|R.memoizeWith}
  */
@@ -787,18 +775,6 @@
 /**
  * @func
  * @memberof module:ramda
- * @name mergeLeft
- * @see {@link http://ramdajs.com/docs/#mergeLeft|R.mergeLeft}
- */
-/**
- * @func
- * @memberof module:ramda
- * @name mergeRight
- * @see {@link http://ramdajs.com/docs/#mergeRight|R.mergeRight}
- */
-/**
- * @func
- * @memberof module:ramda
  * @name mergeWith
  * @see {@link http://ramdajs.com/docs/#mergeWith|R.mergeWith}
  */
@@ -825,12 +801,6 @@
  * @memberof module:ramda
  * @name modulo
  * @see {@link http://ramdajs.com/docs/#modulo|R.modulo}
- */
-/**
- * @func
- * @memberof module:ramda
- * @name move
- * @see {@link http://ramdajs.com/docs/#move|R.move}
  */
 /**
  * @func
@@ -909,12 +879,6 @@
  * @memberof module:ramda
  * @name or
  * @see {@link http://ramdajs.com/docs/#or|R.or}
- */
-/**
- * @func
- * @memberof module:ramda
- * @name otherwise
- * @see {@link http://ramdajs.com/docs/#otherwise|R.otherwise}
  */
 /**
  * @func
@@ -1005,12 +969,6 @@
  * @memberof module:ramda
  * @name pipeP
  * @see {@link http://ramdajs.com/docs/#pipeP|R.pipeP}
- */
-/**
- * @func
- * @memberof module:ramda
- * @name pipeWith
- * @see {@link http://ramdajs.com/docs/#pipeWith|R.pipeWith}
  */
 /**
  * @func
@@ -1267,12 +1225,6 @@
 /**
  * @func
  * @memberof module:ramda
- * @name then
- * @see {@link http://ramdajs.com/docs/#then|R.then}
- */
-/**
- * @func
- * @memberof module:ramda
  * @name times
  * @see {@link http://ramdajs.com/docs/#times|R.times}
  */
@@ -1467,10 +1419,4 @@
  * @memberof module:ramda
  * @name zipWith
  * @see {@link http://ramdajs.com/docs/#zipWith|R.zipWith}
- */
-/**
- * @func
- * @memberof module:ramda
- * @name thunkify
- * @see {@link http://ramdajs.com/docs/#thunkify|R.thunkify}
  */

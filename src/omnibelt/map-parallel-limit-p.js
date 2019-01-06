@@ -1,19 +1,17 @@
 const curry = require('ramda/src/curry');
 const times = require('ramda/src/times');
 
-const arrayEvaluator = async (func, accumulator, iterator) => {
-  const next = iterator.next();
-  if (next.done) { return; }
-  accumulator.push(await func(next.value));
-  await arrayEvaluator(func, accumulator, iterator);
-};
+const objAccumulator = (accumulator, transformed, original) => { accumulator[original[0]] = transformed; };
+const aryAccumulator = (accumulator, transformed) => { accumulator.push(transformed); };
 
-const objectEvaluator = async (func, accumulator, iterator) => {
-  const next = iterator.next();
-  if (next.done) { return; }
-  const key = next.value[0];
-  accumulator[key] = await func(next.value);
-  await objectEvaluator(func, accumulator, iterator);
+const makeEvaluator = (func, iterator, accFunc, accumulator) => {
+  const evaluator = async () => {
+    const next = iterator.next();
+    if (next.done) { return; }
+    accFunc(accumulator, await func(next.value), next.value);
+    await evaluator();
+  };
+  return evaluator;
 };
 
 /**
@@ -28,7 +26,7 @@ const objectEvaluator = async (func, accumulator, iterator) => {
  *
  * @func
  * @memberof module:omnibelt
- * @name parallelLimitMapP
+ * @name mapParallelLimitP
  *
  * @param {Number} maxParallel - Maximum number of items to be evaluating at once
  * @param {Function} func - An async function
@@ -36,29 +34,27 @@ const objectEvaluator = async (func, accumulator, iterator) => {
  * @return {Promise} A promise that will resolve to either an array or object when iteration is done
  * @summary Number -> Function -> Iterable -> Promise<iterable>
  */
-const parallelLimitMapP = curry(async (maxParallel, func, iterable) => {
+const mapParallelLimitP = curry(async (maxParallel, func, iterable) => {
   if (!iterable) { return iterable; }
   if (!maxParallel || maxParallel < 1) { maxParallel = 1; }
 
-  let accumulator, evaluator, iterator;
+  let accumulator, evaluator;
   if (iterable[Symbol.iterator]) {
     accumulator = [];
-    evaluator = arrayEvaluator;
-    iterator = iterable[Symbol.iterator]();
+    evaluator = makeEvaluator(
+      func, iterable[Symbol.iterator](), aryAccumulator, accumulator);
   } else if (typeof(iterable) === 'object') {
     accumulator = {};
-    evaluator = objectEvaluator;
-    iterator = Object.entries(iterable)[Symbol.iterator]();
+    evaluator = makeEvaluator(
+      func, Object.entries(iterable)[Symbol.iterator](), objAccumulator, accumulator);
   } else {
     return iterable;
   }
 
-  const promises = times(() => {
-    return evaluator(func, accumulator, iterator);
-  }, maxParallel);
+  const promises = times(evaluator, maxParallel);
   await Promise.all(promises);
 
   return accumulator;
 });
 
-module.exports = parallelLimitMapP;
+module.exports = mapParallelLimitP;

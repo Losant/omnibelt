@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>omnibelt/is-nil-or-empty.js - Documentation</title>
+    <title>omnibelt/map-parallel-limit-p.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,7 +27,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">omnibelt/is-nil-or-empty.js</h1>
+    <h1 class="page-title">omnibelt/map-parallel-limit-p.js</h1>
     
 
     
@@ -37,21 +37,66 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>const either = require('ramda/src/either');
-const isNil = require('ramda/src/isNil');
-const isEmpty = require('ramda/src/isEmpty');
+            <pre class="prettyprint source linenums"><code>const curry = require('ramda/src/curry');
+const times = require('ramda/src/times');
+
+const objAccumulator = (accumulator, transformed, original) => { accumulator[original[0]] = transformed; };
+const aryAccumulator = (accumulator, transformed) => { accumulator.push(transformed); };
+
+const makeEvaluator = (func, iterator, accFunc, accumulator) => {
+  const evaluator = async () => {
+    const next = iterator.next();
+    if (next.done) { return; }
+    accFunc(accumulator, await func(next.value), next.value);
+    await evaluator();
+  };
+  return evaluator;
+};
 
 /**
- * Checks if a value is null, undefined, an empty string, an empty object, an empty array.
+ * A promise map helper, that limits the number of items being evaluated in parallel.
+ * Given an asynchronous function and an iterable or an object, this will evaluate the
+ * function against each value of the iterable, in parallel, limited by the maxParallel argument.
  *
- * @see R.isNil
- * @see R.isEmpty
+ * If the given iterable is neither iterable nor an object, it is just returned.
  *
- * @signature * -> Boolean
+ * Note: An iterable will always return a promise for an array. An object will return a promise
+ * for an object.
+ *
+ * @func
+ * @memberof module:omnibelt
+ * @name mapParallelLimitP
+ *
+ * @param {Number} maxParallel - Maximum number of items to be evaluating at once
+ * @param {Function} func - An async function
+ * @param {Iterable} iterable - Object or iterable
+ * @return {Promise} A promise that will resolve to either an array or object when iteration is done
+ * @summary Number -> Function -> Iterable -> Promise&lt;iterable>
  */
-const isNilOrEmpty = either(isNil, isEmpty);
+const mapParallelLimitP = curry(async (maxParallel, func, iterable) => {
+  if (!iterable) { return iterable; }
+  if (!maxParallel || maxParallel &lt; 1) { maxParallel = 1; }
 
-module.exports = isNilOrEmpty;
+  let accumulator, evaluator;
+  if (iterable[Symbol.iterator]) {
+    accumulator = [];
+    evaluator = makeEvaluator(
+      func, iterable[Symbol.iterator](), aryAccumulator, accumulator);
+  } else if (typeof(iterable) === 'object') {
+    accumulator = {};
+    evaluator = makeEvaluator(
+      func, Object.entries(iterable)[Symbol.iterator](), objAccumulator, accumulator);
+  } else {
+    return iterable;
+  }
+
+  const promises = times(evaluator, maxParallel);
+  await Promise.all(promises);
+
+  return accumulator;
+});
+
+module.exports = mapParallelLimitP;
 </code></pre>
         </article>
     </section>

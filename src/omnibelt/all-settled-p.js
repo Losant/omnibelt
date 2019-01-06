@@ -1,8 +1,8 @@
 const mapP = require('./map-p');
 
-const onSettledSuccess = (value) => { return { state: 'fulfilled', value }; };
-const onSettledReject = (reason) => { return { state: 'rejected', reason }; };
-const oneSettledP = (promise) => { return promise.then(onSettledSuccess, onSettledReject); };
+const onSettledSuccess = (value) => ({ state: 'fulfilled', value });
+const onSettledReject = (reason) => ({ state: 'rejected', reason });
+const onSettledP = (promise) => promise.then(onSettledSuccess, onSettledReject);
 
 /**
  * A 'promise all' that does not reject when promises are rejected. Instead returns an array of
@@ -21,7 +21,11 @@ const oneSettledP = (promise) => { return promise.then(onSettledSuccess, onSettl
  * @param {Array} promises - An array of promises
  * @return {Promise} A promise that will resolve to an array of settled/rejected results
  * @summary [Promise] -> Promise<[Object]>
+ *
+ * @example
+ * await allSettledP([Promise.resolve('good'), Promise.reject('bad')]);
+ * // => [{ state: 'fulfilled', value: 'good' }, { state: 'rejected', reason: 'bad' }]
  */
-const allSettledP = mapP(oneSettledP);
+const allSettledP = mapP(onSettledP);
 
 module.exports = allSettledP;
