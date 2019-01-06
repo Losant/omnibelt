@@ -108,16 +108,11 @@ Below should serve as an "upgrade guide" jumping off point as you are migrating 
   - `stringify-object` bumped to `3.3.0`
   - Added methods:
     - `allSettledP`
-<<<<<<< HEAD
-    - `parallelLimitMapP`
-    - `serialForEachP`
+    - `forEachSerialP`
+    - `mapParallelLimitP`
   - Removed methods:
     - `evolveArray`
       - 0.26.0 Ramda `evolve` now supports arrays
-=======
-    - `forEachSerialP`
-    - `mapParallelLimitP`
->>>>>>> various-updates
 - `1.2.0`
   - Repo renamed and open sourced!
   - `git remote set-url origin git@github.com:Losant/omnibelt.git`
