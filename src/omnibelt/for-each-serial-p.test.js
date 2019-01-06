@@ -1,16 +1,16 @@
-const serialForEachP = require('./serial-for-each-p');
+const forEachSerialP = require('./for-each-serial-p');
 const sleep = require('./sleep');
 
 const harness = async (input) => {
   const output = [];
-  await serialForEachP(async (val) => {
+  await forEachSerialP(async (val) => {
     await sleep(Math.random());
     output.push(Array.isArray(val) ? val.join(', ') : val * 2);
   }, input);
   return output;
 };
 
-describe('serialForEachP', () => {
+describe('forEachSerialP', () => {
   it('should correctly iterate on an array, serially, in order', async () => {
     expect(await harness([1, 2, 3, 4, 5])).toEqual([2, 4, 6, 8, 10]);
   });

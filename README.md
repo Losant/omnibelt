@@ -105,8 +105,8 @@ Below should serve as an "upgrade guide" jumping off point as you are migrating 
   - `stringify-object` bumped to `3.3.0`
   - Added methods:
     - `allSettledP`
-    - `parallelLimitMapP`
-    - `serialForEachP`
+    - `forEachSerialP`
+    - `mapParallelLimitP`
 - `1.2.0`
   - Repo renamed and open sourced!
   - `git remote set-url origin git@github.com:Losant/omnibelt.git`

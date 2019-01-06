@@ -14,14 +14,14 @@ const evaluator = async (func, iterator) => {
  *
  * @func
  * @memberof module:omnibelt
- * @name serialForEachP
+ * @name forEachSerialP
 
  * @param {Function} func - An async function
  * @param {Iterable} iterable - Object or iterable
  * @return {Promise} A promise that will resolve to undefined when iteration is done
  * @summary Function -> Iterable -> Promise<iterable>
  */
-const serialForEachP = curry(async (func, iterable) => {
+const forEachSerialP = curry(async (func, iterable) => {
   if (!iterable) { return iterable; }
 
   const iterator = iterable[Symbol.iterator] ?
@@ -31,4 +31,4 @@ const serialForEachP = curry(async (func, iterable) => {
   return iterable;
 });
 
-module.exports = serialForEachP;
+module.exports = forEachSerialP;

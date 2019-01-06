@@ -1,9 +1,9 @@
-const parallelLimitMapP = require('./parallel-limit-map-p');
+const mapParallelLimitP = require('./map-parallel-limit-p');
 const sleep = require('./sleep');
 
 const harness = (input) => {
   let areRunning = 0;
-  return parallelLimitMapP(2, async (val) => {
+  return mapParallelLimitP(2, async (val) => {
     if (areRunning >= 2) { throw new Error('TOO MUCH'); }
     areRunning++;
     await sleep(Math.random());
@@ -12,7 +12,7 @@ const harness = (input) => {
   }, input);
 };
 
-describe('parallelLimitMapP', () => {
+describe('mapParallelLimitP', () => {
   it('should correctly iterate on an array, parallel, in order', async () => {
     expect(await harness([1, 2, 3, 4, 5])).toEqual([2, 4, 6, 8, 10]);
   });
