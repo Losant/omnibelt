@@ -30,7 +30,7 @@ const cases = [
 ];
 
 const testHarnessAdapter = pipe(
-  adjust(equalsShallow, 0),
+  adjust(0, equalsShallow),
   apply(testHarnessUnary),
 );
 

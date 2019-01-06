@@ -19,7 +19,7 @@ const updateKeysWith = require('./update-keys-with');
  */
 const updateKeyPaths = updateKeysWith(pipe(
   list,
-  adjust(ensureArray, 0),
+  adjust(0, ensureArray),
   apply(assocPath),
 ));
 

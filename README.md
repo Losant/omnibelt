@@ -102,11 +102,17 @@ Below should serve as an "upgrade guide" jumping off point as you are migrating 
 - `?.?.?` - *WIP*
   - Updating linting, fix various spelling and linting errors
   - `lodash` bumped to `4.17.11`
+  - Ramda upgraded from 0.25.0 to 0.26.1
+    - Removed internal implementation of thunkify, now comes from Ramda
+    - Removed `evolveArray`, Ramda evolve now supports arrays with `evolve`
   - `stringify-object` bumped to `3.3.0`
   - Added methods:
     - `allSettledP`
     - `parallelLimitMapP`
     - `serialForEachP`
+  - Removed methods:
+    - `evolveArray`
+      - 0.26.0 Ramda `evolve` now supports arrays
 - `1.2.0`
   - Repo renamed and open sourced!
   - `git remote set-url origin git@github.com:Losant/omnibelt.git`

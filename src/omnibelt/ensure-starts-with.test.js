@@ -12,7 +12,7 @@ const cases = [
 ];
 
 const testHarnessAdapter = pipe(
-  adjust(ensureStartsWith, 0),
+  adjust(0, ensureStartsWith),
   apply(testHarnessUnary),
 );
 
