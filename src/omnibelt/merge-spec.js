@@ -1,6 +1,6 @@
 const curry = require('ramda/src/curry');
 const converge = require('ramda/src/converge');
-const merge = require('ramda/src/merge');
+const merge = require('ramda/src/mergeRight');
 const identity = require('ramda/src/identity');
 const applySpec = require('ramda/src/applySpec');
 
