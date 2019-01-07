@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>omnibelt/update-key-paths.js - Documentation</title>
+    <title>omnibelt/all-settled-p.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,7 +27,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">omnibelt/update-key-paths.js</h1>
+    <h1 class="page-title">omnibelt/all-settled-p.js</h1>
     
 
     
@@ -37,32 +37,37 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>const pipe = require('ramda/src/pipe');
-const assocPath = require('ramda/src/assocPath');
-const adjust = require('ramda/src/adjust');
-const apply = require('ramda/src/apply');
+            <pre class="prettyprint source linenums"><code>const mapP = require('./map-p');
 
-const list = require('./list');
-const ensureArray = require('./ensure-array');
-const updateKeysWith = require('./update-keys-with');
+const onSettledSuccess = (value) => ({ state: 'fulfilled', value });
+const onSettledReject = (reason) => ({ state: 'rejected', reason });
+const onSettledP = (promise) => promise.then(onSettledSuccess, onSettledReject);
 
 /**
- * Updates the key paths for a given object according to the provided map of
- * { oldKey: newKey } where `newKey` is an array. Any keys that aren't included
- * in the map will be passed through unchanged.
+ * A 'promise all' that does not reject when promises are rejected. Instead returns an array of
+ * results. Each result will be an object. The object will have the following form for a
+ * successfully settled promise:
+ * { state: 'fulfilled', value: &lt;the result of the promise> }
+ * A rejected result will look like:
+ * { state: 'rejected', reason: &lt;the rejection reason/error> }
  *
- * @signature { a: [String] } -> { a: * } -> { b: * }
+ * Similar to [this](https://github.com/kriskowal/q/wiki/API-Reference#promiseallsettled).
+ *
+ * @func
+ * @memberof module:omnibelt
+ * @name allSettledP
+
+ * @param {Array} promises - An array of promises
+ * @return {Promise} A promise that will resolve to an array of settled/rejected results
+ * @summary [Promise] -> Promise&lt;[Object]>
  *
  * @example
- *   updateKeyPaths({ foo: ['params', 'bar'] }, { foo: 1 }); // => { params: { bar: 1 } }
+ * await allSettledP([Promise.resolve('good'), Promise.reject('bad')]);
+ * // => [{ state: 'fulfilled', value: 'good' }, { state: 'rejected', reason: 'bad' }]
  */
-const updateKeyPaths = updateKeysWith(pipe(
-  list,
-  adjust(ensureArray, 0),
-  apply(assocPath),
-));
+const allSettledP = mapP(onSettledP);
 
-module.exports = updateKeyPaths;
+module.exports = allSettledP;
 </code></pre>
         </article>
     </section>

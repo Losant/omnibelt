@@ -1,4 +1,5 @@
-const { map, keys } = require('ramda');
+const map = require('ramda/src/map');
+const keys = require('ramda/src/keys');
 
 /**
  * Takes an object where the values may be promises

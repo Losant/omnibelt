@@ -8,7 +8,7 @@ const nonePass = require('./none-pass');
 const isFoo = equals('foo');
 const isBar = equals('bar');
 
-const cases = [
+const allCases = [
   {
     label: 'is not "foo" or "bar"',
     cases: [
@@ -36,4 +36,4 @@ const testHarnessAdapter = ({ label, cases }) => {
   });
 };
 
-map(testHarnessAdapter)(cases);
+map(testHarnessAdapter)(allCases);

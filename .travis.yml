@@ -1,10 +1,10 @@
 ---
 language: node_js
 node_js:
-  - "node"
-  - "lts/*"
-  - "8.9.4"
-  - "8.0.0"
+  - "11"
+  - "10"
+  - "9"
+  - "8"
 
 sudo: false
 

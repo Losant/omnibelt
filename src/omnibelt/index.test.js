@@ -9,7 +9,7 @@ const index = require('./index');
 
 const getExportedMethods = async () => {
   return fs.readdir(__dirname)
-    // Filter down to just the function defenition files
+    // Filter down to just the function definition files
     .then(
       filter(allPass([
         endsWith('.js'),

@@ -3,7 +3,7 @@ const { map } = require('ramda');
 const { testHarnessUnary } = require('../../test/utils');
 const mapFilter = require('./map-filter');
 
-const cases = [
+const allCases = [
   {
     label: 'mapFilter - add 1, then filter even',
     cases: [
@@ -31,4 +31,4 @@ const testHarnessAdapter = ({ label, cases }) => {
   });
 };
 
-map(testHarnessAdapter)(cases);
+map(testHarnessAdapter)(allCases);

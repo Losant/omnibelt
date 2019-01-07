@@ -1,4 +1,5 @@
-const { reduce, curry } = require('ramda');
+const curry = require('ramda/src/curry');
+const reduce = require('ramda/src/reduce');
 
 /**
  * Maps an array by the given transform, but only the transformed values that pass the given
