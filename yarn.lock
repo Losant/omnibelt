@@ -125,10 +125,10 @@
     eslint-plugin-react "^7.11.1"
     eslint-watch "^4.0.2"
 
-"@rjhilgefort/export-dir@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@rjhilgefort/export-dir/-/export-dir-1.1.1.tgz#d00150754b072eb75889ce7d68b42b323e831abb"
-  integrity sha512-ADGtwVrWt2RN2Yrf50ViZ5DZ1vaLX6B/kY6Y6Mja0T0z6+TcS2hgdZvaJ0nhCLwvMksFEZ3Ht11JMOEH0lltDw==
+"@rjhilgefort/export-dir@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@rjhilgefort/export-dir/-/export-dir-1.1.2.tgz#4ba370895c5a0f5270305d2e23ab1973de438938"
+  integrity sha512-jDq1JmFDZYLX70cHqew4BH+A+tcxN+PlXzFEeC8y7lAr2e3XYm8RVcu0e46njEIuEtLG+5mB9CzABklOLm+7Og==
   dependencies:
     lodash.camelcase "^4.3.0"
     ramda "^0.26.1"
