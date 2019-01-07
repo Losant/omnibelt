@@ -125,13 +125,13 @@
     eslint-plugin-react "^7.11.1"
     eslint-watch "^4.0.2"
 
-"@rjhilgefort/export-dir@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@rjhilgefort/export-dir/-/export-dir-1.1.0.tgz#22264f58f577144d90825f58d998cfbdfbe20467"
-  integrity sha512-nn86VhXVDEGDivCiRz+B4VZo8RTRMK7UmF9QzShvNvf5ms7Iwg2fJAzQ2WMrtlgXWZIPJTX1bbeoh+LdKcozag==
+"@rjhilgefort/export-dir@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@rjhilgefort/export-dir/-/export-dir-1.1.1.tgz#d00150754b072eb75889ce7d68b42b323e831abb"
+  integrity sha512-ADGtwVrWt2RN2Yrf50ViZ5DZ1vaLX6B/kY6Y6Mja0T0z6+TcS2hgdZvaJ0nhCLwvMksFEZ3Ht11JMOEH0lltDw==
   dependencies:
     lodash.camelcase "^4.3.0"
-    ramda "^0.25.0"
+    ramda "^0.26.1"
 
 "@samverschueren/stream-to-observable@^0.3.0":
   version "0.3.0"
@@ -3948,11 +3948,6 @@ ramda@^0.18.0:
   version "0.18.0"
   resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.18.0.tgz#c6e3c5d4b9ab1f7906727fdeeb039152a85d4db3"
   integrity sha1-xuPF1LmrH3kGcn/e6wORUqhdTbM=
-
-ramda@^0.25.0:
-  version "0.25.0"
-  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.25.0.tgz#8fdf68231cffa90bc2f9460390a0cb74a29b29a9"
-  integrity sha512-GXpfrYVPwx3K7RQ6aYT8KPS8XViSXUVJT1ONhoKPE9VAleW42YE+U+8VEyGWt41EnEQW7gwecYJriTI0pKoecQ==
 
 ramda@^0.26.1:
   version "0.26.1"
