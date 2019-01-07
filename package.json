@@ -33,7 +33,7 @@
     "*.js": "esw"
   },
   "dependencies": {
-    "@rjhilgefort/export-dir": "^1.1.0",
+    "@rjhilgefort/export-dir": "^1.1.2",
     "lodash": "^4.17.11",
     "ramda": "^0.26.1",
     "string-format": "^1.0.0",
