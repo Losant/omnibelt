@@ -73,7 +73,7 @@
  * @memberof module:lodash
  * @name isPlainObject
  * @see {@link https://github.com/lodash/lodash/wiki/FP-Guide|FP-Guide For Actual Interface}
- * @see {@link https://lodash.com/docs/4.17.5#isPlainObject|_.isUndefined}
+ * @see {@link https://lodash.com/docs/4.17.5#isPlainObject|_.isPlainObject}
  */
 /**
  * @func
