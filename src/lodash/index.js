@@ -19,6 +19,7 @@ module.exports = pick([
   'forEach',
   'isArrayLike',
   'isNull',
+  'isPlainObject',
   'isUndefined',
   'kebabCase',
   'keyBy',
