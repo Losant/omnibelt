@@ -29,7 +29,7 @@ const allCases = [
 
 const testHarnessAdapter = ({ label, cases }) => {
   describe(label, () => {
-    return map(pipe(
+    map(pipe(
       adjust(0, nonePass),
       apply(testHarnessUnary),
     ), cases);
