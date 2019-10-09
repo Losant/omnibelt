@@ -17,4 +17,5 @@ it('should correctly deal with promise timeouts', async () => {
   expect(error.code).toEqual('ETIMEDOUT');
   expect(error.message).toEqual('Promise timed out after 100 ms');
   expect(error.promise).toBe(p3);
+  expect(error.stack).toMatch('src/omnibelt/timeout-p.test.js');
 });
