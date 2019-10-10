@@ -34,7 +34,7 @@ const testHarnessAdapter = ({ label, cases }) => {
   };
 
   describe(label, () => {
-    return map(runTestCase, cases);
+    map(runTestCase, cases);
   });
 };
 

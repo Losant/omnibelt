@@ -25,8 +25,12 @@ const defer = require('./defer');
 const timeoutP = curry((ms, promise) => {
   const deferred = defer();
 
+  // creating the error here in order to
+  // capture a more reasonable stack trace
+  const error = new Error();
+
   const timeoutId = setTimeout(() => {
-    const error = new Error(`Promise timed out after ${ms} ms`);
+    error.message = `Promise timed out after ${ms} ms`;
     error.code = 'ETIMEDOUT';
     error.promise = promise;
     deferred.reject(error);
