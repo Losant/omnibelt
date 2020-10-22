@@ -23,7 +23,7 @@ const stringToBoolean = pipe(
   defaultTo(''),
   toLower,
   trim,
-  equalsAny(['true', 't', 'yes', 'y']),
+  equalsAny(['true', 't', 'yes', 'y'])
 );
 
 module.exports = stringToBoolean;

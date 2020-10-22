@@ -26,7 +26,7 @@ const cases = [
 
 const testHarnessAdapter = pipe(
   adjust(0, dotPath),
-  apply(testHarnessUnary),
+  apply(testHarnessUnary)
 );
 
 map(testHarnessAdapter)(cases);

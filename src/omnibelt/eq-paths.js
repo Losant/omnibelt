@@ -14,7 +14,7 @@ const equals = require('ramda/src/equals');
 const eqPaths = curry((pathToCheck, a, b) =>
   pipe(
     map(path(pathToCheck)),
-    apply(equals),
+    apply(equals)
   )([a, b])
 );
 

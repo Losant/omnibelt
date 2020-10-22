@@ -35,7 +35,7 @@ it('exports only functions', async () => {
   const funcs = await getExportedMethods().then(
     map(pipe(
       concat('./'),
-      require,
+      require
     ))
   );
 

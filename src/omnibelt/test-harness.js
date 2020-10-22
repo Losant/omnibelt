@@ -16,14 +16,14 @@ const testCaseToString = compose(
   evolve({
     args: map(stringify),
     expected: stringify
-  }),
+  })
 );
 
 // testHarness :: Expect -> Function -> [*] -> *
 const testHarness = curry((expect, fn, args, expected) => {
   it(
     testCaseToString({ args, expected }),
-    () => expect(fn(...args)).toEqual(expected),
+    () => expect(fn(...args)).toEqual(expected)
   );
 });
 

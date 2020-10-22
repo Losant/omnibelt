@@ -23,7 +23,7 @@ const list = require('./list');
 const ensureArray = ifElse(
   isArrayLikeObject,
   Array.from,
-  list,
+  list
 );
 
 module.exports = ensureArray;
