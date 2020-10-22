@@ -490,13 +490,13 @@
     eslint-plugin-react-hooks "^4.2.0"
     eslint-watch "^7.0.0"
 
-"@rjhilgefort/export-dir@^1.1.4":
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/@rjhilgefort/export-dir/-/export-dir-1.1.4.tgz#83ab16aa906f3d0493f234a90f23d9c95fbf5c37"
-  integrity sha512-CT/9oIKLR7QI9fQXFS/HKLkCqHzzfiCqFxMkQHIdKzi6Mpsy7CnoJKLASBLFVIwSpZ5oWjp0KDzy2H9mOQ4xvA==
+"@rjhilgefort/export-dir@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@rjhilgefort/export-dir/-/export-dir-2.0.0.tgz#7b7605734b28ce4a070b6cf3edde8903f00a69d4"
+  integrity sha512-+5Zkjf2BaEkTmzvf1kJ/6HP1+QuES+sHJSMD/+oM2d9V7wTeEOo3nBav0Z5hseSasFF4mWq0Cr0yL2re6HoDbA==
   dependencies:
     lodash.camelcase "^4.3.0"
-    ramda "^0.27.0"
+    ramda "^0.27.1"
 
 "@sinonjs/commons@^1.7.0":
   version "1.8.1"
@@ -1380,7 +1380,7 @@ diff-sequences@^26.5.0:
   resolved "https://registry.yarnpkg.com/diff-sequences/-/diff-sequences-26.5.0.tgz#ef766cf09d43ed40406611f11c6d8d9dd8b2fefd"
   integrity sha512-ZXx86srb/iYy6jG71k++wBN9P9J05UNQ5hQHQd9MtMPvcqXPx/vKU69jfHV637D00Q2gSgPk2D+jSx3l1lDW/Q==
 
-docdash@^1.1.1:
+docdash@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/docdash/-/docdash-1.2.0.tgz#f99dde5b8a89aa4ed083a3150383e042d06c7f49"
   integrity sha512-IYZbgYthPTspgqYeciRJNPhSwL51yer7HAwDXhF5p+H7mTDbPvY3PCk/QDjNxdPCpWkaJVFC4t7iCNB/t9E5Kw==
@@ -3899,7 +3899,7 @@ ramda@^0.18.0:
   resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.18.0.tgz#c6e3c5d4b9ab1f7906727fdeeb039152a85d4db3"
   integrity sha1-xuPF1LmrH3kGcn/e6wORUqhdTbM=
 
-ramda@^0.27.0, ramda@^0.27.1:
+ramda@^0.27.1:
   version "0.27.1"
   resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.27.1.tgz#66fc2df3ef873874ffc2da6aa8984658abacf5c9"
   integrity sha512-PgIdVpn5y5Yns8vqb8FzBUEYn98V3xcPgawAkkgj0YJ0qDsnHCiNmZYfOGMgOvoB0eWFLpYbhxUR3mxfDIMvpw==

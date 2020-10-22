@@ -102,7 +102,7 @@ Below should serve as an "upgrade guide" jumping off point as you are migrating 
 - `2.0.0`
   - `ramda` bumped to `0.27.1`
   - `lodash` bumped to `4.17.20`
-  - `@rjhilgefort/export-dir` bumped to `1.1.4`
+  - `@rjhilgefort/export-dir` bumped to `2.0.0`
   - dropped support for Node.js 8 and 9
   - various development dependencies updated
   - added Node.js 13, 14, and 15 to travis

@@ -33,7 +33,7 @@
     "*.js": "esw"
   },
   "dependencies": {
-    "@rjhilgefort/export-dir": "^1.1.4",
+    "@rjhilgefort/export-dir": "^2.0.0",
     "lodash": "^4.17.20",
     "ramda": "^0.27.1",
     "string-format": "^2.0.0",
@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@losant/eslint-config-losant": "1.4.0",
-    "docdash": "^1.1.1",
+    "docdash": "^1.2.0",
     "expect": "^26.6.0",
     "fs-extra": "^9.0.1",
     "handlebars": "^4.7.6",
