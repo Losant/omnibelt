@@ -23,7 +23,7 @@ const equalsShallow = require('./equals-shallow');
 const eqDotPathsShallow = curry((stringPath, a, b) =>
   pipe(
     map(dotPath(stringPath)),
-    apply(equalsShallow),
+    apply(equalsShallow)
   )([a, b])
 );
 

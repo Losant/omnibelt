@@ -36,7 +36,7 @@ const equalsShallow = curry((a, b) => {
   // OR if any key's value is different between objects
   const hasMatchingKeysAndValues = all(
     (key) => all(has(key), [a, b]) && Object.is(a[key], b[key]),
-    uniq(concat(aKeys, bKeys)),
+    uniq(concat(aKeys, bKeys))
   );
 
   if (!hasMatchingKeysAndValues) {

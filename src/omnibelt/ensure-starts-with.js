@@ -12,7 +12,7 @@ const concat = require('ramda/src/concat');
 const ensureStartsWith = curry((prefix, currentValue) =>
   unless(
     startsWith(prefix),
-    concat(prefix),
+    concat(prefix)
   )(currentValue)
 );
 

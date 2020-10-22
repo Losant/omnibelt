@@ -21,7 +21,7 @@ const dotPath = require('./dot-path');
 const eqDotPaths = curry((stringPath, a, b) =>
   pipe(
     map(dotPath(stringPath)),
-    apply(equals),
+    apply(equals)
   )([a, b])
 );
 

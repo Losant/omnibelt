@@ -955,6 +955,12 @@
 /**
  * @func
  * @memberof module:ramda
+ * @name paths
+ * @see {@link http://ramdajs.com/docs/#paths|R.paths}
+ */
+/**
+ * @func
+ * @memberof module:ramda
  * @name pathEq
  * @see {@link http://ramdajs.com/docs/#pathEq|R.pathEq}
  */
@@ -1267,8 +1273,8 @@
 /**
  * @func
  * @memberof module:ramda
- * @name then
- * @see {@link http://ramdajs.com/docs/#then|R.then}
+ * @name andThen
+ * @see {@link http://ramdajs.com/docs/#andThen|R.andThen}
  */
 /**
  * @func
@@ -1443,6 +1449,12 @@
  * @memberof module:ramda
  * @name without
  * @see {@link http://ramdajs.com/docs/#without|R.without}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name xor
+ * @see {@link http://ramdajs.com/docs/#xor|R.xor}
  */
 /**
  * @func

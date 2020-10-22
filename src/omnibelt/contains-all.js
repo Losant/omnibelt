@@ -23,7 +23,7 @@ const containsAll = curry((needle, haystack) =>
   pipe(
     intersection(needle),
     length,
-    equals(length(needle)),
+    equals(length(needle))
   )(haystack)
 );
 

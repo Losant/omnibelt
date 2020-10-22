@@ -19,7 +19,7 @@ const curry = require('ramda/src/curry');
 const replaceAll = curry((target, replacement, data) =>
   pipe(
     split(target),
-    join(replacement),
+    join(replacement)
   )(data)
 );
 

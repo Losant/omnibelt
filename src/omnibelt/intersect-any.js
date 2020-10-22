@@ -16,7 +16,7 @@ const gt1 = gt(__, 1);
 const parseIntIfPossible =
   unless(
     compose(equals(NaN), parseInt),
-    parseInt,
+    parseInt
   );
 
 /**

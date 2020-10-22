@@ -28,7 +28,7 @@ const isNotEmpty = require('./is-not-empty');
 const containsAny = curry((needle, haystack) =>
   pipe(
     intersection(needle),
-    isNotEmpty,
+    isNotEmpty
   )(haystack)
 );
 

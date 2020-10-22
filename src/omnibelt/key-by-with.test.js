@@ -23,7 +23,7 @@ const cases = [
     keyFn: prop('key'),
     valueFn: pipe(
       prop('json'),
-      tryCatch(unary(JSON.parse), always(null)),
+      tryCatch(unary(JSON.parse), always(null))
     ),
     expectedResult: { foo: 'bar', a: 1 }
   }

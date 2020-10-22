@@ -13,7 +13,7 @@ const defaultToStrict = require('./default-to-strict');
 const propOrStrict = curry((def, key, data) =>
   compose(
     defaultToStrict(def),
-    prop(key),
+    prop(key)
   )(data)
 );
 

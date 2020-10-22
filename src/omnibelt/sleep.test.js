@@ -11,7 +11,7 @@ const duration = curry(
   (start, end) =>
     compose(
       round(0),
-      subtract(__, start),
+      subtract(__, start)
     )(end)
 );
 

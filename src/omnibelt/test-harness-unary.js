@@ -14,9 +14,9 @@ const testHarnessUnary = curry((expect, func, subj, expected) => {
   it(
     pipe(
       map(stringify),
-      format('{subj} ==> {expected}'),
+      format('{subj} ==> {expected}')
     )({ subj, expected }),
-    () => expect(func(subj)).toEqual(expected),
+    () => expect(func(subj)).toEqual(expected)
   );
 });
 

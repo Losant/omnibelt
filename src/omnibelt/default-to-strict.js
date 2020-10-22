@@ -16,7 +16,7 @@ const isPopulatedString = require('./is-populated-string');
 const defaultToStrict = curry((def, val) =>
   when(
     either(isNil, complement(isPopulatedString)),
-    always(def),
+    always(def)
   )(val)
 );
 

@@ -15,7 +15,7 @@ const tryCatchSafe = require('./try-catch-safe');
  */
 const jsonParseSafe = pipe(
   list,
-  tryCatchSafe(JSON.parse),
+  tryCatchSafe(JSON.parse)
 );
 
 module.exports = jsonParseSafe;

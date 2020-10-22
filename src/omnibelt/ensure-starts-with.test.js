@@ -13,7 +13,7 @@ const cases = [
 
 const testHarnessAdapter = pipe(
   adjust(0, ensureStartsWith),
-  apply(testHarnessUnary),
+  apply(testHarnessUnary)
 );
 
 map(testHarnessAdapter)(cases);

@@ -13,6 +13,6 @@ const flip = require('ramda/src/flip');
 module.exports = curry((suffix, currentValue) =>
   unless(
     endsWith(suffix),
-    flip(concat)(suffix),
+    flip(concat)(suffix)
   )(currentValue)
 );
