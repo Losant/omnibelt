@@ -1,5 +1,7 @@
 # Omnibelt
 
+[![Build Status](https://api.travis-ci.com/Losant/omnibelt.svg?branch=master)](https://travis-ci.com/Losant/omnibelt) [![npm version](https://badge.fury.io/js/omnibelt.svg)](https://badge.fury.io/js/omnibelt)
+
 A utility belt that normalizes and wraps [Ramda](https://ramdajs.com/) and [Lodash/FP](https://github.com/lodash/lodash/wiki/FP-Guide). In addition, some other "adjunct" methods are included that solve common patterns. The order of precedence is: Does it exist in `Ramda`? Does it exist in `Lodash/FP`? Then it must be custom (in `src/omnibelt`). That means that you can deconstruct methods from any of those three from the `omnibelt` exported object.
 
 ```js
