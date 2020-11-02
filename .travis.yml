@@ -6,3 +6,16 @@ node_js:
   - "13"
   - "12"
   - "10"
+
+sudo: false
+
+cache:
+  directories:
+    - node_modules
+
+install:
+  - yarn install
+
+script:
+  - yarn lint
+  - yarn test
