@@ -1,10 +1,10 @@
-const mapParallelLimitP = require('./map-parallel-limit-p');
+const mapSerialP = require('./map-serial-p');
 const sleep = require('./sleep');
 
 const harness = (input) => {
   let areRunning = 0;
-  return mapParallelLimitP(2, async (val) => {
-    if (areRunning >= 2) { throw new Error('TOO MUCH'); }
+  return mapSerialP(async (val) => {
+    if (areRunning !== 0) { throw new Error('None should be in parallel'); }
     areRunning++;
     await sleep(Math.random());
     areRunning--;
@@ -12,7 +12,7 @@ const harness = (input) => {
   }, input);
 };
 
-describe('mapParallelLimitP', () => {
+describe('mapSerialP', () => {
   it('should correctly iterate on an array, parallel, in order', async () => {
     expect(await harness([1, 2, 3, 4, 5])).toEqual([2, 4, 6, 8, 10]);
   });
