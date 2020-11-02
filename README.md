@@ -103,9 +103,9 @@ Below should serve as an "upgrade guide" jumping off point as you are migrating 
 
 - `2.0.1`
   - bumped .node-version to `14.15.0`
-  - bumped expect to `26.6.1`
-  - bumped jest to `26.6.1`
-  - bumped lint-staged to `10.5.0`
+  - bumped expect to `26.6.2`
+  - bumped jest to `26.6.2`
+  - bumped lint-staged to `10.5.1`
 - `2.0.0`
   - `ramda` bumped to `0.27.1`
   - `lodash` bumped to `4.17.20`
