@@ -52,12 +52,6 @@
     "present": "^1.0.0",
     "treis": "^2.6.0"
   },
-  "resolutions": {
-    "jsdoc/underscore": "1.12.1",
-    "jest/**/y18n": "4.0.1",
-    "@losant/eslint-config-losant/**/hosted-git-info": "3.0.8",
-    "jest/**/node-notifier": "8.0.1"
-  },
   "eslintConfig": {
     "extends": "@losant/eslint-config-losant/env/node",
     "env": {
