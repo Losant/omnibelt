@@ -44,7 +44,7 @@
     "@losant/eslint-config-losant": "1.4.3",
     "docdash": "^1.2.0",
     "expect": "^26.6.2",
-    "fs-extra": "^10.0.0",
+    "fs-extra": "^9.0.1",
     "handlebars": "^4.7.7",
     "husky": "^6.0.0",
     "jest": "^26.6.3",
