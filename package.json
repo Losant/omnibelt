@@ -1,7 +1,7 @@
 {
   "name": "omnibelt",
   "description": "A utility belt that normalizes and wraps `Ramda` and `Lodash/FP`.",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "license": "MIT",
   "main": "src/index.js",
   "repository": "git@github.com/Losant/omnibelt.git",
@@ -34,23 +34,29 @@
   },
   "dependencies": {
     "@rjhilgefort/export-dir": "^2.0.0",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "ramda": "^0.27.1",
     "string-format": "^2.0.0",
     "stringify-object": "^3.3.0"
   },
   "devDependencies": {
-    "@losant/eslint-config-losant": "1.4.0",
+    "@losant/eslint-config-losant": "1.4.3",
     "docdash": "^1.2.0",
     "expect": "^26.6.2",
-    "fs-extra": "^9.0.1",
-    "handlebars": "^4.7.6",
+    "fs-extra": "^10.0.0",
+    "handlebars": "^4.7.7",
     "husky": "^4.3.0",
-    "jest": "^26.6.2",
+    "jest": "^26.6.3",
     "jsdoc": "^3.6.6",
     "lint-staged": "^10.5.1",
     "present": "^1.0.0",
     "treis": "^2.6.0"
+  },
+  "resolutions": {
+    "jsdoc/underscore": "1.12.1",
+    "jest/**/y18n": "4.0.1",
+    "@losant/eslint-config-losant/**/hosted-git-info": "3.0.8",
+    "jest/**/node-notifier": "8.0.1"
   },
   "eslintConfig": {
     "extends": "@losant/eslint-config-losant/env/node",
