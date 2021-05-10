@@ -101,6 +101,14 @@ git release vX.X.X
 
 Below should serve as an "upgrade guide" jumping off point as you are migrating projects to newer versions of this package. Ideally, interface changes will be called out specifically and one should not have to go sifting through git diffs to discern what changed.
 
+- `2.0.2`
+  - bumped .node-version to `14.16.1`
+  - bumped lodash to `4.17.21`
+  - bumped @losant/eslint-config-losant to `1.4.3`
+  - bumped handlebars to `4.7.7`
+  - bumped husky `6.0.0`
+  - bumped jest `26.6.3`
+  - bumped lint-staged `11.0.0`
 - `2.0.1`
   - Added `mapSerialP`
   - bumped .node-version to `14.15.0`
