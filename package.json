@@ -1,7 +1,7 @@
 {
   "name": "omnibelt",
   "description": "A utility belt that normalizes and wraps `Ramda` and `Lodash/FP`.",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "license": "MIT",
   "main": "src/index.js",
   "repository": "git@github.com/Losant/omnibelt.git",
@@ -27,28 +27,29 @@
     "docs": "yarn docs:open",
     "predocs:build": "./scripts/gen-3rd-party-docs.js",
     "docs:build": "jsdoc -c jsdoc.json",
-    "docs:open": "open ./docs/index.html"
+    "docs:open": "open ./docs/index.html",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.js": "esw"
   },
   "dependencies": {
     "@rjhilgefort/export-dir": "^2.0.0",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "ramda": "^0.27.1",
     "string-format": "^2.0.0",
     "stringify-object": "^3.3.0"
   },
   "devDependencies": {
-    "@losant/eslint-config-losant": "1.4.0",
+    "@losant/eslint-config-losant": "1.4.3",
     "docdash": "^1.2.0",
     "expect": "^26.6.2",
     "fs-extra": "^9.0.1",
-    "handlebars": "^4.7.6",
-    "husky": "^4.3.0",
-    "jest": "^26.6.2",
+    "handlebars": "^4.7.7",
+    "husky": "^6.0.0",
+    "jest": "^26.6.3",
     "jsdoc": "^3.6.6",
-    "lint-staged": "^10.5.1",
+    "lint-staged": "^11.0.0",
     "present": "^1.0.0",
     "treis": "^2.6.0"
   },
@@ -63,10 +64,5 @@
   },
   "eslintIgnore": [
     "docs"
-  ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  }
+  ]
 }
