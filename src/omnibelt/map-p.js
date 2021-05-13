@@ -6,8 +6,15 @@ const is = require('ramda/src/is');
 const T = require('ramda/src/T');
 const identity = require('ramda/src/identity');
 const resolveProps = require('./resolve-props');
+const allSettledP = require('./all-settled-p');
 
-const resolveArray = (x) => Promise.all(x);
+const resolveArray = async (x) => {
+  const promiseResults = await allSettledP(x);
+  return map(({ state, value, reason }) => {
+    if (state === 'fulfilled') { return value; }
+    throw reason;
+  }, promiseResults);
+};
 
 /**
  * Just like a normal `map` function, but handles an asynchronous iteration function

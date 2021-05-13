@@ -51,7 +51,6 @@ describe('mapParallelLimitP', () => {
     try {
       await harnessThatErrors([ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
     } catch {
-
     }
     expect(callCount).toEqual(6);
   });
