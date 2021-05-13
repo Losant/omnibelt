@@ -1,34 +1,18 @@
 const curry = require('ramda/src/curry');
 const times = require('ramda/src/times');
-const allSettledP = require('./all-settled-p');
 
 const objAccumulator = (accumulator, transformed, original) => { accumulator[original[0]] = transformed; };
 const aryAccumulator = (accumulator, transformed) => { accumulator.push(transformed); };
 
-const makeEvaluator = (func, iterator, accFunc, accumulator) => {
+const makeEvaluator = (func, iterator, accFunc, accumulator, opts) => {
   const evaluator = async () => {
+    if (opts.stop) { return; }
     const next = iterator.next();
-    if (next.done) { return 'done'; }
+    if (next.done) { return; }
     accFunc(accumulator, await func(next.value), next.value);
+    await evaluator();
   };
   return evaluator;
-};
-
-const runner = async (maxParallel, evaluator) => {
-  let error;
-  let done = false;
-  const promises = times(evaluator, maxParallel);
-  const results = await allSettledP(promises);
-  results.forEach(({ state, value, reason }) => {
-    done = value === 'done';
-    if (state !== 'fulfilled') {
-      error = reason;
-    }
-  });
-  if (error) {
-    throw error;
-  }
-  if (!done) { return runner(maxParallel, evaluator); }
 };
 
 /**
@@ -57,19 +41,25 @@ const mapParallelLimitP = curry(async (maxParallel, func, iterable) => {
   if (!maxParallel || maxParallel < 1) { maxParallel = 1; }
 
   let accumulator, evaluator;
+  const opts = { stop: false };
   if (iterable[Symbol.iterator]) {
     accumulator = [];
     evaluator = makeEvaluator(
-      func, iterable[Symbol.iterator](), aryAccumulator, accumulator);
+      func, iterable[Symbol.iterator](), aryAccumulator, accumulator, opts);
   } else if (typeof(iterable) === 'object') {
     accumulator = {};
     evaluator = makeEvaluator(
-      func, Object.entries(iterable)[Symbol.iterator](), objAccumulator, accumulator);
+      func, Object.entries(iterable)[Symbol.iterator](), objAccumulator, accumulator, opts);
   } else {
     return iterable;
   }
 
-  await runner(maxParallel, evaluator);
+  const promises = times(evaluator, maxParallel);
+  await Promise.all(promises)
+    .catch(async (err) => {
+      opts.stop = true;
+      throw err;
+    });
 
   return accumulator;
 });
