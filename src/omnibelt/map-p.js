@@ -6,14 +6,13 @@ const is = require('ramda/src/is');
 const T = require('ramda/src/T');
 const identity = require('ramda/src/identity');
 const resolveProps = require('./resolve-props');
-const allSettledP = require('./all-settled-p');
 
 const resolveArray = async (x) => {
-  const promiseResults = await allSettledP(x);
-  return map(({ state, value, reason }) => {
-    if (state === 'fulfilled') { return value; }
-    throw reason;
-  }, promiseResults);
+  return Promise.all(x)
+    .catch(async (err) => {
+      await Promise.allSettled(x);
+      throw err;
+    });
 };
 
 /**

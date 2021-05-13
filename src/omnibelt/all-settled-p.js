@@ -1,3 +1,5 @@
+const mapP = require('./map-p');
+
 const onSettledSuccess = (value) => ({ state: 'fulfilled', value });
 const onSettledReject = (reason) => ({ state: 'rejected', reason });
 const onSettledP = (promise) => promise.then(onSettledSuccess, onSettledReject);
@@ -24,8 +26,6 @@ const onSettledP = (promise) => promise.then(onSettledSuccess, onSettledReject);
  * await allSettledP([Promise.resolve('good'), Promise.reject('bad')]);
  * // => [{ state: 'fulfilled', value: 'good' }, { state: 'rejected', reason: 'bad' }]
  */
-const allSettledP = (promises) => {
-  return Promise.all(promises.map(onSettledP));
-};
+const allSettledP = mapP(onSettledP);
 
 module.exports = allSettledP;
