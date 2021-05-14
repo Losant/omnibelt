@@ -1,5 +1,6 @@
 const map = require('ramda/src/map');
 const keys = require('ramda/src/keys');
+const allSettledP = require('./all-settled-p');
 
 /**
  * Takes an object where the values may be promises
@@ -20,7 +21,7 @@ const resolveProps = async (obj) => {
   }, keys(obj));
   await Promise.all(promises)
     .catch(async (err) => {
-      await Promise.allSettled(promises);
+      await allSettledP(promises);
       throw err;
     });
   return result;

@@ -101,11 +101,10 @@ git release vX.X.X
 
 Below should serve as an "upgrade guide" jumping off point as you are migrating projects to newer versions of this package. Ideally, interface changes will be called out specifically and one should not have to go sifting through git diffs to discern what changed.
 
-- `3.0.0`
+- `2.1.0`
   - `mapP` waits for all promises to complete and then throw the first error if found
   - `mapParallelLimitP` does not continue to run promises once a promise has errored
   - `resolveProps` waits for all promises to complete and then throws the first error if found
-  - Bumped minimum Node version to `12.9.0`
 - `2.0.2`
   - bumped .node-version to `14.16.1`
   - bumped lodash to `4.17.21`

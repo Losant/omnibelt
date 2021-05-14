@@ -1,5 +1,6 @@
 const curry = require('ramda/src/curry');
 const times = require('ramda/src/times');
+const allSettledP = require('./all-settled-p');
 
 const objAccumulator = (accumulator, transformed, original) => { accumulator[original[0]] = transformed; };
 const aryAccumulator = (accumulator, transformed) => { accumulator.push(transformed); };
@@ -58,7 +59,7 @@ const mapParallelLimitP = curry(async (maxParallel, func, iterable) => {
   await Promise.all(promises)
     .catch(async (err) => {
       opts.stop = true;
-      await Promise.allSettled(promises);
+      await allSettledP(promises);
       throw err;
     });
 

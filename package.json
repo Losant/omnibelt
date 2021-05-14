@@ -1,7 +1,7 @@
 {
   "name": "omnibelt",
   "description": "A utility belt that normalizes and wraps `Ramda` and `Lodash/FP`.",
-  "version": "3.0.0",
+  "version": "2.1.0",
   "license": "MIT",
   "main": "src/index.js",
   "repository": "git@github.com/Losant/omnibelt.git",
@@ -14,7 +14,7 @@
     }
   ],
   "engines": {
-    "node": ">=12.9.0"
+    "node": ">=10"
   },
   "scripts": {
     "reinstall": "rm -rf node_modules && yarn install",
