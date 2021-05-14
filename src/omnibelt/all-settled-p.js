@@ -37,10 +37,13 @@ const resolveProps = async (obj) => {
  * // => [{ state: 'fulfilled', value: 'good' }, { state: 'rejected', reason: 'bad' }]
  */
 const allSettledP = (iterable) => {
+  if (!iterable) { return iterable; }
   if (Array.isArray(iterable)) {
     return Promise.all(map(onSettledP, iterable));
   } else if (typeof(iterable) === 'object') {
     return resolveProps(iterable);
+  } else {
+    return iterable;
   }
 };
 
