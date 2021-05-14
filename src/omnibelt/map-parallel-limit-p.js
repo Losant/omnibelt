@@ -58,6 +58,7 @@ const mapParallelLimitP = curry(async (maxParallel, func, iterable) => {
   await Promise.all(promises)
     .catch(async (err) => {
       opts.stop = true;
+      await Promise.allSettled(promises);
       throw err;
     });
 
