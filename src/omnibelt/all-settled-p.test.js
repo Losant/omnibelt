@@ -7,7 +7,7 @@ describe('allSettledP', () => {
     const output = await allSettledP(input);
     expect(output).toEqual([{ state: 'fulfilled', value: 1 }, { state: 'rejected', reason: err }]);
   });
-  it('should correctly settled the promises for an object', async () => {
+  it('should correctly settle the promises for an object', async () => {
     const err = new Error('error');
     const input = {
       a: Promise.resolve(1),
