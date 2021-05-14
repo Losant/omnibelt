@@ -28,10 +28,10 @@ it('Will wait for all promises to complete before throwing an error', async () =
   const startTime = Date.now();
   await mapP(async (x) => {
     callCount++;
-    await sleep(x * 100);
     if (x >= 5 && x < 7) {
       throw new Error(`Error ${x}`);
     }
+    await sleep(x * 100);
     return x + 1;
   }, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]).catch((e) => { err = e; });
   const endTime = Date.now();
