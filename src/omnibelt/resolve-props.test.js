@@ -30,15 +30,21 @@ describe('resolveProps', () => {
     const func = async () => {
       await sleep(1000);
     };
+    let errorTime;
+    const errorFunc = async () => {
+      errorTime = Date.now();
+      throw new Error('error');
+    };
     const obj = {
-      one: Promise.reject(new Error('error')),
+      one: errorFunc(),
       two: func(),
       three: func()
     };
     const start = Date.now();
     await resolveProps(obj).catch(noop);
     const end = Date.now();
-    expect(end - start).toBeGreaterThanOrEqual(1000);
+    expect(errorTime).toBeLessThan(end);
+    expect(errorTime).toBeGreaterThanOrEqual(start);
   });
 });
 
