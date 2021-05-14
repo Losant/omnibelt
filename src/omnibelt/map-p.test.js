@@ -25,16 +25,19 @@ it('Works with an async iterator on Objects', () => {
 it('Will wait for all promises to complete before throwing an error', async () => {
   let callCount = 0;
   let err;
-  await mapP((x) => {
-    return new Promise((resolve, reject) => {
-      callCount++;
-      if (x >= 5) {
-        return reject(new Error(`Error ${x}`));
-      }
-      return resolve(x + 1);
-    });
+  const startTime = Date.now();
+  await mapP(async (x) => {
+    callCount++;
+    await sleep(x * 100);
+    if (x >= 5 && x < 7) {
+      throw new Error(`Error ${x}`);
+    }
+    return x + 1;
   }, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]).catch((e) => { err = e; });
-
+  const endTime = Date.now();
+  const timeTaken = endTime - startTime;
   expect(callCount).toEqual(10);
+  expect(timeTaken).toBeGreaterThan(1000);
+  expect(timeTaken).toBeLessThan(1010);
   expect(err.message).toEqual('Error 5');
 });
