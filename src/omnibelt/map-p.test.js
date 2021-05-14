@@ -37,6 +37,6 @@ it('Will wait for all promises to complete before throwing an error', async () =
   const endTime = Date.now();
   const timeTaken = endTime - startTime;
   expect(callCount).toEqual(10);
-  expect(timeTaken).toBeGreaterThan(1000);
+  expect(timeTaken).toBeGreaterThanOrEqual(1000);
   expect(err.message).toEqual('Error 5');
 });
