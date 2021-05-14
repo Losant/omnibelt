@@ -6,7 +6,7 @@ const harness = (input) => {
   return mapParallelLimitP(2, async (val) => {
     if (areRunning >= 2) { throw new Error('TOO MUCH'); }
     areRunning++;
-    await sleep(Math.random());
+    await sleep(val * 100);
     areRunning--;
     return Array.isArray(val) ? val.join(', ') : val * 2;
   }, input);
@@ -18,11 +18,11 @@ const harnessThatErrors = (input) => {
     callCount++;
     if (areRunning >= 2) { throw new Error('TOO MUCH'); }
     areRunning++;
-    await sleep((11 - val) * 100);
-    areRunning--;
     if (val === 5) {
       throw new Error('AHHH NO MORE...');
     }
+    await sleep(val * 100);
+    areRunning--;
     return val * 2;
   }, input);
 };
@@ -48,10 +48,18 @@ describe('mapParallelLimitP', () => {
   });
 
   it('should not kick off more functions once error occurs', async () => {
+    const startTime = Date.now();
+    const input = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     try {
-      await harnessThatErrors([ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+      await harnessThatErrors(input);
     } catch {
     }
-    expect(callCount).toEqual(7);
+    const endTime = Date.now();
+    const nonErrorStateTime = Date.now();
+    await harness(input);
+    const nonErrorEndTime = Date.now();
+    expect(callCount).toEqual(5);
+    expect(endTime - startTime).toBeGreaterThanOrEqual(600);
+    expect(endTime - startTime).toBeLessThan(nonErrorEndTime - nonErrorStateTime);
   });
 });
