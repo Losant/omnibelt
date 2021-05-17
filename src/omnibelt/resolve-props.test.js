@@ -32,6 +32,7 @@ describe('resolveProps', () => {
     };
     let errorTime;
     const errorFunc = async () => {
+      await sleep(500);
       errorTime = Date.now();
       throw new Error('error');
     };
