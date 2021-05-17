@@ -1,8 +1,18 @@
-const mapP = require('./map-p');
+const map = require('ramda/src/map');
+const keys = require('ramda/src/keys');
 
 const onSettledSuccess = (value) => ({ state: 'fulfilled', value });
 const onSettledReject = (reason) => ({ state: 'rejected', reason });
 const onSettledP = (promise) => promise.then(onSettledSuccess, onSettledReject);
+
+const resolveProps = async (obj) => {
+  const result = {};
+  const promises = map(async (key) => {
+    result[key] = await onSettledP(obj[key]);
+  }, keys(obj));
+  await Promise.all(promises);
+  return result;
+};
 
 /**
  * A 'promise all' that does not reject when promises are rejected. Instead returns an array of
@@ -26,6 +36,15 @@ const onSettledP = (promise) => promise.then(onSettledSuccess, onSettledReject);
  * await allSettledP([Promise.resolve('good'), Promise.reject('bad')]);
  * // => [{ state: 'fulfilled', value: 'good' }, { state: 'rejected', reason: 'bad' }]
  */
-const allSettledP = mapP(onSettledP);
+const allSettledP = (iterable) => {
+  if (!iterable) { return iterable; }
+  if (Array.isArray(iterable)) {
+    return Promise.all(map(onSettledP, iterable));
+  } else if (typeof(iterable) === 'object') {
+    return resolveProps(iterable);
+  } else {
+    return iterable;
+  }
+};
 
 module.exports = allSettledP;

@@ -1,11 +1,13 @@
 const curry = require('ramda/src/curry');
 const times = require('ramda/src/times');
+const allSettledP = require('./all-settled-p');
 
 const objAccumulator = (accumulator, transformed, original) => { accumulator[original[0]] = transformed; };
 const aryAccumulator = (accumulator, transformed) => { accumulator.push(transformed); };
 
-const makeEvaluator = (func, iterator, accFunc, accumulator) => {
+const makeEvaluator = (func, iterator, accFunc, accumulator, opts) => {
   const evaluator = async () => {
+    if (opts.stop) { return; }
     const next = iterator.next();
     if (next.done) { return; }
     accFunc(accumulator, await func(next.value), next.value);
@@ -34,25 +36,32 @@ const makeEvaluator = (func, iterator, accFunc, accumulator) => {
  * @return {Promise} A promise that will resolve to either an array or object when iteration is done
  * @summary Number -> Function -> Iterable -> Promise<iterable>
  */
+
 const mapParallelLimitP = curry(async (maxParallel, func, iterable) => {
   if (!iterable) { return iterable; }
   if (!maxParallel || maxParallel < 1) { maxParallel = 1; }
 
   let accumulator, evaluator;
+  const opts = { stop: false };
   if (iterable[Symbol.iterator]) {
     accumulator = [];
     evaluator = makeEvaluator(
-      func, iterable[Symbol.iterator](), aryAccumulator, accumulator);
+      func, iterable[Symbol.iterator](), aryAccumulator, accumulator, opts);
   } else if (typeof(iterable) === 'object') {
     accumulator = {};
     evaluator = makeEvaluator(
-      func, Object.entries(iterable)[Symbol.iterator](), objAccumulator, accumulator);
+      func, Object.entries(iterable)[Symbol.iterator](), objAccumulator, accumulator, opts);
   } else {
     return iterable;
   }
 
   const promises = times(evaluator, maxParallel);
-  await Promise.all(promises);
+  await Promise.all(promises)
+    .catch(async (err) => {
+      opts.stop = true;
+      await allSettledP(promises);
+      throw err;
+    });
 
   return accumulator;
 });
