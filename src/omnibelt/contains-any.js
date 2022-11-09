@@ -1,6 +1,6 @@
-const curry = require('ramda/src/curry');
-const pipe = require('ramda/src/pipe');
-const intersection = require('ramda/src/intersection');
+const curry = require('ramda/src/curry.js');
+const pipe = require('ramda/src/pipe.js');
+const intersection = require('ramda/src/intersection.js');
 
 const isNotEmpty = require('./is-not-empty');
 

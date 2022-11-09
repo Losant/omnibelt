@@ -4,9 +4,9 @@
 // TODO: https://github.com/Losant/omnibelt/issues/39
 // TODO: https://github.com/Losant/omnibelt/issues/40
 
-const curry = require('ramda/src/curry');
-const map = require('ramda/src/map');
-const pipe = require('ramda/src/pipe');
+const curry = require('ramda/src/curry.js');
+const map = require('ramda/src/map.js');
+const pipe = require('ramda/src/pipe.js');
 const format = require('./format');
 const stringify = require('./stringify');
 

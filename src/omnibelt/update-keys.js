@@ -1,4 +1,4 @@
-const assoc = require('ramda/src/assoc');
+const assoc = require('ramda/src/assoc.js');
 
 const updateKeysWith = require('./update-keys-with');
 

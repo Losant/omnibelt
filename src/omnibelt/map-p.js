@@ -1,10 +1,10 @@
-const curry = require('ramda/src/curry');
-const compose = require('ramda/src/compose');
-const map = require('ramda/src/map');
-const cond = require('ramda/src/cond');
-const is = require('ramda/src/is');
-const T = require('ramda/src/T');
-const identity = require('ramda/src/identity');
+const curry = require('ramda/src/curry.js');
+const compose = require('ramda/src/compose.js');
+const map = require('ramda/src/map.js');
+const cond = require('ramda/src/cond.js');
+const is = require('ramda/src/is.js');
+const T = require('ramda/src/T.js');
+const identity = require('ramda/src/identity.js');
 const resolveProps = require('./resolve-props');
 const allSettledP = require('./all-settled-p');
 

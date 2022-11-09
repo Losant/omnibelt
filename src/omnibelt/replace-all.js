@@ -1,7 +1,7 @@
-const pipe = require('ramda/src/pipe');
-const split = require('ramda/src/split');
-const join = require('ramda/src/join');
-const curry = require('ramda/src/curry');
+const pipe = require('ramda/src/pipe.js');
+const split = require('ramda/src/split.js');
+const join = require('ramda/src/join.js');
+const curry = require('ramda/src/curry.js');
 
 /**
  * Really, using `R.replace` with regex is fine, but this makes a nice interface.

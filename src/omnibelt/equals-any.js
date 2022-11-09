@@ -1,5 +1,5 @@
-const flip = require('ramda/src/flip');
-const includes = require('ramda/src/includes');
+const flip = require('ramda/src/flip.js');
+const includes = require('ramda/src/includes.js');
 
 /**
  * Predicate that checks to see if a value exists in an array.

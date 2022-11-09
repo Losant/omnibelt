@@ -1,4 +1,4 @@
-const curry = require('ramda/src/curry');
+const curry = require('ramda/src/curry.js');
 
 const evaluator = async (func, iterator) => {
   const next = iterator.next();

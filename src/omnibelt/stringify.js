@@ -1,12 +1,12 @@
-const __ = require('ramda/src/__');
-const curryN = require('ramda/src/curryN');
-const map = require('ramda/src/map');
-const always = require('ramda/src/always');
-const compose = require('ramda/src/compose');
-const is = require('ramda/src/is');
-const cond = require('ramda/src/cond');
-const T = require('ramda/src/T');
-const join = require('ramda/src/join');
+const __ = require('ramda/src/__.js');
+const curryN = require('ramda/src/curryN.js');
+const map = require('ramda/src/map.js');
+const always = require('ramda/src/always.js');
+const compose = require('ramda/src/compose.js');
+const is = require('ramda/src/is.js');
+const cond = require('ramda/src/cond.js');
+const T = require('ramda/src/T.js');
+const join = require('ramda/src/join.js');
 const stringifyObject = curryN(2, require('stringify-object'))(
   __, { indent: '  ', inlineCharacterLimit: 50 }
 );

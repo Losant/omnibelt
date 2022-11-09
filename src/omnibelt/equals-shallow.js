@@ -1,10 +1,10 @@
-const curry = require('ramda/src/curry');
-const concat = require('ramda/src/concat');
-const uniq = require('ramda/src/uniq');
-const keys = require('ramda/src/keys');
-const has = require('ramda/src/has');
-const all = require('ramda/src/all');
-const is = require('ramda/src/is');
+const curry = require('ramda/src/curry.js');
+const concat = require('ramda/src/concat.js');
+const uniq = require('ramda/src/uniq.js');
+const keys = require('ramda/src/keys.js');
+const has = require('ramda/src/has.js');
+const all = require('ramda/src/all.js');
+const is = require('ramda/src/is.js');
 
 /**
  * @signature * -> * -> Boolean

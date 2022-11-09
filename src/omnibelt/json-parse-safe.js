@@ -1,4 +1,4 @@
-const pipe = require('ramda/src/pipe');
+const pipe = require('ramda/src/pipe.js');
 
 const list = require('./list');
 const tryCatchSafe = require('./try-catch-safe');

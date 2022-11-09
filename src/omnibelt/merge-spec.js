@@ -1,8 +1,8 @@
-const curry = require('ramda/src/curry');
-const converge = require('ramda/src/converge');
-const merge = require('ramda/src/mergeRight');
-const identity = require('ramda/src/identity');
-const applySpec = require('ramda/src/applySpec');
+const curry = require('ramda/src/curry.js');
+const converge = require('ramda/src/converge.js');
+const merge = require('ramda/src/mergeRight.js');
+const identity = require('ramda/src/identity.js');
+const applySpec = require('ramda/src/applySpec.js');
 
 /**
  * TODO: TESTS

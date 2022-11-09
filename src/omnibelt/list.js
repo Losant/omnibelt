@@ -1,5 +1,5 @@
-const unapply = require('ramda/src/unapply');
-const identity = require('ramda/src/identity');
+const unapply = require('ramda/src/unapply.js');
+const identity = require('ramda/src/identity.js');
 
 /**
  * TODO: TESTS

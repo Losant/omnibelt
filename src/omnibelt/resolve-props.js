@@ -1,5 +1,5 @@
-const map = require('ramda/src/map');
-const keys = require('ramda/src/keys');
+const map = require('ramda/src/map.js');
+const keys = require('ramda/src/keys.js');
 const allSettledP = require('./all-settled-p');
 
 /**

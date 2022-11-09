@@ -1,7 +1,7 @@
-const useWith = require('ramda/src/useWith');
-const identity = require('ramda/src/identity');
-const path = require('ramda/src/path');
-const split = require('ramda/src/split');
+const useWith = require('ramda/src/useWith.js');
+const identity = require('ramda/src/identity.js');
+const path = require('ramda/src/path.js');
+const split = require('ramda/src/split.js');
 
 /**
  * Gets a prop value using a dot-separated path composed of any combination of prop names

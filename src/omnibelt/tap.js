@@ -1,4 +1,4 @@
-const curry = require('ramda/src/curry');
+const curry = require('ramda/src/curry.js');
 
 /**
  * Runs the given function with the supplied object, then returns the object.

@@ -1,4 +1,4 @@
-const clamp = require('ramda/src/clamp');
+const clamp = require('ramda/src/clamp.js');
 
 /**
  * Clamps a numeric value so that it's guaranteed to be 0 or higher. Works with

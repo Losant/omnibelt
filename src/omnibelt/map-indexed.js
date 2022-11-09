@@ -1,5 +1,5 @@
-const map = require('ramda/src/map');
-const addIndex = require('ramda/src/addIndex');
+const map = require('ramda/src/map.js');
+const addIndex = require('ramda/src/addIndex.js');
 
 /**
  * `R.map` with the index added.

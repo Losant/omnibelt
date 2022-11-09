@@ -1,4 +1,4 @@
-const ifElse = require('ramda/src/ifElse');
+const ifElse = require('ramda/src/ifElse.js');
 const isArrayLikeObject = require('lodash/fp/isArrayLikeObject');
 
 const list = require('./list');

@@ -1,5 +1,5 @@
-const map = require('ramda/src/map');
-const keys = require('ramda/src/keys');
+const map = require('ramda/src/map.js');
+const keys = require('ramda/src/keys.js');
 
 const onSettledSuccess = (value) => ({ state: 'fulfilled', value });
 const onSettledReject = (reason) => ({ state: 'rejected', reason });

@@ -1,5 +1,5 @@
-const compose = require('ramda/src/compose');
-const curryN = require('ramda/src/curryN');
+const compose = require('ramda/src/compose.js');
+const curryN = require('ramda/src/curryN.js');
 const flip = require('lodash/fp/flip');
 const _throttle = require('lodash/throttle');
 

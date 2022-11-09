@@ -1,4 +1,4 @@
-const is = require('ramda/src/is');
+const is = require('ramda/src/is.js');
 
 /**
  * Takes an error and immediately throws it. Useful for throwing an error when

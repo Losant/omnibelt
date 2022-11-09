@@ -1,6 +1,6 @@
-const curry = require('ramda/src/curry');
-const reduce = require('ramda/src/reduce');
-const assoc = require('ramda/src/assoc');
+const curry = require('ramda/src/curry.js');
+const reduce = require('ramda/src/reduce.js');
+const assoc = require('ramda/src/assoc.js');
 
 /**
  * A variant of `keyBy` / `indexBy` that accepts getter functions for both the

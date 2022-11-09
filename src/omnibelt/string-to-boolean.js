@@ -1,7 +1,7 @@
-const pipe = require('ramda/src/pipe');
-const toLower = require('ramda/src/toLower');
-const trim = require('ramda/src/trim');
-const defaultTo = require('ramda/src/defaultTo');
+const pipe = require('ramda/src/pipe.js');
+const toLower = require('ramda/src/toLower.js');
+const trim = require('ramda/src/trim.js');
+const defaultTo = require('ramda/src/defaultTo.js');
 
 const equalsAny = require('./equals-any');
 
