@@ -9,9 +9,9 @@
   "plugins": [
   ],
   "opts": {
-    "template": "node_modules/docdash",
+    "template": "./node_modules/docdash",
     "readme": "./README.md",
-    "destination": "docs/",
+    "destination": "./docs/",
     "recurse": true,
     "verbose": true
   },
