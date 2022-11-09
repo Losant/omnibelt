@@ -8,6 +8,8 @@ node_js:
 
 sudo: false
 
+dist: focal
+
 cache:
   directories:
     - node_modules
