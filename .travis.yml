@@ -1,12 +1,13 @@
 ---
 language: node_js
-node_js:
+jobs:
+  include:
   - dist: focal
     node_js: '19'
   - dist: focal
     node_js: '18'
-  - '16'
-  - '14'
+  - node_js: '16'
+  - node_js: '14'
 
 sudo: false
 
