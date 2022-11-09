@@ -1,6 +1,6 @@
 const mergeWith = require('lodash/fp/mergeWith');
-const concat = require('ramda/src/concat.js');
-const is = require('ramda/src/is.js');
+const concat = require('@pnpm/ramda/src/concat');
+const is = require('@pnpm/ramda/src/is');
 
 /**
  * A merge that also handles arrays.

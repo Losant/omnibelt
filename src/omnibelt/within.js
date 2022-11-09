@@ -1,8 +1,8 @@
-const __ = require('ramda/src/__.js');
-const curry = require('ramda/src/curry.js');
-const gt = require('ramda/src/gt.js');
-const lt = require('ramda/src/lt.js');
-const both = require('ramda/src/both.js');
+const __ = require('@pnpm/ramda/src/__');
+const curry = require('@pnpm/ramda/src/curry');
+const gt = require('@pnpm/ramda/src/gt');
+const lt = require('@pnpm/ramda/src/lt');
+const both = require('@pnpm/ramda/src/both');
 
 /**
  * @signature Number -> Number -> Number -> Boolean

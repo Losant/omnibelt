@@ -1,8 +1,8 @@
-const curry = require('ramda/src/curry.js');
-const unless = require('ramda/src/unless.js');
-const endsWith = require('ramda/src/endsWith.js');
-const concat = require('ramda/src/concat.js');
-const flip = require('ramda/src/flip.js');
+const curry = require('@pnpm/ramda/src/curry');
+const unless = require('@pnpm/ramda/src/unless');
+const endsWith = require('@pnpm/ramda/src/endsWith');
+const concat = require('@pnpm/ramda/src/concat');
+const flip = require('@pnpm/ramda/src/flip');
 
 /**
  * Ensures a string / array value ends with the specified suffix. If not, the

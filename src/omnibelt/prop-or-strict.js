@@ -1,6 +1,6 @@
-const curry = require('ramda/src/curry.js');
-const compose = require('ramda/src/compose.js');
-const prop = require('ramda/src/prop.js');
+const curry = require('@pnpm/ramda/src/curry');
+const compose = require('@pnpm/ramda/src/compose');
+const prop = require('@pnpm/ramda/src/prop');
 
 const defaultToStrict = require('./default-to-strict');
 

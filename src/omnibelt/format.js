@@ -1,4 +1,4 @@
-const curryN = require('ramda/src/curryN.js');
+const curryN = require('@pnpm/ramda/src/curryN');
 const stringFormat = require('string-format');
 
 /**

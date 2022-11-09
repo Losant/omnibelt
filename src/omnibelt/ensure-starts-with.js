@@ -1,7 +1,7 @@
-const curry = require('ramda/src/curry.js');
-const unless = require('ramda/src/unless.js');
-const startsWith = require('ramda/src/startsWith.js');
-const concat = require('ramda/src/concat.js');
+const curry = require('@pnpm/ramda/src/curry');
+const unless = require('@pnpm/ramda/src/unless');
+const startsWith = require('@pnpm/ramda/src/startsWith');
+const concat = require('@pnpm/ramda/src/concat');
 
 /**
  * Ensures a string / array value starts with the specified prefix. If not, the

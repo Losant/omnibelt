@@ -1,6 +1,6 @@
-const compose = require('ramda/src/compose.js');
-const curryN = require('ramda/src/curryN.js');
-const flip = require('ramda/src/flip.js');
+const compose = require('@pnpm/ramda/src/compose');
+const curryN = require('@pnpm/ramda/src/curryN');
+const flip = require('@pnpm/ramda/src/flip');
 const _round = require('lodash/round');
 
 /**

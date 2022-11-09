@@ -1,6 +1,6 @@
 const {
   pipe, unary, map, prop, always, tryCatch
-} = require('ramda');
+} = require('@pnpm/ramda');
 
 const { testHarnessUnary } = require('../../test/utils');
 const keyByWith = require('./key-by-with');

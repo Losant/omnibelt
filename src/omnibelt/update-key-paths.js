@@ -1,7 +1,7 @@
-const pipe = require('ramda/src/pipe.js');
-const assocPath = require('ramda/src/assocPath.js');
-const adjust = require('ramda/src/adjust.js');
-const apply = require('ramda/src/apply.js');
+const pipe = require('@pnpm/ramda/src/pipe');
+const assocPath = require('@pnpm/ramda/src/assocPath');
+const adjust = require('@pnpm/ramda/src/adjust');
+const apply = require('@pnpm/ramda/src/apply');
 
 const list = require('./list');
 const ensureArray = require('./ensure-array');

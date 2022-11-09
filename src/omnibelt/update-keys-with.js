@@ -1,8 +1,8 @@
-const curry = require('ramda/src/curry.js');
-const prop = require('ramda/src/prop.js');
-const propOr = require('ramda/src/propOr.js');
-const reduce = require('ramda/src/reduce.js');
-const keys = require('ramda/src/keys.js');
+const curry = require('@pnpm/ramda/src/curry');
+const prop = require('@pnpm/ramda/src/prop');
+const propOr = require('@pnpm/ramda/src/propOr');
+const reduce = require('@pnpm/ramda/src/reduce');
+const keys = require('@pnpm/ramda/src/keys');
 
 /**
  * Updates the keys for an object using the provided function and a map of

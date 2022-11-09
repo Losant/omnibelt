@@ -3,10 +3,10 @@
 // TODO: https://github.com/Losant/omnibelt/issues/40
 // NOTE: See `string-to-boolean` tests for example usage.
 
-const curry = require('ramda/src/curry.js');
-const compose = require('ramda/src/compose.js');
-const evolve = require('ramda/src/evolve.js');
-const map = require('ramda/src/map.js');
+const curry = require('@pnpm/ramda/src/curry');
+const compose = require('@pnpm/ramda/src/compose');
+const evolve = require('@pnpm/ramda/src/evolve');
+const map = require('@pnpm/ramda/src/map');
 
 const format = require('./format');
 const stringify = require('./stringify');

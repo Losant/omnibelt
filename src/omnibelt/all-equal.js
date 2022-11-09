@@ -1,7 +1,7 @@
-const compose = require('ramda/src/compose.js');
-const uniq = require('ramda/src/uniq.js');
-const length = require('ramda/src/length.js');
-const equals = require('ramda/src/equals.js');
+const compose = require('@pnpm/ramda/src/compose');
+const uniq = require('@pnpm/ramda/src/uniq');
+const length = require('@pnpm/ramda/src/length');
+const equals = require('@pnpm/ramda/src/equals');
 
 /**
  * Checks to see if all elements in an array are the same.

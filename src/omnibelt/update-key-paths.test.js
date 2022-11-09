@@ -1,4 +1,4 @@
-const { map, apply } = require('ramda');
+const { map, apply } = require('@pnpm/ramda');
 
 const { testHarnessUnary } = require('../../test/utils');
 const updateKeyPaths = require('./update-key-paths');

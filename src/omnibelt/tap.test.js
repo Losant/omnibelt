@@ -1,4 +1,4 @@
-const { compose } = require('ramda');
+const { compose } = require('@pnpm/ramda');
 
 const { testCases } = require('../../test/utils');
 const tap = require('./tap');

@@ -1,5 +1,5 @@
-const complement = require('ramda/src/complement.js');
-const isNil = require('ramda/src/isNil.js');
+const complement = require('@pnpm/ramda/src/complement');
+const isNil = require('@pnpm/ramda/src/isNil');
 
 /**
  * Takes a value and returns true if the value is neither null nor undefined;

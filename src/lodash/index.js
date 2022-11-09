@@ -1,4 +1,4 @@
-const { pick } = require('ramda');
+const { pick } = require('@pnpm/ramda');
 const _ = require('lodash/fp');
 
 // TODO: Maybe grab these methods from individual packages

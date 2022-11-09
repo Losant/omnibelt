@@ -1,7 +1,7 @@
-const useWith = require('ramda/src/useWith.js');
-const identity = require('ramda/src/identity.js');
-const pathOr = require('ramda/src/pathOr.js');
-const split = require('ramda/src/split.js');
+const useWith = require('@pnpm/ramda/src/useWith');
+const identity = require('@pnpm/ramda/src/identity');
+const pathOr = require('@pnpm/ramda/src/pathOr');
+const split = require('@pnpm/ramda/src/split');
 
 /**
  * If the given, non-null object has a value at the given dot-separated path, returns the

@@ -1,8 +1,8 @@
-const pipe = require('ramda/src/pipe.js');
-const curry = require('ramda/src/curry.js');
-const map = require('ramda/src/map.js');
-const apply = require('ramda/src/apply.js');
-const equals = require('ramda/src/equals.js');
+const pipe = require('@pnpm/ramda/src/pipe');
+const curry = require('@pnpm/ramda/src/curry');
+const map = require('@pnpm/ramda/src/map');
+const apply = require('@pnpm/ramda/src/apply');
+const equals = require('@pnpm/ramda/src/equals');
 
 const dotPath = require('./dot-path');
 

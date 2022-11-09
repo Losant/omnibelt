@@ -1,6 +1,6 @@
 const {
   map, apply
-} = require('ramda');
+} = require('@pnpm/ramda');
 
 const { testHarnessUnary } = require('../../test/utils');
 const stringToBoolean = require('./string-to-boolean');

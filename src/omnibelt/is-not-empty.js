@@ -1,5 +1,5 @@
-const complement = require('ramda/src/complement.js');
-const isEmpty = require('ramda/src/isEmpty.js');
+const complement = require('@pnpm/ramda/src/complement');
+const isEmpty = require('@pnpm/ramda/src/isEmpty');
 
 /**
  * Returns true if value is non-empty.

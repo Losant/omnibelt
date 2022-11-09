@@ -3,7 +3,7 @@ const { camelCase } = require('lodash/fp');
 const {
   filter, allPass, endsWith, complement, equals, slice, map, pipe, keys,
   all, is, concat
-} = require('ramda');
+} = require('@pnpm/ramda');
 
 const index = require('./index');
 

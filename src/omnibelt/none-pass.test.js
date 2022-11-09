@@ -1,6 +1,6 @@
 const {
   pipe, map, apply, adjust, equals, is
-} = require('ramda');
+} = require('@pnpm/ramda');
 
 const { testHarnessUnary } = require('../../test/utils');
 const nonePass = require('./none-pass');

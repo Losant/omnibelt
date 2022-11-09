@@ -1,4 +1,4 @@
-const compose = require('ramda/src/compose.js');
+const compose = require('@pnpm/ramda/src/compose');
 const upperFirst = require('lodash/fp/upperFirst');
 const camelCase = require('lodash/fp/camelCase');
 

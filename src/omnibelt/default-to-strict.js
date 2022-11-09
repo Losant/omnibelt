@@ -1,9 +1,9 @@
-const curry = require('ramda/src/curry.js');
-const when = require('ramda/src/when.js');
-const either = require('ramda/src/either.js');
-const isNil = require('ramda/src/isNil.js');
-const complement = require('ramda/src/complement.js');
-const always = require('ramda/src/always.js');
+const curry = require('@pnpm/ramda/src/curry');
+const when = require('@pnpm/ramda/src/when');
+const either = require('@pnpm/ramda/src/either');
+const isNil = require('@pnpm/ramda/src/isNil');
+const complement = require('@pnpm/ramda/src/complement');
+const always = require('@pnpm/ramda/src/always');
 
 const isPopulatedString = require('./is-populated-string');
 

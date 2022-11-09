@@ -1,4 +1,4 @@
-const r = require('ramda');
+const r = require('@pnpm/ramda');
 
 /**
  * @module ramda
@@ -8,6 +8,7 @@ module.exports = r.omit([
   'flip',
   'forEach',
   'indexBy',
+  'isArrayLike',
   'split',
   'tap',
   'toLower',

@@ -1,5 +1,5 @@
-const curry = require('ramda/src/curry.js');
-const times = require('ramda/src/times.js');
+const curry = require('@pnpm/ramda/src/curry');
+const times = require('@pnpm/ramda/src/times');
 const allSettledP = require('./all-settled-p');
 
 const objAccumulator = (accumulator, transformed, original) => { accumulator[original[0]] = transformed; };

@@ -1,5 +1,5 @@
-const pipe = require('ramda/src/pipe.js');
-const zipObj = require('ramda/src/zipObj.js');
+const pipe = require('@pnpm/ramda/src/pipe');
+const zipObj = require('@pnpm/ramda/src/zipObj');
 
 const list = require('./list');
 

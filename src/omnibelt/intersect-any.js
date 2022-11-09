@@ -1,12 +1,12 @@
-const __ = require('ramda/src/__.js');
-const filter = require('ramda/src/filter.js');
-const gt = require('ramda/src/gt.js');
-const compose = require('ramda/src/compose.js');
-const unnest = require('ramda/src/unnest.js');
-const keys = require('ramda/src/keys.js');
-const map = require('ramda/src/map.js');
-const unless = require('ramda/src/unless.js');
-const equals = require('ramda/src/equals.js');
+const __ = require('@pnpm/ramda/src/__');
+const filter = require('@pnpm/ramda/src/filter');
+const gt = require('@pnpm/ramda/src/gt');
+const compose = require('@pnpm/ramda/src/compose');
+const unnest = require('@pnpm/ramda/src/unnest');
+const keys = require('@pnpm/ramda/src/keys');
+const map = require('@pnpm/ramda/src/map');
+const unless = require('@pnpm/ramda/src/unless');
+const equals = require('@pnpm/ramda/src/equals');
 
 const count = require('./count');
 

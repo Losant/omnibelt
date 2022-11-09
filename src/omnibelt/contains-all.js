@@ -1,8 +1,8 @@
-const curry = require('ramda/src/curry.js');
-const pipe = require('ramda/src/pipe.js');
-const intersection = require('ramda/src/intersection.js');
-const length = require('ramda/src/length.js');
-const equals = require('ramda/src/equals.js');
+const curry = require('@pnpm/ramda/src/curry');
+const pipe = require('@pnpm/ramda/src/pipe');
+const intersection = require('@pnpm/ramda/src/intersection');
+const length = require('@pnpm/ramda/src/length');
+const equals = require('@pnpm/ramda/src/equals');
 
 /**
  * Predicate that checks to see if each element in an array

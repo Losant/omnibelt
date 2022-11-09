@@ -34,9 +34,9 @@
     "*.js": "esw"
   },
   "dependencies": {
+    "@pnpm/ramda": "^0.28.1",
     "@rjhilgefort/export-dir": "^2.0.0",
     "lodash": "^4.17.21",
-    "ramda": "^0.28.0",
     "string-format": "^2.0.0",
     "stringify-object": "^3.3.0"
   },

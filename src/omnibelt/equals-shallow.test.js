@@ -1,4 +1,4 @@
-const { pipe, map, apply, adjust } = require('ramda');
+const { pipe, map, apply, adjust } = require('@pnpm/ramda');
 
 const { testHarnessUnary } = require('../../test/utils');
 const equalsShallow = require('./equals-shallow');

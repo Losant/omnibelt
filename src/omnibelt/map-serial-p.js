@@ -1,4 +1,4 @@
-const curry = require('ramda/src/curry.js');
+const curry = require('@pnpm/ramda/src/curry');
 
 const objAccumulator = (accumulator, transformed, original) => { accumulator[original[0]] = transformed; };
 const aryAccumulator = (accumulator, transformed) => { accumulator.push(transformed); };

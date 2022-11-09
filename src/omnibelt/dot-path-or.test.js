@@ -1,4 +1,4 @@
-const { map } = require('ramda');
+const { map } = require('@pnpm/ramda');
 
 const { testHarnessUnary } = require('../../test/utils');
 const dotPathOr = require('./dot-path-or');

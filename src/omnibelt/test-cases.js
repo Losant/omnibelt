@@ -3,9 +3,9 @@
 // TODO: https://github.com/Losant/omnibelt/issues/40
 // NOTE: See `tap` or `count` tests for example usage.
 
-const curry = require('ramda/src/curry.js');
-const map = require('ramda/src/map.js');
-const apply = require('ramda/src/apply.js');
+const curry = require('@pnpm/ramda/src/curry');
+const map = require('@pnpm/ramda/src/map');
+const apply = require('@pnpm/ramda/src/apply');
 
 const testHarness = require('./test-harness');
 

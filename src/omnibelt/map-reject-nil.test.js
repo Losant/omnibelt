@@ -1,4 +1,4 @@
-const { map, isNil } = require('ramda');
+const { map, isNil } = require('@pnpm/ramda');
 
 const { testHarnessUnary } = require('../../test/utils');
 const mapRejectNil = require('./map-reject-nil');

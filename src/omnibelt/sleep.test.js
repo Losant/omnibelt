@@ -1,6 +1,6 @@
 const {
   compose, subtract, __, curry
-} = require('ramda');
+} = require('@pnpm/ramda');
 const present = require('present');
 const round = require('./round');
 const within = require('./within');
