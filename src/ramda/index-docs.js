@@ -169,6 +169,12 @@
 /**
  * @func
  * @memberof module:ramda
+ * @name collectBy
+ * @see {@link http://ramdajs.com/docs/#collectBy|R.collectBy}
+ */
+/**
+ * @func
+ * @memberof module:ramda
  * @name comparator
  * @see {@link http://ramdajs.com/docs/#comparator|R.comparator}
  */
@@ -183,18 +189,6 @@
  * @memberof module:ramda
  * @name compose
  * @see {@link http://ramdajs.com/docs/#compose|R.compose}
- */
-/**
- * @func
- * @memberof module:ramda
- * @name composeK
- * @see {@link http://ramdajs.com/docs/#composeK|R.composeK}
- */
-/**
- * @func
- * @memberof module:ramda
- * @name composeP
- * @see {@link http://ramdajs.com/docs/#composeP|R.composeP}
  */
 /**
  * @func
@@ -225,12 +219,6 @@
  * @memberof module:ramda
  * @name constructN
  * @see {@link http://ramdajs.com/docs/#constructN|R.constructN}
- */
-/**
- * @func
- * @memberof module:ramda
- * @name contains
- * @see {@link http://ramdajs.com/docs/#contains|R.contains}
  */
 /**
  * @func
@@ -751,12 +739,6 @@
 /**
  * @func
  * @memberof module:ramda
- * @name merge
- * @see {@link http://ramdajs.com/docs/#merge|R.merge}
- */
-/**
- * @func
- * @memberof module:ramda
  * @name mergeAll
  * @see {@link http://ramdajs.com/docs/#mergeAll|R.mergeAll}
  */
@@ -823,6 +805,18 @@
 /**
  * @func
  * @memberof module:ramda
+ * @name modify
+ * @see {@link http://ramdajs.com/docs/#modify|R.modify}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name modifyPath
+ * @see {@link http://ramdajs.com/docs/#modifyPath|R.modifyPath}
+ */
+/**
+ * @func
+ * @memberof module:ramda
  * @name modulo
  * @see {@link http://ramdajs.com/docs/#modulo|R.modulo}
  */
@@ -843,6 +837,12 @@
  * @memberof module:ramda
  * @name nAry
  * @see {@link http://ramdajs.com/docs/#nAry|R.nAry}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name partialObject
+ * @see {@link http://ramdajs.com/docs/#partialObject|R.partialObject}
  */
 /**
  * @func
@@ -897,6 +897,12 @@
  * @memberof module:ramda
  * @name omit
  * @see {@link http://ramdajs.com/docs/#omit|R.omit}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name on
+ * @see {@link http://ramdajs.com/docs/#on|R.on}
  */
 /**
  * @func
@@ -1003,18 +1009,6 @@
 /**
  * @func
  * @memberof module:ramda
- * @name pipeK
- * @see {@link http://ramdajs.com/docs/#pipeK|R.pipeK}
- */
-/**
- * @func
- * @memberof module:ramda
- * @name pipeP
- * @see {@link http://ramdajs.com/docs/#pipeP|R.pipeP}
- */
-/**
- * @func
- * @memberof module:ramda
  * @name pipeWith
  * @see {@link http://ramdajs.com/docs/#pipeWith|R.pipeWith}
  */
@@ -1041,6 +1035,12 @@
  * @memberof module:ramda
  * @name project
  * @see {@link http://ramdajs.com/docs/#project|R.project}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name promap
+ * @see {@link http://ramdajs.com/docs/#promap|R.promap}
  */
 /**
  * @func
@@ -1203,6 +1203,12 @@
  * @memberof module:ramda
  * @name splitWhen
  * @see {@link http://ramdajs.com/docs/#splitWhen|R.splitWhen}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name splitWhenever
+ * @see {@link http://ramdajs.com/docs/#splitWhenever|R.splitWhenever}
  */
 /**
  * @func
@@ -1399,6 +1405,12 @@
 /**
  * @func
  * @memberof module:ramda
+ * @name unwind
+ * @see {@link http://ramdajs.com/docs/#unwind|R.unwind}
+ */
+/**
+ * @func
+ * @memberof module:ramda
  * @name update
  * @see {@link http://ramdajs.com/docs/#update|R.update}
  */
@@ -1437,6 +1449,12 @@
  * @memberof module:ramda
  * @name where
  * @see {@link http://ramdajs.com/docs/#where|R.where}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name whereAny
+ * @see {@link http://ramdajs.com/docs/#whereAny|R.whereAny}
  */
 /**
  * @func
