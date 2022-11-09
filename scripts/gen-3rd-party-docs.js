@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const { curryN, __, compose, objOf, keys } = require('ramda');
+const { curryN, __, compose, objOf, keys } = require('@pnpm/ramda');
 const fs = require('fs-extra');
 const path = require('path');
 const Handlebars = require('handlebars');
