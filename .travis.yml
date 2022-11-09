@@ -1,14 +1,14 @@
 ---
 language: node_js
 node_js:
-  - "19"
-  - "18"
-  - "16"
-  - "14"
+  - dist: focal
+    node_js: '19'
+  - dist: focal
+    node_js: '18'
+  - '16'
+  - '14'
 
 sudo: false
-
-dist: focal
 
 cache:
   directories:
