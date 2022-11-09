@@ -101,6 +101,19 @@ git release vX.X.X
 
 Below should serve as an "upgrade guide" jumping off point as you are migrating projects to newer versions of this package. Ideally, interface changes will be called out specifically and one should not have to go sifting through git diffs to discern what changed.
 
+
+- `3.0.0`
+  - bumped .node-version to `16.17.1`
+  - drop support for node versions, 10, 12, 13, and 15
+  - bumped ramda version `0.28.0` (note in this version of ramda they release a function called `count`, omnibelt has a `count` function already so that ramda function is not included in this library)
+  - bumped @losant/eslint-config-losant to `1.5.0`
+  - bumped expect to `29.3.1`
+  - bumped fs-extra `10.1.0`
+  - bumped husky `8.0.2`
+  - bumped jest `29.3.1`
+  - bumped jsdoc `4.0.0`
+  - bumped lint-staged `13.0.3`
+  - added taffdb as a dev dependency for building the documentation
 - `2.1.0`
   - `mapP` waits for all promises to complete and then throw the first error if found
   - `mapParallelLimitP` does not continue to run promises once a promise has errored
