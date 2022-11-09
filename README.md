@@ -101,7 +101,9 @@ git release vX.X.X
 
 Below should serve as an "upgrade guide" jumping off point as you are migrating projects to newer versions of this package. Ideally, interface changes will be called out specifically and one should not have to go sifting through git diffs to discern what changed.
 
-
+- `3.1.0`
+  - moved from ramda to `@pnpm/ramda`
+  - added tests for allEqual
 - `3.0.0`
   - bumped .node-version to `16.17.1`
   - drop support for node versions, 10, 12, 13, and 15
