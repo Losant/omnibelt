@@ -41,10 +41,10 @@
     "stringify-object": "^3.3.0"
   },
   "devDependencies": {
-    "@losant/eslint-config-losant": "1.5.0",
+    "@losant/eslint-config-losant": "1.6.0",
     "docdash": "^1.2.0",
-    "expect": "^29.3.1",
-    "fs-extra": "^10.1.0",
+    "expect": "^29.4.0",
+    "fs-extra": "^11.1.0",
     "handlebars": "^4.7.7",
     "husky": "^8.0.2",
     "jest": "^29.3.1",

@@ -246,6 +246,13 @@
 /**
  * @func
  * @memberof module:lodash
+ * @name truncate
+ * @see {@link https://github.com/lodash/lodash/wiki/FP-Guide|FP-Guide For Actual Interface}
+ * @see {@link https://lodash.com/docs/4.17.5#truncate|_.truncate}
+ */
+/**
+ * @func
+ * @memberof module:lodash
  * @name unescape
  * @see {@link https://github.com/lodash/lodash/wiki/FP-Guide|FP-Guide For Actual Interface}
  * @see {@link https://lodash.com/docs/4.17.5#unescape|_.unescape}

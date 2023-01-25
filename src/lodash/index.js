@@ -13,6 +13,7 @@ module.exports = pick([
   'capitalize',
   'castArray',
   'compact',
+  'deburr',
   'escape',
   'escapeRegExp',
   'flip',
@@ -44,6 +45,7 @@ module.exports = pick([
   'trim',
   'trimEnd',
   'trimStart',
+  'truncate',
   'unescape',
   'upperFirst',
   'words'
