@@ -12,8 +12,8 @@ const anyPass = require('ramda/src/anyPass');
  * @signature [(*... -> Boolean)] -> (*... -> Boolean)
  *
  * @example
- *   const isClub = propEq('suit', '♣');
- *   const isSpade = propEq('suit', '♠');
+ *   const isClub = propEq('♣', 'suit');
+ *   const isSpade = propEq('♠', 'suit');
  *   const isRedCard = nonePass([isClub, isSpade]);
  *
  *   isRedCard({ rank: '10', suit: '♣' }); //=> false

@@ -104,7 +104,6 @@ Below should serve as an "upgrade guide" jumping off point as you are migrating 
 - `3.1.0`
   - bumped .node-version to `18.16.0`
   - bumped ramda to `0.29.0` (note in this version of ramda they release a function called `isNotNil`, omnibelt has a `isNotNil` function already so that ramda function is not included in this library)
-  - bumped stringify-object to `3.3.0`
   - bumped various dev dependencies
 - `3.0.0`
   - bumped .node-version to `16.17.1`
