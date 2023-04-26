@@ -27,8 +27,7 @@ it('exports all utilities', async () => {
       camelCase
     ))
   );
-
-  expect(keys(index)).toEqual(funcs);
+  expect(keys(index).sort()).toEqual(funcs.sort());
 });
 
 it('exports only functions', async () => {

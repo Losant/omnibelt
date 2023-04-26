@@ -13,5 +13,6 @@ module.exports = r.omit([
   'toLower',
   'toString',
   'toUpper',
-  'trim'
+  'trim',
+  'isNotNil'
 ], r);
