@@ -24,6 +24,7 @@
     "lint:staged": "lint-staged",
     "test": "jest --verbose",
     "test:watch": "yarn test --watch -o",
+    "ramda:index": "node ./scripts/gen-ramda-index-file.js",
     "docs": "yarn docs:open",
     "predocs:build": "./scripts/gen-3rd-party-docs.js",
     "docs:build": "jsdoc -c jsdoc.json",
