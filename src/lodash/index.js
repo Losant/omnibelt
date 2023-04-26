@@ -40,6 +40,7 @@ module.exports.toNumber = _.toNumber;
 module.exports.toPlainObject = _.toPlainObject;
 module.exports.toString = _.toString;
 module.exports.toUpper = _.toUpper;
+module.exports.size = _.size;
 module.exports.trim = _.trim;
 module.exports.trimEnd = _.trimEnd;
 module.exports.trimStart = _.trimStart;
