@@ -1,7 +1,7 @@
 {
   "name": "omnibelt",
   "description": "A utility belt that normalizes and wraps `Ramda` and `Lodash/FP`.",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "license": "MIT",
   "main": "src/index.js",
   "repository": "git@github.com/Losant/omnibelt.git",
@@ -24,6 +24,7 @@
     "lint:staged": "lint-staged",
     "test": "jest --verbose",
     "test:watch": "yarn test --watch -o",
+    "ramda:index": "node ./scripts/gen-ramda-index-file.js",
     "docs": "yarn docs:open",
     "predocs:build": "./scripts/gen-3rd-party-docs.js",
     "docs:build": "jsdoc -c jsdoc.json",
