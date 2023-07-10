@@ -29,6 +29,13 @@
 /**
  * @func
  * @memberof module:lodash
+ * @name deburr
+ * @see {@link https://github.com/lodash/lodash/wiki/FP-Guide|FP-Guide For Actual Interface}
+ * @see {@link https://lodash.com/docs/4.17.5#deburr|_.deburr}
+ */
+/**
+ * @func
+ * @memberof module:lodash
  * @name escape
  * @see {@link https://github.com/lodash/lodash/wiki/FP-Guide|FP-Guide For Actual Interface}
  * @see {@link https://lodash.com/docs/4.17.5#escape|_.escape}
@@ -225,6 +232,13 @@
 /**
  * @func
  * @memberof module:lodash
+ * @name size
+ * @see {@link https://github.com/lodash/lodash/wiki/FP-Guide|FP-Guide For Actual Interface}
+ * @see {@link https://lodash.com/docs/4.17.5#size|_.size}
+ */
+/**
+ * @func
+ * @memberof module:lodash
  * @name trim
  * @see {@link https://github.com/lodash/lodash/wiki/FP-Guide|FP-Guide For Actual Interface}
  * @see {@link https://lodash.com/docs/4.17.5#trim|_.trim}
@@ -242,6 +256,13 @@
  * @name trimStart
  * @see {@link https://github.com/lodash/lodash/wiki/FP-Guide|FP-Guide For Actual Interface}
  * @see {@link https://lodash.com/docs/4.17.5#trimStart|_.trimStart}
+ */
+/**
+ * @func
+ * @memberof module:lodash
+ * @name truncate
+ * @see {@link https://github.com/lodash/lodash/wiki/FP-Guide|FP-Guide For Actual Interface}
+ * @see {@link https://lodash.com/docs/4.17.5#truncate|_.truncate}
  */
 /**
  * @func
