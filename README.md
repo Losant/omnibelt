@@ -101,6 +101,10 @@ git release vX.X.X
 
 Below should serve as an "upgrade guide" jumping off point as you are migrating projects to newer versions of this package. Ideally, interface changes will be called out specifically and one should not have to go sifting through git diffs to discern what changed.
 
+- `3.1.2`
+  - Added methods:
+    - `debounceLeading`
+    - `debounceTrailing`
 - `3.1.1`
   - Added methods:
     - `size` (Lodash)

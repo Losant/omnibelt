@@ -31,6 +31,12 @@
 /**
  * @func
  * @memberof module:ramda
+ * @name addIndexRight
+ * @see {@link http://ramdajs.com/docs/#addIndexRight|R.addIndexRight}
+ */
+/**
+ * @func
+ * @memberof module:ramda
  * @name adjust
  * @see {@link http://ramdajs.com/docs/#adjust|R.adjust}
  */
@@ -315,6 +321,12 @@
  * @memberof module:ramda
  * @name dropRepeats
  * @see {@link http://ramdajs.com/docs/#dropRepeats|R.dropRepeats}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name dropRepeatsBy
+ * @see {@link http://ramdajs.com/docs/#dropRepeatsBy|R.dropRepeatsBy}
  */
 /**
  * @func
@@ -1227,6 +1239,12 @@
  * @memberof module:ramda
  * @name sum
  * @see {@link http://ramdajs.com/docs/#sum|R.sum}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name swap
+ * @see {@link http://ramdajs.com/docs/#swap|R.swap}
  */
 /**
  * @func
