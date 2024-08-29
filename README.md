@@ -105,6 +105,7 @@ Below should serve as an "upgrade guide" jumping off point as you are migrating 
   - moved from travis to github actions
   - bumped ramda to `0.30.1`
   - bumped various dev dependencies
+  - drop support for node.js version 14 and 16.
 - `3.1.2`
   - Added methods:
     - `debounceLeading`
