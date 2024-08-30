@@ -28,8 +28,7 @@
     "docs": "yarn docs:open",
     "predocs:build": "./scripts/gen-3rd-party-docs.js",
     "docs:build": "jsdoc -c jsdoc.json",
-    "docs:open": "open ./docs/index.html",
-    "prepare": "husky install"
+    "docs:open": "open ./docs/index.html"
   },
   "lint-staged": {
     "*.js": "esw"
