@@ -1,6 +1,6 @@
 # Omnibelt
 
-[![Build Status](https://api.travis-ci.com/Losant/omnibelt.svg?branch=master)](https://travis-ci.com/Losant/omnibelt) [![npm version](https://badge.fury.io/js/omnibelt.svg)](https://badge.fury.io/js/omnibelt)
+![Build Status](https://github.com/Losant/omnibelt/actions/workflows/test.yml/badge.svg?branch=master) [![npm version](https://badge.fury.io/js/omnibelt.svg)](https://badge.fury.io/js/omnibelt)
 
 A utility belt that normalizes and wraps [Ramda](https://ramdajs.com/) and [Lodash/FP](https://github.com/lodash/lodash/wiki/FP-Guide). In addition, some other "adjunct" methods are included that solve common patterns. The order of precedence is: Does it exist in `Ramda`? Does it exist in `Lodash/FP`? Then it must be custom (in `src/omnibelt`). That means that you can deconstruct methods from any of those three from the `omnibelt` exported object.
 
@@ -101,6 +101,11 @@ git release vX.X.X
 
 Below should serve as an "upgrade guide" jumping off point as you are migrating projects to newer versions of this package. Ideally, interface changes will be called out specifically and one should not have to go sifting through git diffs to discern what changed.
 
+-`4.0.0`
+  - moved from travis to github actions
+  - bumped ramda to `0.30.1`
+  - bumped various dev dependencies
+  - drop support for node.js version 14 and 16.
 - `3.1.2`
   - Added methods:
     - `debounceLeading`
@@ -114,7 +119,6 @@ Below should serve as an "upgrade guide" jumping off point as you are migrating 
   - bumped .node-version to `18.16.0`
   - bumped ramda to `0.29.0` (note in this version of ramda they release a function called `isNotNil`, omnibelt has a `isNotNil` function already so that ramda function is not included in this library)
   - bumped various dev dependencies
-  - removed 
 - `3.0.0`
   - bumped .node-version to `16.17.1`
   - drop support for node versions, 10, 12, 13, and 15
