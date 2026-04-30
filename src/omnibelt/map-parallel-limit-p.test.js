@@ -35,6 +35,10 @@ describe('mapParallelLimitP', () => {
     expect(await harness([1, 2, 3, 4, 5])).toEqual([2, 4, 6, 8, 10]);
   });
 
+  it('should preserve input order even when later items resolve first', async () => {
+    expect(await harness([5, 4, 3, 2, 1])).toEqual([10, 8, 6, 4, 2]);
+  });
+
   it('should correctly iterate on a Set, serially, in order', async () => {
     expect(await harness(new Set([1, 2, 3, 4, 5]))).toEqual([2, 4, 6, 8, 10]);
   });

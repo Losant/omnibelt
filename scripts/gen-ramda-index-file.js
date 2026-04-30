@@ -13,7 +13,9 @@ const ramdaFuncsNames = Object.keys(r.omit([
   'toString',
   'toUpper',
   'trim',
-  'isNotNil'
+  'isNotNil',
+  'mapKeys',
+  'isNotEmpty'
 ], r));
 
 const moduleExportLines = [];
