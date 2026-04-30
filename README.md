@@ -105,6 +105,7 @@ Below should serve as an "upgrade guide" jumping off point as you are migrating 
   - bumped ramda to `0.32.0`
   - bumped various dev dependencies
   - switch from yarn to pnpm
+  - fixed issue with maintaining order in mapParallelLimitP
 -`4.0.0`
   - moved from travis to github actions
   - bumped ramda to `0.30.1`
