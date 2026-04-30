@@ -11,7 +11,7 @@ jobs:
   test:
     strategy:
       matrix:
-        nodejs: [ '18', '20', '22' ]
+        nodejs: [ '20', '22', '24', '25' ]
     runs-on: ubuntu-latest
     permissions:
       actions: write
@@ -24,9 +24,13 @@ jobs:
         access_token: ${{ github.token }}
     - name: Checkout
       uses: actions/checkout@v4
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v4
+      with:
+        run_install: false
     - name: Use Node.js ${{ matrix.nodejs }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.nodejs }}
-    - run: yarn install --frozen-lockfile
-    - run: yarn test
+    - run: pnpm install --frozen-lockfile
+    - run: pnpm test

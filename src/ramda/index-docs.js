@@ -121,6 +121,12 @@
 /**
  * @func
  * @memberof module:ramda
+ * @name ascendNatural
+ * @see {@link http://ramdajs.com/docs/#ascendNatural|R.ascendNatural}
+ */
+/**
+ * @func
+ * @memberof module:ramda
  * @name assoc
  * @see {@link http://ramdajs.com/docs/#assoc|R.assoc}
  */
@@ -271,6 +277,12 @@
 /**
  * @func
  * @memberof module:ramda
+ * @name descendNatural
+ * @see {@link http://ramdajs.com/docs/#descendNatural|R.descendNatural}
+ */
+/**
+ * @func
+ * @memberof module:ramda
  * @name difference
  * @see {@link http://ramdajs.com/docs/#difference|R.difference}
  */
@@ -417,6 +429,12 @@
  * @memberof module:ramda
  * @name flatten
  * @see {@link http://ramdajs.com/docs/#flatten|R.flatten}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name flow
+ * @see {@link http://ramdajs.com/docs/#flow|R.flow}
  */
 /**
  * @func
@@ -1099,6 +1117,12 @@
 /**
  * @func
  * @memberof module:ramda
+ * @name rebuild
+ * @see {@link http://ramdajs.com/docs/#rebuild|R.rebuild}
+ */
+/**
+ * @func
+ * @memberof module:ramda
  * @name reduce
  * @see {@link http://ramdajs.com/docs/#reduce|R.reduce}
  */
@@ -1137,6 +1161,12 @@
  * @memberof module:ramda
  * @name remove
  * @see {@link http://ramdajs.com/docs/#remove|R.remove}
+ */
+/**
+ * @func
+ * @memberof module:ramda
+ * @name renameKeys
+ * @see {@link http://ramdajs.com/docs/#renameKeys|R.renameKeys}
  */
 /**
  * @func

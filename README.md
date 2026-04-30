@@ -101,6 +101,10 @@ git release vX.X.X
 
 Below should serve as an "upgrade guide" jumping off point as you are migrating projects to newer versions of this package. Ideally, interface changes will be called out specifically and one should not have to go sifting through git diffs to discern what changed.
 
+-`4.1.0`
+  - bumped ramda to `0.32.0`
+  - bumped various dev dependencies
+  - switch from yarn to pnpm
 -`4.0.0`
   - moved from travis to github actions
   - bumped ramda to `0.30.1`
