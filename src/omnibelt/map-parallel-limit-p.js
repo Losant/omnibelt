@@ -3,14 +3,16 @@ const times = require('ramda/src/times');
 const allSettledP = require('./all-settled-p');
 
 const objAccumulator = (accumulator, transformed, original) => { accumulator[original[0]] = transformed; };
-const aryAccumulator = (accumulator, transformed) => { accumulator.push(transformed); };
+const aryAccumulator = (accumulator, transformed, original, index) => { accumulator[index] = transformed; };
 
 const makeEvaluator = (func, iterator, accFunc, accumulator, opts) => {
+  let index = 0;
   const evaluator = async () => {
     if (opts.stop) { return; }
     const next = iterator.next();
     if (next.done) { return; }
-    accFunc(accumulator, await func(next.value), next.value);
+    const i = index++;
+    accFunc(accumulator, await func(next.value), next.value, i);
     await evaluator();
   };
   return evaluator;
